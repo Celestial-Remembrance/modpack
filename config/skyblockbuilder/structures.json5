@@ -16,6 +16,10 @@
   // This is a resource list. See https://moddingx.org/libx/org/moddingx/libx/util/data/ResourceList.html#use_resource_lists_in_configs
   "generationStructures": {
     "allow_list": false,
-    "elements": []
+    "elements": [
+      "ad_astra:lunarian_village",
+      "ad_astra:lunar_tower",
+      "ad_astra:moon_dungeon"
+    ]
   }
 }
