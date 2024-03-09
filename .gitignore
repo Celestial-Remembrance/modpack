@@ -113,3 +113,6 @@ config/skyblockbuilder/data/dimensions.txt
 /crash-reports
 /config/skyblockbuilder/data
 /backups
+patchouli_data.json
+config/patchouli-client.toml
+config/enderio/machines-common-2.toml.bak
