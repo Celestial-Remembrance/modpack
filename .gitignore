@@ -121,3 +121,5 @@ kubejs/config/probejs.json
 kubejs/probe/cache/modHash.txt
 /.vscode
 kubejs/jsconfig.json
+hotbar.nbt
+kubejs/data/demo/structures/ruined_igloo.nbt
