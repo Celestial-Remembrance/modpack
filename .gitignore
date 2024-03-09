@@ -111,3 +111,5 @@ config/embers-common.toml
 config/skyblockbuilder/data/dimensions.txt
 config/skyblockbuilder/data/dimensions.txt
 /crash-reports
+/config/skyblockbuilder/data
+/backups
