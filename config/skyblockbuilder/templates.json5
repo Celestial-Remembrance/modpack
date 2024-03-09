@@ -32,6 +32,11 @@
   "templates": [
     {
       "name": "Default Island",
+      "file": "ruined_igloo.nbt",
+      "spawns": "default"
+    },
+    {
+      "name": "TESTING IGLOO",
       "file": "igloo.snbt",
       "spawns": "default"
     }
