@@ -8,7 +8,7 @@
     // Do sound suppression in orbit dimensions. If it gets annoying, you can turn it off.
     "doSpaceMuffler": true,
     // Type: Long
-    "oxygenTankSize": 500,
+    "oxygenTankSize": 1000,
     // Type: Integer
     "hammerDurability": 64,
     "giveAstroduxAtSpawn": true,
