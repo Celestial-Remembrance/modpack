@@ -116,3 +116,8 @@ config/skyblockbuilder/data/dimensions.txt
 patchouli_data.json
 config/patchouli-client.toml
 config/enderio/machines-common-2.toml.bak
+config/simple-rpc/server-entries.toml
+kubejs/config/probejs.json
+kubejs/probe/cache/modHash.txt
+/.vscode
+kubejs/jsconfig.json
