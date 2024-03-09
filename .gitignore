@@ -108,3 +108,6 @@ config/enderio/machines-common-1.toml.bak
 config/enderio/machines-client.toml
 config/enderio/machines-common.toml
 config/embers-common.toml
+config/skyblockbuilder/data/dimensions.txt
+config/skyblockbuilder/data/dimensions.txt
+/crash-reports
