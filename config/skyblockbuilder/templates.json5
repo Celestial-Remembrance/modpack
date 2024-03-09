@@ -32,7 +32,7 @@
   "templates": [
     {
       "name": "Default Island",
-      "file": "igloo.nbt",
+      "file": "igloo.snbt",
       "spawns": "default"
     }
   ]
