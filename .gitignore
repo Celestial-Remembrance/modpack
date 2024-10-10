@@ -123,3 +123,6 @@ kubejs/probe/cache/modHash.txt
 kubejs/jsconfig.json
 hotbar.nbt
 kubejs/data/demo/structures/ruined_igloo.nbt
+config/skyblockbuilder/customization.json5
+config/jei/blacklist.cfg
+/config/jei
