@@ -35,10 +35,11 @@ global.resources = {
   meteorites: [
     {
       id: "meteorite_1",
-      texture: "minecraft:beacon",
-      drop: ["minecraft:raw_copper"],
-      chance: [50],
-      biomes : ["ad_astra:lunar_wastelands"]
+      block: "mercury_meteorite",
+      texture: "minecraft:block/stone",
+      drop: ["minecraft:raw_copper", "minecraft:redstone"],
+      multiplier: [20, 1],
+      biomes: ["ad_astra:lunar_wastelands"],
     },
   ],
 };
