@@ -509,11 +509,11 @@ JEIAddedEvents.registerCategories((event) => {
           guiGraphics.drawWordWrap(
             Client.font,
             Text.of(
-              convertString("Modifier :" + recipe.data.info[0])
+              convertString("Modifier : " + recipe.data.info[0])
             ),
             48,
             9,
-            100,
+            80,
             0
           );
 
@@ -526,7 +526,7 @@ JEIAddedEvents.registerCategories((event) => {
             ),
             48,
             30,
-            100,
+            80,
             0
           );
         }
