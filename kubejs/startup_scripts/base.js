@@ -33,7 +33,7 @@ function rnd25() {
 function potion(event, id, color) {
   event
     .create(id + "_bottle")
-    .color(0, color)
+    .color(1, color)
     .texture("layer0", "minecraft:item/potion_overlay")
     .texture("layer1", "minecraft:item/potion");
 }
@@ -41,7 +41,7 @@ function potion(event, id, color) {
 function clump(event, id, color) {
   event
     .create(id + "_clump")
-    .color(0, color)
+    .color(1, color)
     .texture("layer0", "mekanism:item/clump_overlay")
     .texture("layer1", "mekanism:item/clump");
 }
@@ -85,7 +85,7 @@ function ingot(event, id, color) {
 function crystal(event, id, color) {
   event
     .create(id + "_crystal")
-    .color(0, color)
+    .color(1, color)
     .texture("layer0", "mekanism:item/crystal_overlay")
     .texture("layer1", "mekanism:item/crystal");
 }
@@ -96,12 +96,35 @@ function crystal(event, id, color) {
  * @param {Item} id
  * @param {Color} color
  */
-function shard(event, id, color) {
+function shard(event, id, color, vanilla) {
+  if (vanilla) {
+    event
+      .create(id + "_shard")
+      .color(0, color)
+      .texture("layer0", "kubejs:item/template/shard");
+  } else {
+    event
+      .create(id + "_shard")
+      .color(1, color)
+      .texture("layer0", "mekanism:item/shard_overlay")
+      .texture("layer1", "mekanism:item/shard");
+  }
+}
+/**
+ *
+ * @param {event} event
+ * @param {Item} id
+ * @param {Color} color
+ */
+function crystal_block(event, id, color) {
   event
-    .create(id + "_shard")
+    .create(id + "_crystal_block")
     .color(0, color)
-    .texture("layer0", "mekanism:item/shard_overlay")
-    .texture("layer1", "mekanism:item/shard");
+    .texture("layer0", "kubejs:block/template/crystal")
+  //   .modelJson = {
+  //   parent: "block/block",
+  //   textures: { layer0: "kubejs:block/template/crystal" },
+  // };
 }
 
 /**
@@ -109,12 +132,21 @@ function shard(event, id, color) {
  * @param {event} event
  * @param {Item} id
  * @param {Color} color
+ * @param {boolean} extradirty true -> extra layer | false -> no extra layer
  */
-function dust(event, id, color) {
-  event
-    .create(id + "_dust")
-    .color(0, color)
-    .texture("layer0", "mekanism:item/dust");
+function dust(event, id, color, moreDirty) {
+  if (moreDirty) {
+    event
+      .create(id + "_dust")
+      .color(0, color)
+      .texture("layer0", "mekanism:item/dust")
+      .texture("layer1", "kubejs:item/template/dust_extra_overlay");
+  } else {
+    event
+      .create(id + "_dust")
+      .color(0, color)
+      .texture("layer0", "mekanism:item/dust");
+  }
 }
 
 /**
@@ -128,14 +160,14 @@ function dirty_dust(event, id, color, moreDirty) {
   if (moreDirty) {
     event
       .create(id + "_dirty_dust")
-      .color(0, color)
+      .color(1, color)
       .texture("layer0", "mekanism:item/dirty_dust_overlay")
       .texture("layer1", "mekanism:item/dirty_dust")
       .texture("layer2", "kubejs:item/template/dust_extra_overlay");
   } else {
     event
       .create(id + "_dirty_dust")
-      .color(0, color)
+      .color(1, color)
       .texture("layer0", "mekanism:item/dirty_dust_overlay")
       .texture("layer1", "mekanism:item/dirty_dust");
   }
