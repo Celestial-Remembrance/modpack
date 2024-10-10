@@ -1,27 +1,44 @@
 // priority: -1
+let types = [
+  {
+    id: "kubejs:copper",
+    color: 0xffb451,
+  },
+  {
+    id: "kubejs:iron",
+    color: 0xdbdbdb,
+  },
+  {
+    id: "kubejs:tin",
+    color: 0xa9e6dc,
+  },
+  {
+    id: "kubejs:redstone",
+    color: 0xf73737,
+  },
+  {
+    id: "kubejs:coal",
+    color: 0x616161,
+  },
+  {
+    id: "kubejs:nickel",
+    color: 0xf0dd8e,
+  },
+];
+
 StartupEvents.registry("item", (event) => {
   event.create("kubejs:star").texture("kubejs:item/star");
   event.create("kubejs:star2").texture("kubejs:item/star-2");
 
   potion(event, "kubejs:limewater", 0xffffaf);
 
-  let types = [
-    {
-      id: "kubejs:tritium",
-      color: 0x8df2d4,
-    },
-    {
-      id: "kubejs:tritanium",
-      color: 0xcd57f0,
-    },
-  ];
-
   types.forEach((e, index) => {
-    ingot(event, e.color, e.id);
-    dust(event, e.color, e.id);
-    dirty_dust(event, e.color, e.id, true);
-    nugget(event, e.color, e.id, true);
-    clump(event, e.color, e.id);
-    shard(event, e.color, e.id);
+    shard(event, e.id, e.color, true);
+  });
+});
+
+StartupEvents.registry("block", (event) => {
+  types.forEach((e, index) => {
+    crystal_block(event, e.id, e.color);
   });
 });
