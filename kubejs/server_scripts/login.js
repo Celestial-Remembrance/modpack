@@ -12,5 +12,19 @@ PlayerEvents.loggedIn(event=>{
 
 
     }
-
+    
+    
 })
+
+ItemEvents.rightClicked('minecraft:stick',event=>{
+  let list = [
+    Fluid.of('minecraft:lava',10),
+    Item.of("minecraft:stone",10)
+  ]
+
+list.forEach(e=>{
+  event.player.tell(e+' -> ' +e == Item.of())
+})
+  
+})
+
