@@ -34,11 +34,23 @@ global.jei = {
 global.resources = {
   meteorites: [
     {
-      id: "meteorite_1",
+      id: "1",
       block: "mercury_meteorite",
       texture: "minecraft:block/stone",
-      drop: ["minecraft:raw_copper", "minecraft:redstone"],
-      multiplier: [20, 1],
+      drop: ["kubejs:copper_shard", "kubejs:tin_shard"],
+      multiplier: [20, 12],
+      biomes: ["ad_astra:lunar_wastelands"],
+    },
+    {
+      id: "2",
+      block: "mars_meteorite",
+      texture: "minecraft:block/red_sandstone",
+      drop: [
+        "kubejs:iron_shard",
+        "kubejs:redstone_shard",
+        "kubejs:nickel_shard",
+      ],
+      multiplier: [14, 24, 10],
       biomes: ["ad_astra:lunar_wastelands"],
     },
   ],
