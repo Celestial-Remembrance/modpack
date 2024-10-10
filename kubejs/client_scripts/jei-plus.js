@@ -602,10 +602,10 @@ JEIAddedEvents.registerRecipes((event) => {
     info: 2,
   });
 
-  event.custom("kubejs:atomic").add({
-    input: "minecraft:dirt",
-    output: "minecraft:cobblestone",
-  });
+  // event.custom("kubejs:atomic").add({
+  //   input: "minecraft:dirt",
+  //   output: "minecraft:cobblestone",
+  // });
 
   //mud to clay
   event.custom("kubejs:random-tick").add({
@@ -666,6 +666,10 @@ JEIAddedEvents.registerRecipes((event) => {
   //-------DYNAMIC-RECIPES-----------//
   global.jei.recipes.click.forEach((element) => {
     event.custom("kubejs:click-event").add(element);
+  });
+
+  global.jei.recipes.atomic.forEach((element) => {
+    event.custom("kubejs:atomic").add(element);
   });
 
   //---------------------------------//
