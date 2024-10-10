@@ -1,3 +1,4 @@
+// priority: -1
 StartupEvents.registry("block", (event) => {
   event
     .create("kubejs:converter")
@@ -23,9 +24,10 @@ StartupEvents.registry("block", (event) => {
             10,
             0.1
           );
-          if (state.persistentData.getBoolean("active") && rnd(0, 2) == 2) {
-            minerals.forEach((e) => {
-              if (state.level.getBlock(x, y + 1, z) == "minecraft:" + e) {
+          if (state.persistentData.getBoolean("active") && rnd50()) {
+            global.jei.recipes.atomic.forEach((e) => {
+              const {input,output} = e;
+              if (state.level.getBlock(x, y + 1, z) == input) {
                 state.persistentData.putInt(
                   "amount",
                   state.persistentData.getInt("amount") - 100
@@ -42,7 +44,7 @@ StartupEvents.registry("block", (event) => {
                   1,
                   0.1
                 );
-                state.level.getBlock(x, y + 1, z).set("minecraft:gold_ore");
+                state.level.getBlock(x, y + 1, z).set(output);
               }
             });
           }
