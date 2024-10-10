@@ -430,6 +430,7 @@ JEIAddedEvents.registerCategories((event) => {
       //---------------------------------------------------------------------//
       .handleLookup((builder, recipe, focuses) => {
         verify(recipe.data.fuel, "INPUT", 10, 15, builder);
+        
         //verify(recipe.data.output, "OUTPUT", 65, 7, builder);
       })
     //---------------------------------------------------------------------//
@@ -439,7 +440,7 @@ JEIAddedEvents.registerCategories((event) => {
       (recipe, recipeSlotsView, guiGraphics, mouseX, mouseY) => {
         guiGraphics.drawWordWrap(
           Client.font,
-          Text.of(convertString('Base Multiplier :'+recipe.data.info+'x')).bold(),
+          Text.of(convertString('Base Multiplier '+parseFloat(recipe.data.info))),
           48,
           9,
           100,
@@ -455,12 +456,33 @@ JEIAddedEvents.registerCategories((event) => {
   //});
 });
 
+
+
+/*
+['thoriumreactors:enriched_uranium', 'thoriumreactors:depleted_uranium']
+['thoriumreactors:molten_salt', 'thoriumreactors:heated_molten_salt']
+
+['thoriumreactors:reactor_controller', 'thoriumreactors:reactor_casing', 'thoriumreactors:reactor_valve', 'thoriumreactors:reactor_rod_controller', 'thoriumreactors:reactor_core', 'thoriumreactors:reactor_graphite_moderator', 'thoriumreactors:reactor_glass']
+
+
+
+['minecraft:water', 'thoriumreactors:steam']
+['thoriumreactors:heated_molten_salt', 'thoriumreactors:depleted_molten_salt']
+['thoriumreactors:thermal_controller', 'thoriumreactors:thermal_conductor', 'thoriumreactors:thermal_valve', 'thoriumreactors:thermal_heat_sink']
+
+
+'thoriumreactors:steam'
+
+
+*/
+
+
 JEIAddedEvents.registerRecipes((event) => {
   //--------HARDCODED-RECIPES--------//
 
   event.custom("kubejs:dynamo-fuel").add({
     fuel:'minecraft:coal',
-    info: 2.0
+    info: 2
   })
 
 
