@@ -27,4 +27,3 @@ list.forEach(e=>{
 })
   
 })
-
