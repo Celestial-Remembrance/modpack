@@ -1,6 +1,7 @@
 // priority: -1
 StartupEvents.registry("item", (event) => {
   event.create("kubejs:star").texture("kubejs:item/star");
+  event.create("kubejs:star2").texture("kubejs:item/star-2");
 
   potion(event, "kubejs:limewater", 0xffffaf);
 
