@@ -23,3 +23,6 @@ function rnd75() {
 function rnd25() {
   return Math.random() < 0.25;
 }
+
+//TODO BE SIDES
+const energy_links = ['mekanism:creative_energy_cube', 'mekanism:basic_universal_cable', 'mekanism:advanced_universal_cable', 'mekanism:elite_universal_cable', 'mekanism:ultimate_universal_cable', 'mekanism:basic_energy_cube', 'mekanism:advanced_energy_cube', 'mekanism:elite_energy_cube', 'mekanism:ultimate_energy_cube']
