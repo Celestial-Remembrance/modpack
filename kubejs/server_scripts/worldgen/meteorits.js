@@ -1,6 +1,7 @@
-ServerEvents.highPriorityData((event) => {
-  global.resources.meteorites.forEach((element) => {
-    event.addJson("kubejs:worldgen/placed_feature/" + element.id, {
+ServerEvents.lowPriorityData((event) => {
+  global.resources.meteorites.forEach((element, index) => {
+    console.log(element);
+    event.addJson("kubejs:worldgen/placed_feature/" + index, {
       feature: {
         type: "minecraft:random_patch",
         config: {
@@ -14,7 +15,7 @@ ServerEvents.highPriorityData((event) => {
                 to_place: {
                   type: "minecraft:simple_state_provider",
                   state: {
-                    Name: element.id,
+                    Name: "kubejs:" + element.block,
                   },
                 },
               },
@@ -43,7 +44,13 @@ ServerEvents.highPriorityData((event) => {
       placement: [
         {
           type: "minecraft:rarity_filter",
-          chance: 8,
+          chance: 32,
+        },
+        {
+          type: "minecraft:in_square",
+        },
+        {
+          type: "minecraft:in_square",
         },
         {
           type: "minecraft:in_square",
@@ -55,27 +62,33 @@ ServerEvents.highPriorityData((event) => {
         {
           type: "minecraft:biome",
         },
-        {
-          type: "minecraft:height_range",
-          height: {
-            type: "minecraft:uniform",
-            min_inclusive: {
-              absolute: 64,
-            },
-            max_inclusive: {
-              absolute: 0,
-            },
-          },
-        },
       ],
     });
 
-    event.addJson("kubejs:forge/biome_modifier/" + element.id,
-    {
-        "type": "forge:add_features",
-        "biomes": element.biomes,
-        "features": "kubejs:"+element.id,
-        "step": "top_layer_modification"
-      })
+    event.addJson("kubejs:forge/biome_modifier/" + index, {
+      type: "forge:add_features",
+      biomes: element.biomes,
+      features: "kubejs:" + index,
+      step: "underground_decoration",
+    });
+  });
+});
+
+BlockEvents.broken((event) => {
+    if(!event.player.isCreative())
+  global.resources.meteorites.forEach((element) => {
+    if (event.block.id == "kubejs:" + element.block) {
+      element.drop.forEach((drop, index) => {
+        let success = 0;
+        for (let i = 0; i < element.multiplier[index] + 1; i++) {
+          if (rnd50()) {
+            success++;
+          }
+        }
+        if (success >= 1) {
+          event.block.popItem(Item.of(drop, success));
+        }
+      });
+    }
   });
 });
