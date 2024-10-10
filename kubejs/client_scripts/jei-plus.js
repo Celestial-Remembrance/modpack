@@ -357,12 +357,118 @@ JEIAddedEvents.registerCategories((event) => {
     //---------------------------------------------------------------------//
   });
 
+  //---------------------------------------------------------------------------------------//
+  //                                         ATOMIC                                        //
+  //---------------------------------------------------------------------------------------//
+
+  event.custom("kubejs:atomic", (category) => {
+    const {
+      jeiHelpers,
+      jeiHelpers: { guiHelper },
+    } = category;
+    category
+      .title("Block Infusion")
+      .background(
+        guiHelper.createDrawable(
+          "kubejs:textures/gui/atomic.png",
+          2,
+          2,
+          112,
+          27
+        )
+      )
+      .icon(guiHelper.createDrawableItemStack(Item.of("wooden_pickaxe")))
+      //---------------------------------------------------------------------//
+      //                            SLOT VALIDATOR                           //
+      //---------------------------------------------------------------------//
+      .isRecipeHandled((recipe) => {
+        return !!(
+          recipe?.data?.input !== undefined &&
+          recipe?.data?.output !== undefined &&
+          Item.of("stone") !== undefined
+        );
+      })
+      //---------------------------------------------------------------------//
+      //                            SLOT IO                                  //
+      //---------------------------------------------------------------------//
+      .handleLookup((builder, recipe, focuses) => {
+        verify(recipe.data.input, "INPUT", 4, 4, builder);
+        verify("stone", "INPUT", 45, 3, builder);
+        verify(recipe.data.output, "OUTPUT", 86, 4, builder);
+      });
+    //---------------------------------------------------------------------//
+    //                            TEXT DRAWING                             //
+    //---------------------------------------------------------------------//
+    //---------------------------------------------------------------------//
+  });
+  //---------------------------------------------------------------------------------------//
+  //                                      DYNAMO FUEL                                      //
+  //---------------------------------------------------------------------------------------//
+
+  event.custom("kubejs:dynamo-fuel", (category) => {
+    const {
+      jeiHelpers,
+      jeiHelpers: { guiHelper },
+    } = category;
+    category
+      .title("Dynamo Fuel")
+      .background(
+        guiHelper.createDrawable("kubejs:textures/gui/dynamo_fuel.png", 2, 2, 144, 51)
+      )
+      .icon(guiHelper.createDrawableItemStack(Item.of("coal")))
+      //---------------------------------------------------------------------//
+      //                            SLOT VALIDATOR                           //
+      //---------------------------------------------------------------------//
+      .isRecipeHandled((recipe) => {
+        return !!(
+          recipe?.data?.fuel !== undefined &&
+          recipe?.data?.info !== undefined
+        );
+      })
+      //---------------------------------------------------------------------//
+      //                            SLOT IO                                  //
+      //---------------------------------------------------------------------//
+      .handleLookup((builder, recipe, focuses) => {
+        verify(recipe.data.fuel, "INPUT", 10, 15, builder);
+        //verify(recipe.data.output, "OUTPUT", 65, 7, builder);
+      })
+    //---------------------------------------------------------------------//
+    //                            TEXT DRAWING                             //
+    //---------------------------------------------------------------------//
+    .setDrawHandler(
+      (recipe, recipeSlotsView, guiGraphics, mouseX, mouseY) => {
+        guiGraphics.drawWordWrap(
+          Client.font,
+          Text.of(convertString('Base Multiplier :'+recipe.data.info+'x')).bold(),
+          48,
+          9,
+          100,
+          0
+        );
+      }
+    );
+    //---------------------------------------------------------------------//
+  });
+
+
     //---------------------------------------------------------------------//
   //});
 });
 
 JEIAddedEvents.registerRecipes((event) => {
   //--------HARDCODED-RECIPES--------//
+
+  event.custom("kubejs:dynamo-fuel").add({
+    fuel:'minecraft:coal',
+    info: 2.0
+  })
+
+
+  event.custom("kubejs:atomic").add({
+    input:'minecraft:dirt',
+    output:"minecraft:cobblestone"
+  })
+
 
     //mud to clay
     event.custom("kubejs:random-tick").add({
