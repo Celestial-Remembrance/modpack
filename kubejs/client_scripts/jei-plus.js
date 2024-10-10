@@ -383,7 +383,7 @@ JEIAddedEvents.registerCategories((event) => {
           27
         )
       )
-      .icon(guiHelper.createDrawableItemStack(Item.of("wooden_pickaxe")))
+      .icon(guiHelper.createDrawableItemStack(Item.of('kubejs:converter')))
       //---------------------------------------------------------------------//
       //                            SLOT VALIDATOR                           //
       //---------------------------------------------------------------------//
@@ -391,7 +391,7 @@ JEIAddedEvents.registerCategories((event) => {
         return !!(
           recipe?.data?.input !== undefined &&
           recipe?.data?.output !== undefined &&
-          Item.of("stone") !== undefined
+          Item.of('kubejs:converter') !== undefined
         );
       })
       //---------------------------------------------------------------------//
@@ -399,7 +399,7 @@ JEIAddedEvents.registerCategories((event) => {
       //---------------------------------------------------------------------//
       .handleLookup((builder, recipe, focuses) => {
         verify(recipe.data.input, "INPUT", 4, 4, builder);
-        verify("stone", "INPUT", 45, 3, builder);
+        verify('kubejs:converter', "INPUT", 45, 3, builder);
         verify(recipe.data.output, "OUTPUT", 86, 4, builder);
       });
     //---------------------------------------------------------------------//
@@ -427,7 +427,7 @@ JEIAddedEvents.registerCategories((event) => {
           51
         )
       )
-      .icon(guiHelper.createDrawableItemStack(Item.of("coal")))
+      .icon(guiHelper.createDrawableItemStack(Item.of('kubejs:dynamo')))
       //---------------------------------------------------------------------//
       //                            SLOT VALIDATOR                           //
       //---------------------------------------------------------------------//
