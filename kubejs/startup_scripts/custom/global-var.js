@@ -36,7 +36,6 @@ global.resources = {
     {
       id: "1",
       block: "mercury_meteorite",
-      texture: "minecraft:block/stone",
       drop: ["kubejs:copper_shard", "kubejs:tin_shard"],
       multiplier: [20, 12],
       biomes: ["ad_astra:lunar_wastelands"],
@@ -44,7 +43,6 @@ global.resources = {
     {
       id: "2",
       block: "mars_meteorite",
-      texture: "minecraft:block/red_sandstone",
       drop: [
         "kubejs:iron_shard",
         "kubejs:redstone_shard",
