@@ -48,6 +48,7 @@ global.resources = {
         "kubejs:iron_shard",
         "kubejs:redstone_shard",
         "kubejs:nickel_shard",
+        "kubejs:coal_shard"
       ],
       multiplier: [14, 24, 10],
       biomes: ["ad_astra:martian_wastelands"],
