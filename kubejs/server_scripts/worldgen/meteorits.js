@@ -1,6 +1,5 @@
 ServerEvents.lowPriorityData((event) => {
   global.resources.meteorites.forEach((element, index) => {
-    console.log(element);
     event.addJson("kubejs:worldgen/placed_feature/" + index, {
       feature: {
         type: "minecraft:random_patch",
@@ -86,7 +85,7 @@ BlockEvents.broken((event) => {
           }
         }
         if (success >= 1) {
-          event.block.offset(0,1.25,0).popItemFromFace(Item.of(drop, success),"down");
+          event.block.offset('up').popItemFromFace(Item.of(drop, success),'down');
         }
       });
     }
