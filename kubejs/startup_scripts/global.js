@@ -120,17 +120,12 @@ function crystal_block(event, id, color) {
   event
     .create(id + "_crystal_block")
     .color(0, color)
-    //.texture("layer0", "kubejs:block/template/crystal");
-
+    .defaultCutout()
+    .model("kubejs:block/crystal")
     .item((item) => {
-      item.modelJson({
-        parent: "block/block",
-        textures: { layer0: "kubejs:block/template/crystal" },
-      });
-    }).modelJson = {
-    parent: "block/block",
-    textures: { layer0: "kubejs:block/template/crystal" },
-  };
+      item.color(0, color);
+      item.parentModel("kubejs:block/crystal");
+    });
 }
 
 /**
@@ -198,7 +193,7 @@ function meteors(planets) {
       list.push({ model: "kubejs:block/sample/" + e, y: r });
     });
   });
-  console.log({ variants: { "": list } });
+  //console.log({ variants: { "": list } });
   return { variants: { "": list } };
 }
 
