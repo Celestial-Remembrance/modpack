@@ -173,10 +173,20 @@ function dirty_dust(event, id, color, moreDirty) {
   }
 }
 
-function meteors() {
-  let planets = ["moon", "mars", "mercury", "venus", "glacio"];
+/**
+ *
+ * @param {} planets
+ * @returns
+ */
+function meteors(planets) {
   let rot = [0, 90, 180, 270];
   let list = [];
+
+  if (planets == "all")
+    planets = ["moon", "mars", "mercury", "venus", "glacio"];
+
+  if (!Array.isArray(planets)) planets = [planets];
+
   rot.forEach((r) => {
     planets.forEach((e) => {
       list.push({ model: "kubejs:block/sample/" + e, y: r });
