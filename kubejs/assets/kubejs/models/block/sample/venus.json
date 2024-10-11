@@ -1,0 +1,6 @@
+{
+  "parent": "kubejs:block/sample/base_sample",
+  "textures": {
+    "block": "ad_astra:block/venus_cobblestone"
+  }
+}
