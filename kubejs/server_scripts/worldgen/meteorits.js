@@ -86,7 +86,7 @@ BlockEvents.broken((event) => {
           }
         }
         if (success >= 1) {
-          event.block.popItem(Item.of(drop, success));
+          event.block.offset(0,1.25,0).popItemFromFace(Item.of(drop, success),"down");
         }
       });
     }
