@@ -119,6 +119,7 @@ function shard(event, id, color, vanilla) {
 function crystal_block(event, id, color) {
   event
     .create(id + "_crystal_block")
+    .soundType(SoundType.AMETHYST)
     .color(0, color)
     .defaultCutout()
     .model("kubejs:block/crystal")
