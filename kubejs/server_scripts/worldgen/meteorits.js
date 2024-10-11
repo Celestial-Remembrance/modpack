@@ -74,7 +74,7 @@ ServerEvents.lowPriorityData((event) => {
 });
 
 BlockEvents.broken((event) => {
-    //if(!event.player.isCreative())
+    if(!event.player.isCreative())
   global.resources.meteorites.forEach((element) => {
     if (event.block.id == "kubejs:" + element.block) {
       element.drop.forEach((drop, index) => {
