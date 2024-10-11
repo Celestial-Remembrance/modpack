@@ -6,9 +6,10 @@ StartupEvents.registry("block", (event) => {
       .defaultCutout()
       .soundType(SoundType.ANCIENT_DEBRIS)
       .box(1, 0, 1, 14, 3, 14)
+      .noDrops()
       .item((item) => {
         item.modelJson({
-          parent: "kubejs:block/sample/mercury",
+          parent: "kubejs:block/sample/"+ element.icon,
         });
       }).blockstateJson = meteors(element.type);
   });
