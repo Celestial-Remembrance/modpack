@@ -4,11 +4,12 @@ StartupEvents.registry("block", (event) => {
     event
       .create(element.block, "cardinal")
       .defaultCutout()
+      .soundType(SoundType.ANCIENT_DEBRIS)
       .box(1, 0, 1, 14, 3, 14)
       .item((item) => {
         item.modelJson({
           parent: "kubejs:block/sample/mercury",
         });
-      }).blockstateJson = meteors();
+      }).blockstateJson = meteors(element.type);
   });
 });
