@@ -1,0 +1,230 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "2"
+	group: ""
+	id: "6DE8C0C97E0EB6D6"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4BFAE93DBE2CF97C"]
+			id: "56D8A43D9BEC628F"
+			shape: "square"
+			tasks: [{
+				id: "7C07C4C7648C0223"
+				item: "factorium:alloy"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3958C5A713B861EC"]
+			id: "2FAFCEC63A6170FB"
+			tasks: [{
+				id: "10BC76982C2BA453"
+				item: "mekanism:ingot_steel"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["0E2AAEAB608B1B22"]
+			id: "2F8DA95EF450A177"
+			tasks: [{
+				id: "6FD190EF4911CA4B"
+				item: "industrialforegoing:plant_sower"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["56D8A43D9BEC628F"]
+			id: "2B9679DD9C47CEE2"
+			tasks: [{
+				id: "634186FF48E8CFDF"
+				item: "alchemistry:dissolver"
+				type: "item"
+			}]
+			x: -9.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["075AC8146E6EF906"]
+			id: "73A62D534AD513E9"
+			tasks: [
+				{
+					id: "414E727479106BB9"
+					item: "chemlib:cellulose"
+					type: "item"
+				}
+				{
+					id: "46C80FADF857CA3B"
+					item: "chemlib:oxygen"
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["73A62D534AD513E9"]
+			id: "29673DAB27165733"
+			tasks: [{
+				id: "7B6FEF8573EF0930"
+				item: "minecraft:oak_sapling"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"29673DAB27165733"
+				"2F8DA95EF450A177"
+			]
+			id: "70D7844E9B691669"
+			tasks: [{
+				id: "5CA4A89DE4FF0F2A"
+				item: "minecraft:oak_log"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"70D7844E9B691669"
+				"56C9241597C7AE61"
+			]
+			id: "3958C5A713B861EC"
+			tasks: [{
+				id: "7E5B99F42CEB542A"
+				item: "minecraft:charcoal"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["56D8A43D9BEC628F"]
+			id: "6E618AD00F2EAA2E"
+			tasks: [{
+				id: "6690D417651EA353"
+				item: "factorium:smelter"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6E618AD00F2EAA2E"]
+			id: "15273E4BBFF743AF"
+			tasks: [{
+				id: "7FBD5E3AD5D0E3F6"
+				item: "factorium:mixer"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["15273E4BBFF743AF"]
+			id: "56C9241597C7AE61"
+			tasks: [{
+				id: "7022CA153FA9D479"
+				item: "factorium:grinder"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["2FAFCEC63A6170FB"]
+			id: "7A86EE5540BF8FAE"
+			tasks: [{
+				id: "4BEBC4313235EA58"
+				item: "thermal:upgrade_augment_1"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["2B9679DD9C47CEE2"]
+			id: "075AC8146E6EF906"
+			tasks: [{
+				id: "3E76BCA90D3B2FAB"
+				item: "alchemistry:combiner"
+				type: "item"
+			}]
+			x: -5.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["56D8A43D9BEC628F"]
+			id: "0E2AAEAB608B1B22"
+			tasks: [{
+				id: "6640FA13D48234CA"
+				item: "industrialforegoing:plant_gatherer"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7A86EE5540BF8FAE"]
+			id: "29800B08AEE76F85"
+			tasks: [{
+				id: "03DA6C526CFE43BF"
+				item: "ad_astra:moon_desh_ore"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["29800B08AEE76F85"]
+			id: "2C78EF018331C78B"
+			tasks: [{
+				id: "0EE33656BA5C18BA"
+				item: "ad_astra:desh_plate"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["2C78EF018331C78B"]
+			id: "1758A146DE115500"
+			tasks: [{
+				id: "2AD64CA32944AD50"
+				item: "ad_astra:nasa_workbench"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["1758A146DE115500"]
+			id: "143E016AA1576F3A"
+			shape: "gear"
+			size: 2.5d
+			tasks: [{
+				id: "45DEDD507285B9C3"
+				item: {
+					Count: 1
+					id: "ad_astra:tier_1_rocket"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -9.0d
+			y: 5.0d
+		}
+	]
+	title: "2"
+}
