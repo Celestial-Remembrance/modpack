@@ -120,7 +120,7 @@ function crystal_block(event, id, color) {
   event
     .create(id + "_crystal_block")
     .color(0, color)
-    .texture("layer0", "kubejs:block/template/crystal")
+    .texture("layer0", "kubejs:block/template/crystal");
   //   .modelJson = {
   //   parent: "block/block",
   //   textures: { layer0: "kubejs:block/template/crystal" },
@@ -173,10 +173,18 @@ function dirty_dust(event, id, color, moreDirty) {
   }
 }
 
-
-
-
-
+function meteors() {
+  let planets = ["moon", "mars", "mercury", "venus", "glacio"];
+  let rot = [0, 90, 180, 270];
+  let list = [];
+  rot.forEach((r) => {
+    planets.forEach((e) => {
+      list.push({ model: "kubejs:block/sample/" + e, y: r });
+    });
+  });
+  console.log({ variants: { "": list } });
+  return { variants: { "": list } };
+}
 
 //
 //
