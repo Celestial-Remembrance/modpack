@@ -17,26 +17,12 @@ StartupEvents.registry("block", (event) => {
   });
 
   global.resources.meteorites.forEach((element) => {
-    event
-      .create(element.block)
-      .defaultCutout()
-      .soundType(SoundType.ANCIENT_DEBRIS)
-      .box(1, 0, 1, 14, 3, 14)
-      .noDrops()
-      .item((item) => {
-        item.modelJson({
-          parent: "kubejs:block/sample/"+ element.type,
-        });
-      }).blockstateJson = meteors(element.type);
+    meteors(event,element.block,element.type)
   });
 
 
-event.create('a').modelJson ={
-  "parent": "kubejs:block/special/_double_layer",
-  "textures": {
-    "top": "kubejs:block/template/ores/diamond",
-    "below": "minecraft:block/cobblestone"
-  }
-}
+  ore(event,'kubejs:fancy_cake','gold','ad_astra:block/moon_stone')
+
+
 
 });
