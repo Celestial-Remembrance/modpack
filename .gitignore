@@ -182,7 +182,7 @@ config/ad_astra.jsonc
 config/ad_astra.jsonc
 config/ad_astra.jsonc
 *.jsonc
-blueprints/michepoli/pack.json
+blueprints/
 config/badoptimizations.txt
 config/betterfpsdist.json
 config/chunksending.json
@@ -198,7 +198,7 @@ config/findme.json
 config/fluxnetworks-common.toml
 config/gamemenumodoption-client.toml
 config/kleeslabs-common.toml
-config/mm/pack/.cache/59eb3dbb5f86130e09b3c62d89b9525ee01cf52d
+config/mm/
 config/mm/pack/.cache/5d7c155008efc6fe4d744502cd6fc13b5ed4ee6b
 config/mm/pack/.cache/a358578d4b4df6570846462a55d6efe8286ff0a1
 config/mm/pack/.cache/c4675e2bfd2a93402b231d01cde3741490187212
