@@ -1,77 +1,107 @@
-/**
- * 
- * @param {item} item item id
- * @param {block} id_block block id of generator
- * @param {number} rfgen FE generated / tick
- */
-let i = 0
-function dynamo(item,id_block,rfgen,consume){
+// priority: -1
+let baseFEgen = 100;
 StartupEvents.registry("block", (event) => {
-  event.create(id_block).property($BooleanProperty.create("active")).blockEntity((be) => {
-      be.inventory(9, 1, item);
-      be.rightClickOpensInventory();
+  event
+    .create("dynamo")
+    .property($BooleanProperty.create("active"))
+    .property(BlockProperties.NORTH)
+    .property(BlockProperties.SOUTH)
+    .property(BlockProperties.EAST)
+    .property(BlockProperties.WEST)
+    .defaultState((state) => {
+      state
+        .set($BooleanProperty.create("active"), false)
+        .set(BlockProperties.NORTH, false)
+        .set(BlockProperties.SOUTH, false)
+        .set(BlockProperties.EAST, false)
+        .set(BlockProperties.WEST, false);
+    })
+    .placementState((state) => {
+      state
+        .set($BooleanProperty.create("active"), false)
+        .set(BlockProperties.NORTH, false)
+        .set(BlockProperties.SOUTH, false)
+        .set(BlockProperties.EAST, false)
+        .set(BlockProperties.WEST, false);
+    })
+    .rightClick((click) => {
+      const { properties } = click.block;
+      let direc = ["north", "south", "east", "west"];
+      let obj = {};
+      direc.forEach((e) => {
+        obj[e] = properties.get(e);
+      });
 
-        be.serverTick(1,0,state=>{
-
-          state.persistentData.putBoolean('active',(!state.inventory.isEmpty()))
-          state.persistentData.putInt('delay',state.persistentData.getInt('delay')+1)
-
-          state.block.set(state.block.id, {active: state.persistentData.getBoolean('active')})
-
-            if(state.persistentData.getBoolean('active'))
-            state.persistentData.putInt('rate',state.inventory.count(item))
-
-            if(state.persistentData.getInt('delay') >= 20){
-              state.persistentData.putInt('delay',0)
-              if(state.persistentData.getBoolean('active') && consume){
-                state.inventory.extractItem(state.inventory.find(item),1,false)
-              }
-            }
-
-
-        })
+      if (click.item == "kubejs:star") {
+        obj["active"] = true;
+        click.block.set(click.block.id, obj);
+      }
+    })
+    .steppedOn((step) => {
+      if (step.block.properties.get("active").toLowerCase() === "true") {
+        step.entity.remainingFireTicks = 30;
+      }
+    })
+    .blockEntity((be) => {
+      be.serverTick(1, 0, (state) => {
+        let direc = ["north", "south", "east", "west"];
+        let result = {
+          active: state.persistentData.getBoolean("active"),
+        };
+        direc.forEach((dir) => {
+          result[dir] =
+            global.be.energy_links.indexOf(state.block.offset(dir).id) != -1
+              ? true
+              : false;
+        });
+        state.block.set(state.block.id, result);
+      });
       be.attachCapability(
         CapabilityBuilder.ENERGY.customBlockEntity()
           .canExtract(() => true)
           .canReceive(() => false)
 
-          .extractEnergy(energy => {
-            if (energy.persistentData.getBoolean('active')) {
-              return rfgen * energy.persistentData.getInt('rate');
-            } else {
-              return 0;
-            }
+          .extractEnergy((energy) => {
+            return energy.persistentData.getBoolean("active") ? 100 : 0;
           })
-
-          .getEnergyStored(energy => {
-            if (energy.persistentData.getBoolean('active')) {
-              return rfgen * energy.persistentData.getInt('rate');
-            } else {
-              return 0;
-            }
+          .getEnergyStored((energy) => {
+            return energy.persistentData.getBoolean("active") ? 100 : 0;
           })
-          .getMaxEnergyStored(energy => {
-            if (energy.persistentData.getBoolean('active')) {
-              return rfgen * energy.persistentData.getInt('rate');
-            } else {
-              return 0;
-            }
+          .getMaxEnergyStored((energy) => {
+            return energy.persistentData.getBoolean("active") ? 100 : 0;
           })
       );
-    }).item(item=>{
+    })
+    .item((item) => {
       item.modelJson({
-        "parent": "kubejs:block/dynamo/off"
-      })
-
+        parent: "kubejs:block/dynamo/off",
+      });
     }).blockstateJson = {
-      "variants": {
-          "active=true": { "model": "kubejs:block/dynamo/on" },
-          "active=false": { "model": "kubejs:block/dynamo/off" }
-      }
-  }
+    multipart: [
+      {
+        when: { active: "false" },
+        apply: { model: "kubejs:block/dynamo/off" },
+      },
+      {
+        when: { active: "true" },
+        apply: { model: "kubejs:block/dynamo/on" },
+      },
+      {
+        when: { north: "true" },
+        apply: { model: "kubejs:block/dynamo/parts/port" },
+      },
+      {
+        when: { east: "true" },
+        apply: { model: "kubejs:block/dynamo/parts/port", y: 90 },
+      },
+      {
+        when: { west: "true" },
+        apply: { model: "kubejs:block/dynamo/parts/port", y: -90 },
+      },
+      {
+        when: { south: "true" },
+        apply: { model: "kubejs:block/dynamo/parts/port", y: 180 },
+      },
+    ],
+  };
 });
-}
-
-dynamo('minecraft:redstone','dynamo',20,false)
-dynamo('minecraft:redstone','omega_dynamo',2000,true)
-
