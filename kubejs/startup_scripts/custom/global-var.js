@@ -29,12 +29,6 @@ global.jei = {
         output: "minecraft:coal_block",
       },
     ],
-    dynamo_fuel:[
-      {
-        fuel: "minecraft:coal",
-        info: 2,
-      }
-    ],
     blockdrop:[]
   },
 };
@@ -130,11 +124,3 @@ global.be = {
     "mekanism:ultimate_energy_cube",
   ]
 }
-
-global.tags = {
-  dynamo_fuel:[]
-}
-
-global.jei.recipes.dynamo_fuel.forEach((r) => {
-  global.tags.dynamo_fuel.push(r.fuel);
-});
