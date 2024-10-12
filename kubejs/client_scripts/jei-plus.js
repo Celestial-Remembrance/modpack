@@ -452,11 +452,11 @@ JEIAddedEvents.registerCategories((event) => {
           guiGraphics.drawWordWrap(
             Client.font,
             Text.of(
-              convertString("Base Multiplier : ")+recipe.data.info
+              convertString("Base Multiplier : ")+recipe.data.info+convertString('x')
             ),
-            48,
+            35,
             9,
-            100,
+            150,
             0
           );
         }
@@ -511,9 +511,9 @@ JEIAddedEvents.registerCategories((event) => {
             Text.of(
               convertString("Modifier : ")+recipe.data.info[0]
             ),
-            30,
+            35,
             9,
-            80,
+            150,
             0
           );
 
@@ -524,9 +524,9 @@ JEIAddedEvents.registerCategories((event) => {
                 "Max Energy : "
               )+recipe.data.info[1]+convertString(" ⚡/t")
             ),
+            35,
             30,
-            30,
-            80,
+            150,
             0
           );
         }
