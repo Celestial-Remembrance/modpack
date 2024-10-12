@@ -33,8 +33,7 @@ StartupEvents.registry("block", (event) => {
       });
 
       if (click.item == "kubejs:star") {
-        obj["active"] = true;
-        click.block.set(click.block.id, obj);
+        click.persistentData.putBoolean("active",true)
       }
     })
     .steppedOn((step) => {
