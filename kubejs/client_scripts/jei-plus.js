@@ -19,7 +19,7 @@ JEIAddedEvents.registerCategories((event) => {
           128
         )
       )
-      .icon(guiHelper.createDrawableItemStack(Item.of("wooden_pickaxe")))
+      .icon(guiHelper.createDrawableItemStack(Item.of("kubejs:icon_click")))
       //---------------------------------------------------------------------//
       //                            SLOT VALIDATOR                           //
       //---------------------------------------------------------------------//
@@ -554,7 +554,7 @@ JEIAddedEvents.registerCategories((event) => {
           69
         )
       )
-      .icon(guiHelper.createDrawableItemStack(Item.of("wooden_pickaxe")))
+      .icon(guiHelper.createDrawableItemStack(Item.of("kubejs:icon_tree")))
       //---------------------------------------------------------------------//
       //                            SLOT VALIDATOR                           //
       //---------------------------------------------------------------------//
