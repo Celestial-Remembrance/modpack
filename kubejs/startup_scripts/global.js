@@ -27,8 +27,8 @@ function rnd25() {
 }
 /**
  *
- * @param {event} event
- * @param {Item} id
+ * @param {Event} event
+ * @param {string} id
  * @param {Color} color
  */
 function potion(event, id, color) {
@@ -40,8 +40,8 @@ function potion(event, id, color) {
 }
 /**
  *
- * @param {event} event
- * @param {Item} id
+ * @param {Event} event
+ * @param {string} id
  * @param {Color} color
  */
 function clump(event, id, color) {
@@ -53,8 +53,8 @@ function clump(event, id, color) {
 }
 /**
  *
- * @param {event} event
- * @param {Item} id
+ * @param {Event} event
+ * @param {string} id
  * @param {Color} color
  * @param {boolean} isclassic true -> classic | false -> meka style
  */
@@ -69,8 +69,8 @@ function nugget(event, id, color, isclassic) {
 }
 /**
  *
- * @param {event} event
- * @param {Item} id
+ * @param {Event} event
+ * @param {string} id
  * @param {Color} color
  */
 function ingot(event, id, color) {
@@ -81,8 +81,8 @@ function ingot(event, id, color) {
 }
 /**
  *
- * @param {event} event
- * @param {Item} id
+ * @param {Event} event
+ * @param {string} id
  * @param {Color} color
  */
 function crystal(event, id, color) {
@@ -94,8 +94,8 @@ function crystal(event, id, color) {
 }
 /**
  *
- * @param {event} event
- * @param {Item} id
+ * @param {Event} event
+ * @param {string} id
  * @param {Color} color
  */
 function shard(event, id, color, vanilla) {
@@ -113,9 +113,9 @@ function shard(event, id, color, vanilla) {
   }
 }
 /**
- * 
- * @param {event} event
- * @param {Item} id
+ *
+ * @param {Event} event
+ * @param {string} id
  * @param {Color} color
  */
 function crystal_block(event, id, color) {
@@ -132,8 +132,8 @@ function crystal_block(event, id, color) {
 }
 /**
  *
- * @param {event} event
- * @param {Item} id
+ * @param {Event} event
+ * @param {string} id
  * @param {Color} color
  * @param {boolean} extradirty true -> extra layer | false -> no extra layer
  */
@@ -153,8 +153,8 @@ function dust(event, id, color, moreDirty) {
 }
 /**
  *
- * @param {event} event
- * @param {Item} id
+ * @param {Event} event
+ * @param {string} id
  * @param {Color} color
  * @param {boolean} extradirty true -> extra layer | false -> no extra layer
  */
@@ -175,46 +175,55 @@ function dirty_dust(event, id, color, moreDirty) {
   }
 }
 /**
- *
- * @param {} planets
- * @returns
+ * 
+ * @param {Event} event 
+ * @param {string} blockid 
+ * @param {string[]} planets 
  */
-function meteors(planets) {
-  let rot = [0, 90, 180, 270];
-  let list = [];
+function meteors(event, blockid, type) {
+  let methstate = (planets) => {
+    let rot = [0, 90, 180, 270];
+    let list = [];
 
-  if (planets == "all")
-    planets = ["moon", "mars", "mercury", "venus", "glacio"];
+    if (planets == "all")
+      planets = ["moon", "mars", "mercury", "venus", "glacio"];
 
-  if (!Array.isArray(planets)) planets = [planets];
+    if (!Array.isArray(planets)) planets = [planets];
 
-  rot.forEach((r) => {
-    planets.forEach((e) => {
-      list.push({ model: "kubejs:block/sample/" + e, y: r });
+    rot.forEach((r) => {
+      planets.forEach((e) => {
+        list.push({ model: "kubejs:block/sample/" + e, y: r });
+      });
     });
-  });
-  //console.log({ variants: { "": list } });
-  return { variants: { "": list } };
+    return { variants: { "": list } };
+  }
+  event
+    .create(blockid)
+    .defaultCutout()
+    .soundType(SoundType.ANCIENT_DEBRIS)
+    .box(1, 0, 1, 14, 3, 14)
+    .noDrops()
+    .item((item) => {
+      item.modelJson({
+        parent: "kubejs:block/sample/" + type,
+      });
+    }).blockstateJson = methstate(type);
+}
+/**
+ *
+ * @param {Event} event
+ * @param {string} id
+ * @param {string} type  example "uranium" -> "kubejs:block/template/ore/" + "uranium"
+ * @param {string} stone example "minecraft:block/stone"
+ */
+function ore(event, id, type, stone) {
+  event.create(id).defaultCutout().modelJson = {
+    parent: "kubejs:block/special/_double_layer",
+    textures: {
+      top: "kubejs:block/template/ores/" + type,
+      below: stone,
+    },
+  };
 }
 
 
-
-//
-//
-//
-//
-
-//TODO BE SIDES
-const energy_links = [
-  "ad_astra:steel_cable",
-  "ad_astra:desh_cable",
-  "mekanism:creative_energy_cube",
-  "mekanism:basic_universal_cable",
-  "mekanism:advanced_universal_cable",
-  "mekanism:elite_universal_cable",
-  "mekanism:ultimate_universal_cable",
-  "mekanism:basic_energy_cube",
-  "mekanism:advanced_energy_cube",
-  "mekanism:elite_energy_cube",
-  "mekanism:ultimate_energy_cube",
-];
