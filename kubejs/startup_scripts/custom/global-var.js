@@ -49,7 +49,7 @@ global.resources = {
         "kubejs:nickel_shard",
         "kubejs:coal_shard"
       ],
-      multiplier: [14, 24, 10],
+      multiplier: [14, 24, 10,5],
       biomes: ["ad_astra:martian_wastelands"],
       type: "mars",
     },
