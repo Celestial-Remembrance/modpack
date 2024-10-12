@@ -452,7 +452,7 @@ JEIAddedEvents.registerCategories((event) => {
           guiGraphics.drawWordWrap(
             Client.font,
             Text.of(
-              convertString("Base Multiplier : ")+recipe.data.info+convertString('x')
+              convertString("Base Power : ")+('§a'+recipe.data.info)+convertString('⚡/t ')
             ),
             35,
             9,
@@ -598,8 +598,8 @@ JEIAddedEvents.registerRecipes((event) => {
   });
 
   event.custom("kubejs:dynamo-fuel").add({
-    fuel: "minecraft:coal",
-    info: '§a2.0',
+    fuel: "kubejs:star",
+    info: 100,
   });
 
   //mud to clay
