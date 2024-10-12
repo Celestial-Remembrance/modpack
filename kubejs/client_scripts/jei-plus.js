@@ -452,7 +452,7 @@ JEIAddedEvents.registerCategories((event) => {
           guiGraphics.drawWordWrap(
             Client.font,
             Text.of(
-              convertString("Base Multiplier " + parseFloat(recipe.data.info))
+              convertString("Base Multiplier : ")+recipe.data.info
             ),
             48,
             9,
@@ -509,9 +509,9 @@ JEIAddedEvents.registerCategories((event) => {
           guiGraphics.drawWordWrap(
             Client.font,
             Text.of(
-              convertString("Modifier : " + recipe.data.info[0])
+              convertString("Modifier : ")+recipe.data.info[0]
             ),
-            48,
+            30,
             9,
             80,
             0
@@ -521,10 +521,10 @@ JEIAddedEvents.registerCategories((event) => {
             Client.font,
             Text.of(
               convertString(
-                "Max Energy :" + recipe.data.info[1] + " ⚡/t"
-              )
+                "Max Energy : "
+              )+recipe.data.info[1]+convertString(" ⚡/t")
             ),
-            48,
+            30,
             30,
             80,
             0
@@ -599,13 +599,8 @@ JEIAddedEvents.registerRecipes((event) => {
 
   event.custom("kubejs:dynamo-fuel").add({
     fuel: "minecraft:coal",
-    info: 2,
+    info: '§a2.0',
   });
-
-  // event.custom("kubejs:atomic").add({
-  //   input: "minecraft:dirt",
-  //   output: "minecraft:cobblestone",
-  // });
 
   //mud to clay
   event.custom("kubejs:random-tick").add({
@@ -670,6 +665,10 @@ JEIAddedEvents.registerRecipes((event) => {
 
   global.jei.recipes.atomic.forEach((element) => {
     event.custom("kubejs:atomic").add(element);
+  });
+
+  global.jei.recipes.blockdrop.forEach((element) => {
+    event.custom("kubejs:block-drop").add(element);
   });
 
   //---------------------------------//
