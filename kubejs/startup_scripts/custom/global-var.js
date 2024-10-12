@@ -110,3 +110,18 @@ global.resources.meteorites.forEach(element => {
 });
 
 
+global.be = {
+  energy_links : [
+    "ad_astra:steel_cable",
+    "ad_astra:desh_cable",
+    "mekanism:creative_energy_cube",
+    "mekanism:basic_universal_cable",
+    "mekanism:advanced_universal_cable",
+    "mekanism:elite_universal_cable",
+    "mekanism:ultimate_universal_cable",
+    "mekanism:basic_energy_cube",
+    "mekanism:advanced_energy_cube",
+    "mekanism:elite_energy_cube",
+    "mekanism:ultimate_energy_cube",
+  ]
+}
