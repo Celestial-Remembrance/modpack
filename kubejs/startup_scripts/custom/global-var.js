@@ -63,4 +63,30 @@ global.resources = {
       type: "all",
     },
   ],
+  crystals:[
+    {
+      id: "copper",
+      color: 0xffb451,
+    },
+    {
+      id: "iron",
+      color: 0xdbdbdb,
+    },
+    {
+      id: "tin",
+      color: 0xa9e6dc,
+    },
+    {
+      id: "redstone",
+      color: 0xf73737,
+    },
+    {
+      id: "coal",
+      color: 0x616161,
+    },
+    {
+      id: "nickel",
+      color: 0xf0dd8e,
+    }
+  ]
 };
