@@ -25,8 +25,18 @@ StartupEvents.registry("block", (event) => {
       .noDrops()
       .item((item) => {
         item.modelJson({
-          parent: "kubejs:block/sample/"+ element.icon,
+          parent: "kubejs:block/sample/"+ element.type,
         });
       }).blockstateJson = meteors(element.type);
   });
+
+
+event.create('a').modelJson ={
+  "parent": "kubejs:block/special/_double_layer",
+  "textures": {
+    "top": "kubejs:block/template/ores/diamond",
+    "below": "minecraft:block/cobblestone"
+  }
+}
+
 });
