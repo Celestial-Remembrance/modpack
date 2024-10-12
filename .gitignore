@@ -168,3 +168,17 @@ kubejs/assets/kubejs/textures/block/example_block.png
 kubejs/client_scripts/example.js
 instance.json
 instance.png
+config/appflux-common.toml
+config/advgenerators-common.toml
+config/advanced_ae-common.toml
+config/ad_astra.jsonc
+config/ad_astra-client.jsonc
+config/ad_astra_giselle_addon.ver2.jsonc
+config/mcjtylib-client.toml
+config/rftoolsbuilder-client.toml
+config/rftoolsdim-common.toml
+config/rftoolsutility-client.toml
+config/ad_astra.jsonc
+config/ad_astra.jsonc
+config/ad_astra.jsonc
+*.jsonc

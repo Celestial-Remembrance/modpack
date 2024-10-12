@@ -1,0 +1,20 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "4"
+	group: ""
+	id: "71627F79C69D7B9A"
+	order_index: 3
+	quest_links: [ ]
+	quests: [{
+		id: "23AF437DE9E51EC6"
+		tasks: [{
+			id: "5E4C394CF5C7CF50"
+			item: "mekanism:qio_drive_array"
+			type: "item"
+		}]
+		x: -4.0d
+		y: -2.0d
+	}]
+	title: "4"
+}

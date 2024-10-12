@@ -22,12 +22,14 @@
 		{
 			dependencies: ["3958C5A713B861EC"]
 			id: "2FAFCEC63A6170FB"
+			shape: "gear"
+			size: 2.0d
 			tasks: [{
 				id: "10BC76982C2BA453"
 				item: "mekanism:ingot_steel"
 				type: "item"
 			}]
-			x: 5.0d
+			x: 3.0d
 			y: 2.5d
 		}
 		{
@@ -38,7 +40,7 @@
 				item: "industrialforegoing:plant_sower"
 				type: "item"
 			}]
-			x: -2.0d
+			x: -3.0d
 			y: 0.0d
 		}
 		{
@@ -57,29 +59,56 @@
 			id: "73A62D534AD513E9"
 			tasks: [
 				{
-					id: "414E727479106BB9"
-					item: "chemlib:cellulose"
+					id: "1D048A466DC70402"
+					item: "chemlib:carbon"
 					type: "item"
 				}
 				{
-					id: "46C80FADF857CA3B"
+					id: "7C6680CA339B130D"
+					item: "chemlib:hydrogen"
+					type: "item"
+				}
+				{
+					id: "2BF54A6B70066343"
 					item: "chemlib:oxygen"
 					type: "item"
 				}
 			]
-			x: -2.0d
+			x: -3.0d
 			y: -2.5d
 		}
 		{
-			dependencies: ["73A62D534AD513E9"]
+			dependencies: ["2F765057287E7614"]
 			id: "29673DAB27165733"
-			tasks: [{
-				id: "7B6FEF8573EF0930"
-				item: "minecraft:oak_sapling"
-				type: "item"
-			}]
-			x: 1.5d
-			y: -2.5d
+			tasks: [
+				{
+					id: "7B6FEF8573EF0930"
+					item: "minecraft:oak_sapling"
+					type: "item"
+				}
+				{
+					id: "01A945C825BB566F"
+					item: "minecraft:wheat_seeds"
+					type: "item"
+				}
+				{
+					id: "640D2CF013E8D019"
+					item: "minecraft:carrot"
+					type: "item"
+				}
+				{
+					id: "0C40F12302FB8365"
+					item: "minecraft:potato"
+					type: "item"
+				}
+				{
+					id: "61630EB5211CCEC0"
+					item: "minecraft:water_bucket"
+					type: "item"
+				}
+			]
+			x: 3.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -92,7 +121,7 @@
 				item: "minecraft:oak_log"
 				type: "item"
 			}]
-			x: 1.5d
+			x: 0.0d
 			y: 0.0d
 		}
 		{
@@ -106,7 +135,7 @@
 				item: "minecraft:charcoal"
 				type: "item"
 			}]
-			x: 1.5d
+			x: 0.0d
 			y: 2.5d
 		}
 		{
@@ -128,7 +157,7 @@
 				item: "factorium:mixer"
 				type: "item"
 			}]
-			x: -5.5d
+			x: -6.0d
 			y: 2.5d
 		}
 		{
@@ -139,19 +168,8 @@
 				item: "factorium:grinder"
 				type: "item"
 			}]
-			x: -2.0d
+			x: -3.0d
 			y: 2.5d
-		}
-		{
-			dependencies: ["2FAFCEC63A6170FB"]
-			id: "7A86EE5540BF8FAE"
-			tasks: [{
-				id: "4BEBC4313235EA58"
-				item: "thermal:upgrade_augment_1"
-				type: "item"
-			}]
-			x: 5.0d
-			y: 5.0d
 		}
 		{
 			dependencies: ["2B9679DD9C47CEE2"]
@@ -161,7 +179,7 @@
 				item: "alchemistry:combiner"
 				type: "item"
 			}]
-			x: -5.5d
+			x: -6.0d
 			y: -2.5d
 		}
 		{
@@ -172,58 +190,30 @@
 				item: "industrialforegoing:plant_gatherer"
 				type: "item"
 			}]
-			x: -5.5d
+			x: -6.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["7A86EE5540BF8FAE"]
-			id: "29800B08AEE76F85"
+			dependencies: ["12A5A1F7F73A008D"]
+			id: "2F765057287E7614"
 			tasks: [{
-				id: "03DA6C526CFE43BF"
-				item: "ad_astra:moon_desh_ore"
+				id: "6D66F18A8E0C328E"
+				item: "minecraft:water_bucket"
 				type: "item"
 			}]
-			x: 1.5d
-			y: 5.0d
+			x: 3.0d
+			y: -2.5d
 		}
 		{
-			dependencies: ["29800B08AEE76F85"]
-			id: "2C78EF018331C78B"
+			dependencies: ["73A62D534AD513E9"]
+			id: "12A5A1F7F73A008D"
 			tasks: [{
-				id: "0EE33656BA5C18BA"
-				item: "ad_astra:desh_plate"
+				id: "2AC3D8E233929E33"
+				item: "chemlib:water"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 5.0d
-		}
-		{
-			dependencies: ["2C78EF018331C78B"]
-			id: "1758A146DE115500"
-			tasks: [{
-				id: "2AD64CA32944AD50"
-				item: "ad_astra:nasa_workbench"
-				type: "item"
-			}]
-			x: -5.5d
-			y: 5.0d
-		}
-		{
-			dependencies: ["1758A146DE115500"]
-			id: "143E016AA1576F3A"
-			shape: "gear"
-			size: 2.5d
-			tasks: [{
-				id: "45DEDD507285B9C3"
-				item: {
-					Count: 1
-					id: "ad_astra:tier_1_rocket"
-					tag: { }
-				}
-				type: "item"
-			}]
-			x: -9.0d
-			y: 5.0d
+			x: 0.0d
+			y: -2.5d
 		}
 	]
 	title: "2"
