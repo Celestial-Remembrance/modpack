@@ -224,3 +224,4 @@ config/mm/pack/assets/mm/lang/en_us.json
 config/modernfix-mixins.properties
 config/moonlight-client.toml
 config/packetfixer.properties
+config/ad_astra.jsonc
