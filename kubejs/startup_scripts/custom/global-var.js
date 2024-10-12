@@ -29,12 +29,12 @@ global.jei = {
         output: "minecraft:coal_block",
       },
     ],
+    blockdrop:[]
   },
 };
 global.resources = {
   meteorites: [
     {
-      icon:"mercury",
       block: "mercury_meteorite",
       drop: ["kubejs:copper_shard", "kubejs:tin_shard"],
       multiplier: [20, 12],
@@ -42,7 +42,6 @@ global.resources = {
       type: "mercury",
     },
     {
-      icon: "mars",
       block: "mars_meteorite",
       drop: [
         "kubejs:iron_shard",
@@ -55,7 +54,6 @@ global.resources = {
       type: "mars",
     },
     {
-      icon : "all",
       block: "generic_meteorite",
       drop: ["minecraft:stone"],
       multiplier: [10],
@@ -90,3 +88,25 @@ global.resources = {
     }
   ]
 };
+
+global.resources.meteorites.forEach(element => {
+  let sum = 0
+  element.multiplier.forEach(m=>{
+    sum += m
+  })
+  let list = []
+  element.multiplier.forEach(m=>{
+    list.push(Math.floor((m/sum)*100)+'%')
+  })
+  element.multiplier = list
+
+  global.jei.recipes.blockdrop.push({
+    input: 'kubejs:'+element.block,
+    output: {
+      id: element.drop,
+      count: element.multiplier,
+    },
+  })
+});
+
+
