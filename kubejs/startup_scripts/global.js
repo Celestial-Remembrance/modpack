@@ -124,10 +124,10 @@ function crystal_block(event, id, color) {
     .soundType(SoundType.AMETHYST)
     .color(0, color)
     .defaultCutout()
-    .model("kubejs:block/crystal")
+    .model("kubejs:block/special/crystal")
     .item((item) => {
       item.color(0, color);
-      item.parentModel("kubejs:block/crystal");
+      item.parentModel("kubejs:block/special/crystal");
     });
 }
 /**
@@ -196,6 +196,8 @@ function meteors(planets) {
   //console.log({ variants: { "": list } });
   return { variants: { "": list } };
 }
+
+
 
 //
 //
