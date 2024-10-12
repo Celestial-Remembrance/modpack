@@ -7,23 +7,24 @@ const $BooleanProperty = Java.loadClass(
 const $IntegerProperty = Java.loadClass(
   "net.minecraft.world.level.block.state.properties.IntegerProperty"
 );
-
+/**
+ *
+ * @param {number} min
+ * @param {number} max
+ * @returns
+ */
 function rnd(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 function rnd50() {
   return Math.random() < 0.5;
 }
-
 function rnd75() {
   return Math.random() < 0.75;
 }
-
 function rnd25() {
   return Math.random() < 0.25;
 }
-
 /**
  *
  * @param {event} event
@@ -37,7 +38,12 @@ function potion(event, id, color) {
     .texture("layer0", "minecraft:item/potion_overlay")
     .texture("layer1", "minecraft:item/potion");
 }
-
+/**
+ *
+ * @param {event} event
+ * @param {Item} id
+ * @param {Color} color
+ */
 function clump(event, id, color) {
   event
     .create(id + "_clump")
@@ -45,7 +51,6 @@ function clump(event, id, color) {
     .texture("layer0", "mekanism:item/clump_overlay")
     .texture("layer1", "mekanism:item/clump");
 }
-
 /**
  *
  * @param {event} event
@@ -62,7 +67,6 @@ function nugget(event, id, color, isclassic) {
       isclassic ? "kubejs:item/template/classic_nugget" : "mekanism:item/nugget"
     );
 }
-
 /**
  *
  * @param {event} event
@@ -75,7 +79,6 @@ function ingot(event, id, color) {
     .color(0, color)
     .texture("layer0", "mekanism:item/ingot");
 }
-
 /**
  *
  * @param {event} event
@@ -89,7 +92,6 @@ function crystal(event, id, color) {
     .texture("layer0", "mekanism:item/crystal_overlay")
     .texture("layer1", "mekanism:item/crystal");
 }
-
 /**
  *
  * @param {event} event
@@ -128,7 +130,6 @@ function crystal_block(event, id, color) {
       item.parentModel("kubejs:block/crystal");
     });
 }
-
 /**
  *
  * @param {event} event
@@ -150,7 +151,6 @@ function dust(event, id, color, moreDirty) {
       .texture("layer0", "mekanism:item/dust");
   }
 }
-
 /**
  *
  * @param {event} event
@@ -174,7 +174,6 @@ function dirty_dust(event, id, color, moreDirty) {
       .texture("layer1", "mekanism:item/dirty_dust");
   }
 }
-
 /**
  *
  * @param {} planets
