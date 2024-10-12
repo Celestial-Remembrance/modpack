@@ -383,7 +383,7 @@ JEIAddedEvents.registerCategories((event) => {
           27
         )
       )
-      .icon(guiHelper.createDrawableItemStack(Item.of('kubejs:converter')))
+      .icon(guiHelper.createDrawableItemStack(Item.of("kubejs:converter")))
       //---------------------------------------------------------------------//
       //                            SLOT VALIDATOR                           //
       //---------------------------------------------------------------------//
@@ -391,7 +391,7 @@ JEIAddedEvents.registerCategories((event) => {
         return !!(
           recipe?.data?.input !== undefined &&
           recipe?.data?.output !== undefined &&
-          Item.of('kubejs:converter') !== undefined
+          Item.of("kubejs:converter") !== undefined
         );
       })
       //---------------------------------------------------------------------//
@@ -399,7 +399,7 @@ JEIAddedEvents.registerCategories((event) => {
       //---------------------------------------------------------------------//
       .handleLookup((builder, recipe, focuses) => {
         verify(recipe.data.input, "INPUT", 4, 4, builder);
-        verify('kubejs:converter', "INPUT", 45, 3, builder);
+        verify("kubejs:converter", "INPUT", 45, 3, builder);
         verify(recipe.data.output, "OUTPUT", 86, 4, builder);
       });
     //---------------------------------------------------------------------//
@@ -427,7 +427,7 @@ JEIAddedEvents.registerCategories((event) => {
           51
         )
       )
-      .icon(guiHelper.createDrawableItemStack(Item.of('kubejs:dynamo')))
+      .icon(guiHelper.createDrawableItemStack(Item.of("kubejs:dynamo")))
       //---------------------------------------------------------------------//
       //                            SLOT VALIDATOR                           //
       //---------------------------------------------------------------------//
@@ -452,7 +452,9 @@ JEIAddedEvents.registerCategories((event) => {
           guiGraphics.drawWordWrap(
             Client.font,
             Text.of(
-              convertString("Base Power : ")+('§a'+recipe.data.info)+convertString('⚡/t ')
+              convertString("Base Power : ") +
+                ("§a" + recipe.data.info) +
+                convertString("⚡/t ")
             ),
             35,
             9,
@@ -508,9 +510,7 @@ JEIAddedEvents.registerCategories((event) => {
         (recipe, recipeSlotsView, guiGraphics, mouseX, mouseY) => {
           guiGraphics.drawWordWrap(
             Client.font,
-            Text.of(
-              convertString("Modifier : ")+recipe.data.info[0]
-            ),
+            Text.of(convertString("Modifier : ") + recipe.data.info[0]),
             35,
             9,
             150,
@@ -520,9 +520,9 @@ JEIAddedEvents.registerCategories((event) => {
           guiGraphics.drawWordWrap(
             Client.font,
             Text.of(
-              convertString(
-                "Max Energy : "
-              )+recipe.data.info[1]+convertString(" ⚡/t")
+              convertString("Max Energy : ") +
+                recipe.data.info[1] +
+                convertString(" ⚡/t")
             ),
             35,
             30,
@@ -531,6 +531,60 @@ JEIAddedEvents.registerCategories((event) => {
           );
         }
       );
+    //---------------------------------------------------------------------//
+  });
+
+  //---------------------------------------------------------------------------------------//
+  //                                       MULTIBLOCK                                      //
+  //---------------------------------------------------------------------------------------//
+
+  event.custom("kubejs:multiblock", (category) => {
+    const {
+      jeiHelpers,
+      jeiHelpers: { guiHelper },
+    } = category;
+    category
+      .title("MultiBlock")
+      .background(
+        guiHelper.createDrawable(
+          "kubejs:textures/gui/multiblock.png",
+          2,
+          2,
+          158,
+          69
+        )
+      )
+      .icon(guiHelper.createDrawableItemStack(Item.of("wooden_pickaxe")))
+      //---------------------------------------------------------------------//
+      //                            SLOT VALIDATOR                           //
+      //---------------------------------------------------------------------//
+      .isRecipeHandled((recipe) => {
+        return !!(
+          recipe?.data?.controller !== undefined &&
+          recipe?.data?.blocks !== undefined
+        );
+      })
+      //---------------------------------------------------------------------//
+      //                            SLOT IO                                  //
+      //---------------------------------------------------------------------//
+      .handleLookup((builder, recipe, focuses) => {
+        verify(recipe.data.controller, "INPUT", 10, 25, builder);
+        let slotSize = 21;
+        for (let i = 0; i < 5; i++) {
+          for (let j = 0; j < 3; j++) {
+            verifyCrude(
+              recipe.data.blocks[j * 5 + i],
+              "OUTPUT",
+              51 + i * slotSize,
+              4 + j * slotSize,
+              builder
+            );
+          }
+        }
+      });
+    //---------------------------------------------------------------------//
+    //                            TEXT DRAWING                             //
+    //---------------------------------------------------------------------//
     //---------------------------------------------------------------------//
   });
 
@@ -582,21 +636,37 @@ JEIAddedEvents.registerCategories((event) => {
 JEIAddedEvents.registerRecipes((event) => {
   //--------HARDCODED-RECIPES--------//
 
+  event.custom("kubejs:multiblock").add({
+    controller: "minecraft:stone",
+    blocks: [
+      Item.of("minecraft:bedrock", 4),
+      "minecraft:dirt",
+      Item.of("coal", 4),
+      Item.of("iron_ore", 2),
+      Item.of("gold_block", 7),
+      Item.of("diamond", 10),
+    ],
+  });
+
+  //thorium moderators
   event.custom("kubejs:turbine-mod").add({
     fuel: "thoriumreactors:nickel_block",
     info: ["§c1.0", "§c114k"],
   });
 
+  //thorium moderators
   event.custom("kubejs:turbine-mod").add({
     fuel: "thoriumreactors:niob_block",
     info: ["§e1.5", "§e171k"],
   });
 
+  //thorium moderators
   event.custom("kubejs:turbine-mod").add({
     fuel: "thoriumreactors:molybdenum_block",
     info: ["§a2.0", "§a228k"],
   });
 
+  //dynamo star fuel
   event.custom("kubejs:dynamo-fuel").add({
     fuel: "kubejs:star",
     info: 100,
