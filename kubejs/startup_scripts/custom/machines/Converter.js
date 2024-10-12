@@ -3,13 +3,40 @@ StartupEvents.registry("block", (event) => {
   event
     .create("kubejs:converter")
     .property($BooleanProperty.create("active"))
+    .property(BlockProperties.NORTH)
+    .property(BlockProperties.SOUTH)
+    .property(BlockProperties.EAST)
+    .property(BlockProperties.WEST)
+    .defaultState((state) => {
+      state
+        .set($BooleanProperty.create("active"), false)
+        .set(BlockProperties.NORTH, false)
+        .set(BlockProperties.SOUTH, false)
+        .set(BlockProperties.EAST, false)
+        .set(BlockProperties.WEST, false);
+    })
+    .placementState((state) => {
+      state
+        .set($BooleanProperty.create("active"), false)
+        .set(BlockProperties.NORTH, false)
+        .set(BlockProperties.SOUTH, false)
+        .set(BlockProperties.EAST, false)
+        .set(BlockProperties.WEST, false);
+    })
     .blockEntity((be) => {
       be.serverTick(1, 0, (state) => {
         const { x, y, z } = state.block;
-        let minerals = ["stone", "coal_ore", "copper_ore", "iron_ore"];
-        state.block.set(state.block.id, {
+        let direc = ["north", "south", "east", "west"];
+        let result = {
           active: state.persistentData.getBoolean("active"),
+        };
+        direc.forEach((dir) => {
+          result[dir] =
+            global.be.energy_links.indexOf(state.block.offset(dir).id) != -1
+              ? true
+              : false;
         });
+        state.block.set(state.block.id, result);
 
         if (state.persistentData.getBoolean("active") && rnd(0, 10) == 10) {
           state.level.spawnParticles(
@@ -26,7 +53,7 @@ StartupEvents.registry("block", (event) => {
           );
           if (state.persistentData.getBoolean("active") && rnd50()) {
             global.jei.recipes.atomic.forEach((e) => {
-              const {input,output} = e;
+              const { input, output } = e;
               if (state.level.getBlock(x, y + 1, z) == input) {
                 state.persistentData.putInt(
                   "amount",
@@ -98,9 +125,31 @@ StartupEvents.registry("block", (event) => {
         parent: "kubejs:block/dynamo/off",
       });
     }).blockstateJson = {
-    variants: {
-      "active=true": { model: "kubejs:block/dynamo/on" },
-      "active=false": { model: "kubejs:block/dynamo/off" },
-    },
+    multipart: [
+      {
+        when: { active: "false" },
+        apply: { model: "kubejs:block/dynamo/off" },
+      },
+      {
+        when: { active: "true" },
+        apply: { model: "kubejs:block/dynamo/on" },
+      },
+      {
+        when: { north: "true" },
+        apply: { model: "kubejs:block/dynamo/parts/port" },
+      },
+      {
+        when: { east: "true" },
+        apply: { model: "kubejs:block/dynamo/parts/port", y: 90 },
+      },
+      {
+        when: { west: "true" },
+        apply: { model: "kubejs:block/dynamo/parts/port", y: -90 },
+      },
+      {
+        when: { south: "true" },
+        apply: { model: "kubejs:block/dynamo/parts/port", y: 180 },
+      },
+    ],
   };
 });
