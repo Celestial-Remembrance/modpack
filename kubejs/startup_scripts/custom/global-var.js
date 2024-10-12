@@ -36,20 +36,19 @@ global.resources = {
   meteorites: [
     {
       block: "mercury_meteorite",
-      drop: ["kubejs:copper_shard", "kubejs:tin_shard"],
-      multiplier: [20, 12],
+      drop: ["kubejs:copper_shard","kubejs:iron_shard", "kubejs:tin_shard"],
+      multiplier: [20,14, 12],
       biomes: ["ad_astra:lunar_wastelands"],
       type: "mercury",
     },
     {
       block: "mars_meteorite",
       drop: [
-        "kubejs:iron_shard",
         "kubejs:redstone_shard",
         "kubejs:nickel_shard",
         "kubejs:coal_shard"
       ],
-      multiplier: [14, 24, 10,5],
+      multiplier: [24, 10,5],
       biomes: ["ad_astra:martian_wastelands"],
       type: "mars",
     },
