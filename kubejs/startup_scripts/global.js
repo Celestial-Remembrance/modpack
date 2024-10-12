@@ -113,7 +113,7 @@ function shard(event, id, color, vanilla) {
   }
 }
 /**
- *
+ * 
  * @param {event} event
  * @param {Item} id
  * @param {Color} color
