@@ -228,3 +228,9 @@ TrashSlotSaveState.json
 modernfix/structureCacheV1/ad_astra_oil_2ac1e0916c.nbt
 modernfix/structureCacheV1/ad_astra_meteor5_91fd9d7c49.nbt
 config/rftoolsstorage-client.toml
+/config/tacz/backup
+/config/tacz/custom/tacz_default_gun
+config/cosmeticarmorreworked-client.toml
+config/cosmeticarmorreworked-common.toml
+config/tacz-client.toml
+config/tacz-common.toml
