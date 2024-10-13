@@ -5,6 +5,10 @@ StartupEvents.registry("item", (event) => {
   //event.create("kubejs:motor").texture("kubejs:item/motor");
   event.create("kubejs:star2").texture("kubejs:item/star-2");
 
+  event.create('icon_click').texture('kubejs:item/right_click')
+  event.create('icon_tree').texture('kubejs:item/tree')
+
+
   potion(event, "kubejs:limewater", 0xffffaf);
 
   global.resources.crystals.forEach((e, index) => {
