@@ -234,3 +234,4 @@ config/cosmeticarmorreworked-client.toml
 config/cosmeticarmorreworked-common.toml
 config/tacz-client.toml
 config/tacz-common.toml
+/config/konkrete
