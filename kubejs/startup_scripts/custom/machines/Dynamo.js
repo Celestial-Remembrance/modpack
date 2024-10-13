@@ -33,6 +33,7 @@ StartupEvents.registry("block", (event) => {
     .property(BlockProperties.SOUTH)
     .property(BlockProperties.EAST)
     .property(BlockProperties.WEST)
+    .defaultCutout()
     .defaultState((state) => {
       state
         .set($BooleanProperty.create("active"), false)
@@ -57,9 +58,9 @@ StartupEvents.registry("block", (event) => {
         obj[e] = properties.get(e);
       });
 
-      if (click.item == "kubejs:star") {
-        click.persistentData.putBoolean("active", true);
-        obj["active"] = true;
+      if (click.item == "kubejs:star" && click.block.properties.get('active').toLowerCase()==='true') {
+        obj["active"] = "true";
+        click.block.entity.persistentData.putBoolean("active", true);
         click.block.set(click.block.id, obj);
       }
     })
@@ -71,14 +72,12 @@ StartupEvents.registry("block", (event) => {
     .blockEntity((be) => {
       be.serverTick(1, 0, (state) => {
         let direc = ["north", "south", "east", "west"];
-        let result = {
-          active: state.persistentData.getBoolean("active"),
-        };
+        let result = { active: state.persistentData.getBoolean("active") };
         direc.forEach((dir) => {
           result[dir] =
             global.be.energy_links.indexOf(state.block.offset(dir).id) != -1
-              ? true
-              : false;
+              ? "true"
+              : "false";
         });
         state.block.set(state.block.id, result);
       });
@@ -88,13 +87,28 @@ StartupEvents.registry("block", (event) => {
           .canReceive(() => false)
 
           .extractEnergy((energy) => {
-            return energy.persistentData.getBoolean("active") ? 100 : 0;
+            return energy.level
+              .getBlock(energy.blockPos)
+              .properties.get("active")
+              .toLowerCase() === "true"
+              ? 100
+              : 0;
           })
           .getEnergyStored((energy) => {
-            return energy.persistentData.getBoolean("active") ? 100 : 0;
+            return energy.level
+              .getBlock(energy.blockPos)
+              .properties.get("active")
+              .toLowerCase() === "true"
+              ? 100
+              : 0;
           })
           .getMaxEnergyStored((energy) => {
-            return energy.persistentData.getBoolean("active") ? 100 : 0;
+            return energy.level
+              .getBlock(energy.blockPos)
+              .properties.get("active")
+              .toLowerCase() === "true"
+              ? 100
+              : 0;
           })
       );
     })
