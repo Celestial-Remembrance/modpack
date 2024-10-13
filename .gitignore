@@ -224,3 +224,7 @@ config/mm/pack/assets/mm/lang/en_us.json
 config/modernfix-mixins.properties
 config/moonlight-client.toml
 config/packetfixer.properties
+TrashSlotSaveState.json
+modernfix/structureCacheV1/ad_astra_oil_2ac1e0916c.nbt
+modernfix/structureCacheV1/ad_astra_meteor5_91fd9d7c49.nbt
+config/rftoolsstorage-client.toml
