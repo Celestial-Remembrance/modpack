@@ -26,17 +26,12 @@ StartupEvents.registry("block", (event) => {
         .set(BlockProperties.WEST, false);
     })
     .rightClick((click) => {
-      const { properties } = click.block;
-      let direc = ["north", "south", "east", "west"];
-      let obj = {};
-      direc.forEach((e) => {
-        obj[e] = properties.get(e);
-      });
-
-      if (click.item == "kubejs:star" && click.block.properties.get('active').toLowerCase()==='true') {
-        obj["active"] = "true";
+      if (
+        click.item == "kubejs:star" &&
+        click.block.properties.get("active").toLowerCase() === "false"
+      ) {
         click.block.entity.persistentData.putBoolean("active", true);
-        click.block.set(click.block.id, obj);
+        click.block.set(click.block.id, { active: "true" });
       }
     })
     .steppedOn((step) => {
