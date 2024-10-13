@@ -49,9 +49,9 @@
     },
     "spaceSuit": {
         // Type: Long
-        "spaceSuitTankSize": 1000,
+        "spaceSuitTankSize": 10000,
         // Type: Long
-        "netheriteSpaceSuitTankSize": 2000,
+        "netheriteSpaceSuitTankSize": 20000,
         "netheriteSpaceSuitHasFireResistance": true,
         /*
          * The speed when flying forward.
@@ -66,7 +66,7 @@
         // Type: Long
         "jetSuitEnergyPerTick": 60,
         // Type: Long
-        "jetSuitTankSize": 4000,
+        "jetSuitTankSize": 40000,
         // Type: Long
         "jetSuitMaxEnergy": 1000000,
         "enableJetSuitFlight": true,
@@ -161,7 +161,7 @@
         // Type: Long
         "energyPerTick": 10,
         // Type: Long
-        "tankSize": 3000
+        "tankSize": 50000
     },
     "oxygenDistributor": {
         // Type: Long
@@ -169,7 +169,7 @@
         // Type: Long
         "fluidConversionEnergyPerTick": 5,
         // Type: Long
-        "tankSize": 6000,
+        "tankSize": 10000,
         /*
          * How many blocks the distributor can distribute oxygen in. Be careful increasing this number, as it can reduce server performance significantly. If you are adamant about increasing this value, consider increasing the Oxygen Loader refresh ticks so the server is not constantly checking thousands of blocks.
          * Range: 1 - 50000
@@ -195,7 +195,7 @@
         // Type: Long
         "maxEnergy": 18000,
         // Type: Double
-        "energyMultiplier": 1.0
+        "energyMultiplier": 10.0
     },
     "waterPump": {
         // Type: Long
