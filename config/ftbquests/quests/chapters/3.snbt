@@ -178,29 +178,25 @@
 				"168E214FC6579E62"
 			]
 			id: "5550C4DA7BB312F7"
-			tasks: [{
-				id: "0103943C10A7DC8A"
-				item: "advgenerators:syngas_controller"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "7627488FA196459A"
+					item: "mekanism:qio_dashboard"
+					type: "item"
+				}
+				{
+					id: "6BFAF5F41297AADC"
+					item: "mekanism:qio_exporter"
+					type: "item"
+				}
+				{
+					id: "6A7219182E7263C2"
+					item: "mekanism:qio_importer"
+					type: "item"
+				}
+			]
 			x: -2.5d
 			y: -3.5d
-		}
-		{
-			dependencies: [
-				"5550C4DA7BB312F7"
-				"24BA75DDEA865545"
-			]
-			id: "109ED99C368DB1F5"
-			shape: "gear"
-			size: 2.0d
-			tasks: [{
-				id: "7E4CE2F872BA6421"
-				item: "advgenerators:fuel_turbine_controller"
-				type: "item"
-			}]
-			x: -2.5d
-			y: -6.0d
 		}
 		{
 			dependencies: ["359B8108917F53E6"]
@@ -281,17 +277,17 @@
 			id: "1D9B270D918BCDAF"
 			tasks: [
 				{
-					id: "2171B8B69C5C69FD"
-					item: {
-						Count: 1
-						id: "ad_astra:tier_1_rocket"
-						tag: { }
-					}
+					id: "22245621AD11EAF2"
+					item: "ad_astra:launch_pad"
 					type: "item"
 				}
 				{
-					id: "22245621AD11EAF2"
-					item: "ad_astra:launch_pad"
+					id: "666ED80D1DE927A6"
+					item: {
+						Count: 1
+						id: "ad_astra:tier_2_rocket"
+						tag: { }
+					}
 					type: "item"
 				}
 			]
@@ -299,6 +295,7 @@
 			y: -6.0d
 		}
 		{
+			dependencies: ["2FAFCEC63A6170FB"]
 			id: "0A85592101625D9E"
 			shape: "square"
 			tasks: [{
@@ -308,6 +305,29 @@
 			}]
 			x: -17.5d
 			y: -1.0d
+		}
+		{
+			dependencies: [
+				"24BA75DDEA865545"
+				"5550C4DA7BB312F7"
+			]
+			id: "768AAC00B9BD1E4B"
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "0C98106CA97859A1"
+					item: "mekanism:qio_drive_array"
+					type: "item"
+				}
+				{
+					id: "1B364A057AC4ABD5"
+					item: "mekanism:qio_drive_base"
+					type: "item"
+				}
+			]
+			x: -2.5d
+			y: -6.0d
 		}
 	]
 	title: "3"

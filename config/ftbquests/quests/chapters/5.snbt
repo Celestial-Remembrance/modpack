@@ -6,6 +6,46 @@
 	id: "2D58FD167E4775F0"
 	order_index: 4
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			dependencies: ["76394CA56A1EC1FA"]
+			id: "5FDD809829FE1E0C"
+			tasks: [
+				{
+					id: "3E80B502D16BA635"
+					item: "minecraft:gold_block"
+					type: "item"
+				}
+				{
+					id: "483C02EB70571A4E"
+					item: "minecraft:quartz_block"
+					type: "item"
+				}
+				{
+					id: "6438A8A079EDF589"
+					item: "ad_astra:calorite_ingot"
+					type: "item"
+				}
+				{
+					id: "344306D06E42FAF6"
+					item: "minecraft:diamond_block"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4EEB0D35A5CB5C0B"]
+			id: "76394CA56A1EC1FA"
+			tasks: [{
+				dimension: "ad_astra:venus"
+				id: "6E736BCFD8B6511B"
+				type: "dimension"
+			}]
+			x: -6.5d
+			y: -1.5d
+		}
+	]
 	title: "5"
 }

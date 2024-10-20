@@ -8,28 +8,290 @@
 	quest_links: [ ]
 	quests: [
 		{
-			id: "23AF437DE9E51EC6"
-			tasks: [{
-				id: "5E4C394CF5C7CF50"
-				item: "mekanism:qio_drive_array"
-				type: "item"
-			}]
-			x: -4.0d
-			y: -2.0d
-		}
-		{
+			dependencies: ["0DB438C586FA58C5"]
 			id: "20AF4E4CEE939207"
 			tasks: [{
-				id: "275AA0C0B5BB0854"
+				id: "1E2B716D98E0B37D"
+				item: "energizedpower:charger"
+				type: "item"
+			}]
+			x: -9.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["768AAC00B9BD1E4B"]
+			id: "109ED99C368DB1F5"
+			shape: "square"
+			size: 1.0d
+			tasks: [{
+				id: "7E4CE2F872BA6421"
+				item: "advgenerators:fuel_turbine_controller"
+				type: "item"
+			}]
+			x: -12.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"4E914487EB2249C6"
+				"6BA73536E6E2D6DA"
+			]
+			id: "581D270828CBFCAF"
+			tasks: [{
+				id: "1B8DEA0276C25F71"
+				item: "infused_crystals_2:redstonium"
+				type: "item"
+			}]
+			x: -6.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"4E914487EB2249C6"
+				"325FBFCC5E4CDA5F"
+			]
+			id: "1725F1E4946AAF1A"
+			tasks: [{
+				id: "588DBAF93CAD7A51"
+				item: "infused_crystals_2:coalium"
+				type: "item"
+			}]
+			x: -6.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["4E914487EB2249C6"]
+			id: "405639D7556E6249"
+			tasks: [{
+				id: "526548E216D6E20C"
+				item: "infused_crystals_2:ironium"
+				type: "item"
+			}]
+			x: -3.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["20AF4E4CEE939207"]
+			id: "4E914487EB2249C6"
+			tasks: [{
+				id: "3FBBECA2451DB7F0"
+				item: "kubejs:iron_shard"
+				type: "item"
+			}]
+			x: -6.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["405639D7556E6249"]
+			id: "6E98C78FEED3AB01"
+			tasks: [{
+				id: "0E68B2A829192366"
+				item: "alchemistry:reactor_casing"
+				type: "item"
+			}]
+			x: -0.5d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"1725F1E4946AAF1A"
+				"405639D7556E6249"
+			]
+			id: "2F3A71B21AF63536"
+			tasks: [{
+				id: "71A39FE708C921AF"
+				item: "alchemistry:fission_chamber_controller"
+				type: "item"
+			}]
+			x: -3.5d
+			y: -5.0d
+		}
+		{
+			dependencies: [
+				"581D270828CBFCAF"
+				"405639D7556E6249"
+			]
+			id: "6E1C27EFBB741F71"
+			tasks: [{
+				id: "1A0253CA26BA18ED"
+				item: "alchemistry:fusion_chamber_controller"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"2F3A71B21AF63536"
+				"6E98C78FEED3AB01"
+			]
+			id: "6EACE41A6703B666"
+			tasks: [{
+				id: "5DA125B6981C961C"
+				item: "alchemistry:fission_core"
+				type: "item"
+			}]
+			x: -0.5d
+			y: -5.0d
+		}
+		{
+			dependencies: [
+				"6E1C27EFBB741F71"
+				"6E98C78FEED3AB01"
+			]
+			id: "094EC69FD03D1273"
+			tasks: [{
+				id: "2B9E20B276BF3C83"
+				item: "alchemistry:fusion_core"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6EACE41A6703B666"]
+			id: "036A42162F763903"
+			tasks: [{
+				id: "0EE558FCD4BF2DBE"
+				item: "chemlib:phosphorus"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["49B57E6A1C2E25B4"]
+			id: "4EEB0D35A5CB5C0B"
+			shape: "gear"
+			size: 2.0d
+			tasks: [{
+				id: "28A9A4A5C39FDCDF"
 				item: {
 					Count: 1
-					id: "ad_astra:energizer"
+					id: "ad_astra:tier_2_rocket"
 					tag: { }
 				}
 				type: "item"
 			}]
-			x: -1.5d
-			y: -2.0d
+			x: -6.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["43AB43AB89F030B2"]
+			id: "49B57E6A1C2E25B4"
+			tasks: [
+				{
+					id: "05BABB6EAE9F4260"
+					item: "thermal:lumium_dust"
+					type: "item"
+				}
+				{
+					id: "24CA5EC95DC87844"
+					item: "thermal:signalum_dust"
+					type: "item"
+				}
+			]
+			x: -3.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"094EC69FD03D1273"
+				"7C09DF12F2CF2A5F"
+			]
+			id: "65DB9D2C67730CAA"
+			tasks: [{
+				id: "75CA4B576F22B5C5"
+				item: "chemlib:silver"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["20AF4E4CEE939207"]
+			id: "325FBFCC5E4CDA5F"
+			tasks: [{
+				id: "5D5EABE80FB4A143"
+				item: "kubejs:coal_shard"
+				type: "item"
+			}]
+			x: -9.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["20AF4E4CEE939207"]
+			id: "6BA73536E6E2D6DA"
+			tasks: [{
+				id: "30D17EE194BDA603"
+				item: "kubejs:redstone_shard"
+				type: "item"
+			}]
+			x: -9.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["036A42162F763903"]
+			id: "7C09DF12F2CF2A5F"
+			tasks: [{
+				id: "2E8AB3B3BA5632B7"
+				item: "minecraft:glowstone_dust"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["109ED99C368DB1F5"]
+			id: "180136BF31337915"
+			shape: "rsquare"
+			tasks: [{
+				id: "63D7FC7E3D26DD61"
+				item: "ad_astra_giselle_addon:gravity_normalizer"
+				type: "item"
+			}]
+			x: -12.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["65DB9D2C67730CAA"]
+			id: "5B07073DC1647446"
+			tasks: [{
+				id: "3B7D0046E4489C60"
+				item: "alltheores:silver_dust"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["5B07073DC1647446"]
+			id: "43AB43AB89F030B2"
+			tasks: [
+				{
+					id: "38A867181BE7F351"
+					item: "alltheores:tin_dust"
+					type: "item"
+				}
+				{
+					id: "2F54986ACF22058F"
+					item: "alltheores:copper_dust"
+					type: "item"
+				}
+			]
+			x: -0.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["109ED99C368DB1F5"]
+			id: "0DB438C586FA58C5"
+			tasks: [{
+				id: "109BFC0A3C087DD9"
+				item: "voidminers:rubetine_miner"
+				type: "item"
+			}]
+			x: -12.5d
+			y: -2.5d
 		}
 	]
 	title: "4"
