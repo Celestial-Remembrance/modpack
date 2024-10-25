@@ -1,9 +1,10 @@
 # todolist
 - [ ] rework of README
-- [ ] asteroid belt
+- [x] asteroid belt
 - [ ] new converter model
 - [ ] new dynamo model
 - [ ] change spawn base
+- [ ] rework island spawn base
 
 
  # roadmap
