@@ -3,14 +3,14 @@
   "downfall": 0.4,
   "has_precipitation": false,
   "temperature_modifier": "none",
-  "creature_spawn_probability": 0.4,
+  "creature_spawn_probability": 0,
   "effects": {
-    "sky_color": 7895677,
-    "fog_color": 6645868,
-    "water_color": 136507,
-    "water_fog_color": 723814,
-    "grass_color": 4406589,
-    "foliage_color": 10308802
+    "sky_color": 3092529,
+    "fog_color": 9737364,
+    "water_color": 1908163,
+    "water_fog_color": 1579147,
+    "grass_color": 6381921,
+    "foliage_color": 11808190
   },
   "spawners": {},
   "spawn_costs": {},
