@@ -6,6 +6,37 @@
 	id: "0BF35B039670793D"
 	order_index: 5
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			id: "0F6EB8E3B8399B2B"
+			tasks: [{
+				id: "1EA9472123B684DD"
+				item: "mecontroller:me_controller"
+				type: "item"
+			}]
+			x: -4.5d
+			y: -2.0d
+		}
+		{
+			id: "6615C60E76DF07FC"
+			tasks: [{
+				id: "7692F27D5931B5E1"
+				item: "enderio:alloy_smelter"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -2.0d
+		}
+		{
+			id: "2A28CDE4B37F9D9E"
+			tasks: [{
+				id: "5A5A2A61EFB536A7"
+				item: "mekanism:energized_smelter"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -2.0d
+		}
+	]
 	title: "6"
 }
