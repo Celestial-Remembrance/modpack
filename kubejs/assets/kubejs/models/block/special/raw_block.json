@@ -1,0 +1,6 @@
+{
+  "parent": "kubejs:block/special/_tinted",
+  "textures": {
+    "block": "kubejs:block/template/raw_block"
+  }
+}

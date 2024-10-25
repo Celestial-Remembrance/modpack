@@ -11,14 +11,20 @@ StartupEvents.registry("item", (event) => {
 
   potion(event, "kubejs:limewater", 0xffffaf);
 
-  global.resources.crystals.forEach((e, index) => {
+  global.resources.crystals.forEach((e) => {
     shard(event, 'kubejs:'+e.id, e.color, true);
   });
+
+
 });
 
 StartupEvents.registry("block", (event) => {
-  global.resources.crystals.forEach((e, index) => {
+  global.resources.crystals.forEach((e) => {
     crystal_block(event, 'kubejs:'+e.id, e.color);
+  });
+
+  global.resources.gems.forEach((e) => {
+    raw_block(event, 'kubejs:'+e.id, e.color);
   });
 
   global.resources.meteorites.forEach((element) => {

@@ -1,0 +1,16 @@
+{
+  "type": "oxygen:asteroid_belt",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "oxygen:asteroid_belt",
+      "lakes": false,
+      "features": false,
+      "layers": [],
+      "structure_overrides": [
+        "oxygen:meteor_ore",
+        "oxygen:meteor"
+      ]
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/aluminium",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/calorite",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/coal",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/copper",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/desh",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/gold",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/iridium",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/iron",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/lead",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/nickel",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/osmium",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/ostrum",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/platinum",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/redstone",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/silver",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/tin",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/uranium",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    },{
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "oxygen:meteor_ores/zinc",
+        "projection": "rigid",
+        "processors": "minecraft:empty"
+      }
+    }
+  ]
+}

@@ -225,5 +225,22 @@ function ore(event, id, type, stone) {
     },
   };
 }
-
+/**
+ *
+ * @param {Event} event
+ * @param {string} id
+ * @param {Color} color
+ */
+function raw_block(event, id, color) {
+  event
+    .create(id + "_raw_block")
+    .soundType(SoundType.ANCIENT_DEBRIS)
+    .color(0, color)
+    .defaultCutout()
+    .model("kubejs:block/special/raw_block")
+    .item((item) => {
+      item.color(0, color);
+      item.parentModel("kubejs:block/special/raw_block");
+    });
+}
 

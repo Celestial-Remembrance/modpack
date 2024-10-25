@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "oxygen:meteor",
+      "weight": 1
+    },
+    {
+      "structure": "oxygen:meteor_ore",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "salt": 1002315599,
+    "spacing": 2,
+    "separation": 0
+  }
+}

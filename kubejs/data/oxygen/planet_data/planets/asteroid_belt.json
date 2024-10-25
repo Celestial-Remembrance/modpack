@@ -1,0 +1,16 @@
+{
+  "translation": "planet.oxygen.asteroid_belt",
+  "galaxy": "ad_astra:milky_way",
+  "solar_system": "ad_astra:solar_system",
+  "world": "oxygen:asteroid_belt",
+  "orbit_world": "oxygen:asteroid_belt",
+  "rocket_tier": 3,
+  "gravity": 1.12,
+  "has_atmosphere": false,
+  "days_in_year": 1679,
+  "temperature": -113,
+  "solar_power": 11,
+  "orbit_solar_power": 13,
+  "has_oxygen": false,
+  "button_color": "grey"
+}

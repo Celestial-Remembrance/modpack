@@ -88,6 +88,15 @@ global.resources = {
   ]
 };
 
+let list_gems = ['redstone','emerald','diamond','coal','quartz']
+global.resources.gems = []
+global.resources.crystals.forEach(e=>{
+if(list_gems.indexOf(e.id) != -1){
+  global.resources.gems.push(e)
+}
+})
+
+
 global.resources.meteorites.forEach(element => {
   let sum = 0
   element.multiplier.forEach(m=>{
