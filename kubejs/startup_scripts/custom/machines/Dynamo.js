@@ -1,8 +1,8 @@
 // priority: -1
 let baseFEgen = 100;
 StartupEvents.registry("block", (event) => {
-  event
-    .create("dynamo")
+  event.create("dynamo")
+  .displayName('ExoNova Sidereal Engine')
     .property($BooleanProperty.create("active"))
     .property(BlockProperties.NORTH)
     .property(BlockProperties.SOUTH)
@@ -40,6 +40,7 @@ StartupEvents.registry("block", (event) => {
       }
     })
     .blockEntity((be) => {
+      
       be.serverTick(1, 0, (state) => {
         let direc = ["north", "south", "east", "west"];
         let result = { active: state.persistentData.getBoolean("active") };
@@ -50,7 +51,27 @@ StartupEvents.registry("block", (event) => {
               : "false";
         });
         state.block.set(state.block.id, result);
-      });
+
+
+
+        if(state.persistentData.getBoolean("active")){
+          state.level.spawnParticles(
+            "minecraft:glow",
+            true,
+            state.block.x +0.25+ 0.1 * rnd(1, 3),
+            state.block.y +0.25+ 0.1 * rnd(1, 3),
+            state.block.z +0.25+ 0.1 * rnd(1, 3),
+            0,
+            0,
+            0,
+            1,
+            0
+          );
+        }
+
+
+      })
+
       be.attachCapability(
         CapabilityBuilder.ENERGY.customBlockEntity()
           .canExtract(() => true)
@@ -84,33 +105,33 @@ StartupEvents.registry("block", (event) => {
     })
     .item((item) => {
       item.modelJson({
-        parent: "kubejs:block/dynamo/off",
+        parent: "kubejs:block/dynamo/base",
       });
     }).blockstateJson = {
     multipart: [
       {
-        when: { active: "false" },
-        apply: { model: "kubejs:block/dynamo/off" },
+        when: { active: "true|false" },
+        apply: { model: "kubejs:block/dynamo/base" },
       },
       {
-        when: { active: "true" },
-        apply: { model: "kubejs:block/dynamo/on" },
+        when: { active: "true|false" },
+        apply: { model: "kubejs:block/dynamo/side" },
       },
       {
         when: { north: "true" },
-        apply: { model: "kubejs:block/dynamo/parts/port" },
+        apply: { model: "kubejs:block/dynamo/port" },
       },
       {
         when: { east: "true" },
-        apply: { model: "kubejs:block/dynamo/parts/port", y: 90 },
+        apply: { model: "kubejs:block/dynamo/port", y: 90 },
       },
       {
         when: { west: "true" },
-        apply: { model: "kubejs:block/dynamo/parts/port", y: -90 },
+        apply: { model: "kubejs:block/dynamo/port", y: -90 },
       },
       {
         when: { south: "true" },
-        apply: { model: "kubejs:block/dynamo/parts/port", y: 180 },
+        apply: { model: "kubejs:block/dynamo/port", y: 180 },
       },
     ],
   };
