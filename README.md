@@ -5,6 +5,7 @@
 - [ ] new dynamo model
 - [ ] change spawn base
 - [ ] rework island spawn base
+- [ ] datagen .nbt meteors
 
 
  # roadmap
