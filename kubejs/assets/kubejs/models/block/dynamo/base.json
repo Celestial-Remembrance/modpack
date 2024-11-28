@@ -1,0 +1,4 @@
+{
+  "parent": "mekanism:block/energy_cube/base",
+  "textures": { "corner": "kubejs:block/dynamo" }
+}
