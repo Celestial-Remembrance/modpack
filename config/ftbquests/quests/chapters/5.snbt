@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "5"
 	group: ""
+	hide_quest_until_deps_visible: true
 	id: "2D58FD167E4775F0"
 	order_index: 4
 	quest_links: [ ]
@@ -15,8 +16,8 @@
 				item: "minecraft:diamond"
 				type: "item"
 			}]
-			x: -3.5d
-			y: -1.5d
+			x: -6.5d
+			y: -4.0d
 		}
 		{
 			dependencies: ["4EEB0D35A5CB5C0B"]
@@ -24,11 +25,12 @@
 			shape: "square"
 			tasks: [{
 				dimension: "ad_astra:venus"
+				icon: "ad_astra:venus_sandstone"
 				id: "6E736BCFD8B6511B"
 				type: "dimension"
 			}]
 			x: -6.5d
-			y: -1.5d
+			y: -6.5d
 		}
 		{
 			dependencies: ["76394CA56A1EC1FA"]
@@ -38,8 +40,8 @@
 				item: "ad_astra:calorite_ingot"
 				type: "item"
 			}]
-			x: -6.5d
-			y: -4.0d
+			x: -3.5d
+			y: -6.5d
 		}
 		{
 			dependencies: ["76394CA56A1EC1FA"]
@@ -57,7 +59,7 @@
 				}
 			]
 			x: -6.5d
-			y: 1.0d
+			y: -9.0d
 		}
 		{
 			dependencies: ["3A64ADE9F8ED2767"]
@@ -67,8 +69,8 @@
 				item: "thermal:rf_coil"
 				type: "item"
 			}]
-			x: -6.5d
-			y: 3.5d
+			x: -3.5d
+			y: -9.0d
 		}
 		{
 			dependencies: ["3A64ADE9F8ED2767"]
@@ -78,8 +80,8 @@
 				item: "factorium:craft_quartz_pulse"
 				type: "item"
 			}]
-			x: -3.5d
-			y: 1.0d
+			x: -6.5d
+			y: -11.5d
 		}
 		{
 			dependencies: [
@@ -121,8 +123,8 @@
 				item: "thermal:crude_oil_bucket"
 				type: "item"
 			}]
-			x: -0.5d
-			y: -1.5d
+			x: 2.5d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -131,17 +133,17 @@
 			]
 			id: "59A4582E03FB0CEC"
 			tasks: [{
-				id: "15223E58C465729A"
-				item: "thermal_extra:advanced_refinery"
+				id: "76BFF700FC0F25AE"
+				item: "thermal:machine_refinery"
 				type: "item"
 			}]
 			x: -3.5d
-			y: 3.5d
+			y: -11.5d
 		}
 		{
 			dependencies: [
-				"0BB2CF6C8AE15984"
-				"59A4582E03FB0CEC"
+				"467A167775A83F9D"
+				"066E3E9586BD71A9"
 			]
 			id: "42B9D89479B9D60A"
 			tasks: [{
@@ -149,137 +151,191 @@
 				item: "thermal_extra:polyolefin_plate"
 				type: "item"
 			}]
-			x: -0.5d
-			y: 3.5d
-		}
-		{
-			dependencies: ["467A167775A83F9D"]
-			id: "0BB2CF6C8AE15984"
-			tasks: [{
-				id: "2EE914B38C639720"
-				item: "thermal_extra:polyolefin_bucket"
-				type: "item"
-			}]
-			x: -0.5d
-			y: 1.0d
-		}
-		{
-			dependencies: ["78667AD1FB09FF7A"]
-			id: "4C969CCCBA205E32"
-			tasks: [{
-				id: "0A5DC3D943A85B9A"
-				item: "energizedpower:basic_circuit"
-				type: "item"
-			}]
 			x: 2.5d
-			y: 1.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["44403B91A10DC5E3"]
+			id: "0BB2CF6C8AE15984"
+			tasks: [
+				{
+					id: "71A9E1F5B60FD363"
+					item: "laserio:logic_chip_raw"
+					type: "item"
+				}
+				{
+					id: "5CA4967B8AE546C5"
+					item: "thoriumreactors:module_empty"
+					type: "item"
+				}
+			]
+			x: 8.5d
+			y: -6.5d
+		}
+		{
+			dependencies: ["0BB2CF6C8AE15984"]
+			id: "797403C0C6A71A52"
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "4114101BFF61B35A"
+					item: {
+						Count: 1
+						id: "industrialforegoing:speed_addon_1"
+						tag: {
+							TitaniumAugment: {
+								Speed: 2.0f
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3AB5E87876230A5A"
+					item: {
+						Count: 1
+						id: "industrialforegoing:efficiency_addon_1"
+						tag: {
+							TitaniumAugment: {
+								Efficiency: 0.9f
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3ACC3D2AC4229FC4"
+					item: {
+						Count: 1
+						id: "industrialforegoing:efficiency_addon_1"
+						tag: {
+							TitaniumAugment: {
+								Efficiency: 0.9f
+							}
+						}
+					}
+					type: "item"
+				}
+			]
+			x: 8.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["3F2B0E1F1696876E"]
+			id: "6879DB76718DA243"
+			tasks: [{
+				id: "336B982A0CFC95AF"
+				item: "thermal_extra:endothermic_dehydrator"
+				type: "item"
+			}]
+			x: -0.5d
+			y: -9.0d
+		}
+		{
+			dependencies: ["59A4582E03FB0CEC"]
+			id: "3F2B0E1F1696876E"
+			tasks: [{
+				id: "235B5C9207A6C29D"
+				item: "thermal_extra:fluid_mixer"
+				type: "item"
+			}]
+			x: -0.5d
+			y: -11.5d
+		}
+		{
+			dependencies: ["6879DB76718DA243"]
+			id: "066E3E9586BD71A9"
+			tasks: [{
+				id: "0F482ACEFA94EA7A"
+				item: "thermal:machine_chiller"
+				type: "item"
+			}]
+			x: -0.5d
+			y: -6.5d
 		}
 		{
 			dependencies: ["42B9D89479B9D60A"]
-			id: "78667AD1FB09FF7A"
+			id: "44403B91A10DC5E3"
 			tasks: [{
-				id: "7A4E9FD03751CCC2"
-				item: {
-					Count: 1
-					id: "energizedpower:wire_press_mold"
-					tag: {
-						Damage: 0
-					}
+				id: "4AA6F8977CAE2875"
+				item: "thermal_extra:component_assembly"
+				type: "item"
+			}]
+			x: 5.5d
+			y: -6.5d
+		}
+		{
+			dependencies: ["0BB2CF6C8AE15984"]
+			id: "53625AC6C38450FA"
+			tasks: [
+				{
+					id: "1479A681DA7337D7"
+					item: "thoriumreactors:module_io"
+					type: "item"
 				}
-				type: "item"
-			}]
-			x: 2.5d
-			y: 3.5d
-		}
-		{
-			dependencies: ["4C969CCCBA205E32"]
-			id: "5C6F29C0067119BC"
-			tasks: [{
-				id: "0180CC5E29F83A6E"
-				item: "energizedpower:energized_copper_ingot"
-				type: "item"
-			}]
-			x: 2.5d
-			y: -1.5d
-		}
-		{
-			dependencies: ["51192ED104C91C90"]
-			id: "500AF5D754C13504"
-			tasks: [{
-				id: "1A2A32F8E33B002C"
-				item: "energizedpower:advanced_circuit"
-				type: "item"
-			}]
-			x: 5.5d
-			y: 1.0d
-		}
-		{
-			dependencies: ["5C6F29C0067119BC"]
-			id: "51192ED104C91C90"
-			tasks: [{
-				id: "469DFEAF8DF81AA2"
-				item: "energizedpower:energized_copper_wire"
-				type: "item"
-			}]
-			x: 5.5d
-			y: -1.5d
-		}
-		{
-			dependencies: ["500AF5D754C13504"]
-			id: "045F5BA8CEFC0175"
-			tasks: [{
-				id: "1F55198FD16F88EB"
-				item: "energizedpower:energizer"
-				type: "item"
-			}]
-			x: 5.5d
-			y: 3.5d
-		}
-		{
-			dependencies: ["045F5BA8CEFC0175"]
-			id: "01275F1E429C92B7"
-			tasks: [{
-				id: "03591F378EB43C8A"
-				item: "energizedpower:energized_gold_ingot"
-				type: "item"
-			}]
+				{
+					id: "032116A01302A80F"
+					item: "thoriumreactors:module_energy"
+					type: "item"
+				}
+				{
+					id: "0AC60E98D2BD2B11"
+					item: "thoriumreactors:module_storage"
+					type: "item"
+				}
+			]
 			x: 8.5d
-			y: 3.5d
+			y: -9.0d
 		}
 		{
-			dependencies: ["01275F1E429C92B7"]
-			id: "08B1217F0FEF5141"
+			dependencies: ["53625AC6C38450FA"]
+			id: "43089914D063D622"
 			tasks: [{
-				id: "03B6B044528152CB"
-				item: "energizedpower:energized_gold_wire"
-				type: "item"
-			}]
-			x: 8.5d
-			y: 1.0d
-		}
-		{
-			dependencies: ["08B1217F0FEF5141"]
-			id: "2EF183D7E6AF0F34"
-			tasks: [{
-				id: "7239A1BC7C8732A6"
-				item: "energizedpower:processing_unit"
-				type: "item"
-			}]
-			x: 8.5d
-			y: -1.5d
-		}
-		{
-			dependencies: ["2EF183D7E6AF0F34"]
-			id: "6B4D6D6ADF642B38"
-			shape: "gear"
-			size: 2.0d
-			tasks: [{
-				id: "151D0D234D1780B3"
+				id: "5D49ACBEE94DCD70"
 				item: "expatternprovider:ex_inscriber"
 				type: "item"
 			}]
 			x: 8.5d
-			y: -4.0d
+			y: -11.5d
+		}
+		{
+			dependencies: ["53625AC6C38450FA"]
+			id: "05C642744417F38E"
+			tasks: [{
+				id: "1FDD02788BB9CB3E"
+				item: "voidminers:aurantium_miner"
+				type: "item"
+			}]
+			x: 5.5d
+			y: -9.0d
+		}
+		{
+			dependencies: [
+				"05C642744417F38E"
+				"43089914D063D622"
+			]
+			id: "05C92DA7E1E1DE2A"
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "6EA1127B4E048101"
+					item: "ae2:printed_calculation_processor"
+					type: "item"
+				}
+				{
+					id: "18A8E9FA2AAAED3E"
+					item: "ae2:printed_engineering_processor"
+					type: "item"
+				}
+				{
+					id: "2AAC8A92E8E08C70"
+					item: "ae2:printed_logic_processor"
+					type: "item"
+				}
+			]
+			x: 5.5d
+			y: -11.5d
 		}
 	]
 	title: "5"

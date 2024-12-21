@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "3"
 	group: ""
+	hide_quest_until_deps_visible: true
 	id: "358AAA439B4A74A0"
 	order_index: 2
 	quest_links: [ ]
@@ -107,8 +108,8 @@
 			]
 			id: "5510E3D2C4F309A4"
 			tasks: [{
-				id: "410B02802E9A6592"
-				item: "thermal:machine_frame"
+				id: "1C0922055941B0E0"
+				item: "industrialforegoing:machine_frame_simple"
 				type: "item"
 			}]
 			x: -11.5d

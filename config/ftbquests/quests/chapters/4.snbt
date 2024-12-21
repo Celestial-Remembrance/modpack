@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "4"
 	group: ""
+	hide_quest_until_deps_visible: true
 	id: "71627F79C69D7B9A"
 	order_index: 3
 	quest_links: [ ]
@@ -11,8 +12,8 @@
 			dependencies: ["0DB438C586FA58C5"]
 			id: "20AF4E4CEE939207"
 			tasks: [{
-				id: "1E2B716D98E0B37D"
-				item: "energizedpower:charger"
+				id: "3AF42CC991C1E1FF"
+				item: "thermal:machine_crystallizer"
 				type: "item"
 			}]
 			x: -9.5d

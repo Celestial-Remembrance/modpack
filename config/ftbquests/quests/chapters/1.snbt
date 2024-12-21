@@ -3,6 +3,7 @@
 	default_quest_shape: ""
 	filename: "1"
 	group: ""
+	hide_quest_until_deps_visible: true
 	icon: "mekanism:teleporter_frame"
 	id: "42C5F3C53E658BDE"
 	order_index: 0
