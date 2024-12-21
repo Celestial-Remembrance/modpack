@@ -18,11 +18,9 @@ let isDef = (any, replace) => {
   return any != undefined ? any : replace != undefined ? replace : 1;
 };
 
-const Qdrill = "quantum_astro_drill";
-const Qprocess = "quantum_ore_processor";
-const DEV = "dev";
+const Generic = "basic"
 
-const ALL = [Qdrill, Qprocess, DEV];
+// const ALL = [Qdrill, Qprocess, DEV];
 
 MMEvents.registerControllers((event) => {
   /**
@@ -39,38 +37,25 @@ MMEvents.registerControllers((event) => {
 
   // CreateController(Qprocess);
   // CreateController(Qdrill);
-  CreateController(DEV);
+  // CreateController(DEV);
+  CreateController(Generic)
 });
 
 MMEvents.registerExtraBlocks((event) => {
-  let ComponentCreation = (name, type) => {
-    event
-      .create(name + "_" + type)
-      .type("mm:" + type)
-      .name(UpCased(name + "_" + type));
-  };
-  /**
-   *
-   * @param {string} name
-   * @returns mm:name_vent
-   */
-  let createVent = (name) => ComponentCreation(name, "vent");
-  /**
-   *
-   * @param {string} name
-   * @returns mm:name_circuit
-   */
-  let createCircuit = (name) => ComponentCreation(name, "circuit");
-  /**
-   *
-   * @param {string} name
-   * @returns mm:name_gearbox
-   */
-  let createGearBox = (name) => ComponentCreation(name, "gearbox");
+  event
+  .create("gearbox")
+  .type("mm:gearbox")
+  .name('Gearbox');
 
-  createCircuit(DEV);
-  createGearBox(DEV);
-  createVent(DEV);
+  event
+  .create("vent")
+  .type("mm:vent")
+  .name('Vent');
+
+  event
+  .create("circuit")
+  .type("mm:circuit")
+  .name('Circuit');
 });
 
 MMEvents.registerPorts((event) => {
@@ -165,12 +150,9 @@ MMEvents.registerPorts((event) => {
 
 
 
-
-  CreateSetPort("basic",DEV,1)
-  CreateSetPort("advanced",DEV,3)
-  CreateSetPort("elite",DEV,5)
-  CreateSetPort("ultimate",DEV,7)
-
+  CreateSetPort("primitive",Generic,1)
+  CreateSetPort("basic",Generic,3)
+  CreateSetPort("advanced",Generic,5)
 
 
 });
