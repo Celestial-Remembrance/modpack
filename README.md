@@ -32,10 +32,10 @@ ITALIAN ONLY FOR NOW
 - logistica base (mekanism basic pipes + sorter + cube + IF harvester + addons)
 - componenti chimici (con reward per "skippare il grinding" , opzionali per la progressione) #1-chem
 - jetboots
-fine - steel
+**fine** - steel
 
 ### 2.
-inizio - machine frame t1 (meka)
+**inizio** - machine frame t1 (meka)
 - enricher -> materiali "enriched" (custom) utili per creare leghe
 - materiali enriched producono nel dissolver materiali non farmabili in bassa probabilità (oro , tin , coal e diamante)
 - metallurgic infuser (enriched + gas infused = leghe)
@@ -44,10 +44,10 @@ inizio - machine frame t1 (meka)
 - ortaggi (via chimica)			#2-chem
 - crusher (2.5x ores -> 2=5 | biofuel)
 - nutritional liquifier (item->gas) (usato per il biofuel)
-fine - bio-fuel generator (da vedere se è buffabile + espandere la recipe con gli altri macchinari + chimica)
+**fine** - bio-fuel generator (da vedere se è buffabile + espandere la recipe con gli altri macchinari + chimica)
 
 ### 3.
-inizio - machine frame t2 (custom , usando il machine frame + materiali sbloccati nel age 2)
+**inizio** - machine frame t2 (custom , usando il machine frame + materiali sbloccati nel age 2)
 - liquifier (alchemistry) (item->fluid)
 - electrolizer separator (+ custom recipe per separare elementi della alchemistry)
 - rotary (fluid<->gas)
@@ -58,19 +58,19 @@ inizio - machine frame t2 (custom , usando il machine frame + materiali sbloccat
 - usando la chimica creazione di osmium  , quarzo e lead (+ steel ottimizzato) #3-chem
 - item chimici secondari			emerald , endstone e soulsand
 - item laser drill t1
-fine - razzo t1 per marte (+ materiale tipo cadmium) *da verificare
+**fine** - razzo t1 per marte (+ materiale tipo cadmium) *da verificare
 
 ### 4.
-inizio - marte
+**inizio** - marte
 - nuovi materiali (con extractinator) -  sulfur , gold , nickel , desh
 - osmium compressor (gas+item = item) 
 - bronze , constant , copper alloy e energetic alloy						#4-chem
 - gas burning generator
 - thermal evaporation (fluid->fluid)
-fine - refined glowstone
+**fine** - refined glowstone
 
 ### 5.
-inizio - machine frame t3
+**inizio** - machine frame t3
 - estrazione wasted oil col fluid laser drill (t1)
 - chemical washer (fluid+dirty->slurry)
 - chemical dissolution chamber
@@ -83,10 +83,10 @@ inizio - machine frame t3
 - via chimica con bassa probabilità 	aluminium , zinc , silver e tin		#5-chem
 - brass , lumium e electrum
 - item laser drill t2
-fine - rocket t2
+**fine** - rocket t2
 
 ### 6.
-inizio - venere
+**inizio** - venere
 - nuovi materiali (con extractinator) ostrum , ruby , sapphire e peridot
 - PRC (fluid+item+gas -> item + gas)	
 - isotopic centrifuge (gas->gas)
@@ -96,11 +96,11 @@ inizio - venere
 - dark steel (da espandere)
 - machine frame t4
 - item laser drill t3
-fine - rocket t3 mercurio - glacio
+**fine** - rocket t3 mercurio - glacio
 
 
 ### 7.
-inizio - mercurio - glacio
+**inizio** - mercurio - glacio
 - fluid laser drill
 
 - glacio : fluorite , certus e ice shard
@@ -119,10 +119,10 @@ inizio - mercurio - glacio
 
 - reinforced alloy da glacio (+ custom "pyrolitic alloy" con mercurio ?)
 
-fine - *modularium* (da capire)
+**fine** - *modularium* (da capire)
 
 ### 8.
-inizio - machine frame t5
+**inizio** - machine frame t5
 - modular machinery (dei macchinari della meka ma ottimizzate le recipe)
 - magma -> lava -> refined obsidian
 - platinum e iridium (dalla modular come secondario prodotto chimico)
@@ -133,4 +133,4 @@ inizio - machine frame t5
 - vibrant alloy , soularium e end steel
 - atomic alloy
 - item laser drill t4
-fine - rocket t4
+**fine** - rocket t4
