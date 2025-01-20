@@ -3,9 +3,83 @@
 	default_quest_shape: ""
 	filename: "8"
 	group: ""
-	id: "2C90E42FC27FB03F"
-	order_index: 7
+	icon: "ad_astra:earth_globe"
+	id: "0A1F23044561BB75"
+	order_index: 9
 	quest_links: [ ]
-	quests: [ ]
-	title: "8"
+	quests: [
+		{
+			id: "1BD6BDA54A1EF47F"
+			size: 2.0d
+			subtitle: "IT'S TIME TO GO AT HOME"
+			tasks: [{
+				id: "00FB842BEDF894DA"
+				item: {
+					Count: 1
+					id: "ad_astra:tier_4_rocket"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 1.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1FB143490D3B699B"]
+			id: "50B929A26058AE03"
+			tasks: [{
+				id: "022E3FFB6BFD1DE6"
+				item: "industrialforegoing:dissolution_chamber"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["5477BDDE4F3702E4"]
+			id: "1FB143490D3B699B"
+			size: 2.0d
+			tasks: [{
+				id: "77EB7C2619102473"
+				item: "industrialforegoing:machine_frame_supreme"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -9.0d
+		}
+		{
+			id: "49EE237B9B5E3E69"
+			tasks: [{
+				id: "37EE5BC2500AADE7"
+				item: "mm:basic_controller"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["50B929A26058AE03"]
+			id: "115D78A2E5FA6714"
+			subtitle: "ANY STONE"
+			tasks: [{
+				id: "0FF01228807B7BFE"
+				item: "industrialforegoing:material_stonework_factory"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -6.5d
+		}
+		{
+			dependencies: ["50B929A26058AE03"]
+			id: "66C86A7DF7E70A3D"
+			tasks: [{
+				id: "1C1F21910D1EAE65"
+				item: "mekanismgenerators:fusion_reactor_controller"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -5.0d
+		}
+	]
+	title: "8 earth - end"
 }
