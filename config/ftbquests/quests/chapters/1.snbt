@@ -3,174 +3,24 @@
 	default_quest_shape: ""
 	filename: "1"
 	group: ""
-	hide_quest_until_deps_visible: true
-	icon: "mekanism:teleporter_frame"
-	id: "42C5F3C53E658BDE"
+	icon: {
+		Count: 1
+		id: "ftbquests:custom_icon"
+		tag: {
+			Icon: "minecraft:textures/gui/checkmark.png"
+		}
+	}
+	id: "711F548DA2613FF8"
 	order_index: 0
 	quest_links: [ ]
-	quests: [
-		{
-			id: "201E356F80488BC6"
-			shape: "square"
-			tasks: [
-				{
-					id: "671AF48B8E65318F"
-					item: "mekanism:configurator"
-					type: "item"
-				}
-				{
-					id: "42DF05C2E6FDDA56"
-					item: "mekanism:basic_universal_cable"
-					type: "item"
-				}
-				{
-					id: "0A66BF988C8E0DF2"
-					item: "kubejs:star"
-					type: "item"
-				}
-			]
-			x: -2.0d
-			y: -0.5d
-		}
-		{
-			dependencies: ["11C7B6CD22A44A24"]
-			id: "070FEF9ED73C92AD"
-			tasks: [{
-				id: "41A57A981D9C6E27"
-				item: "kubejs:converter"
-				type: "item"
-			}]
-			x: 1.0d
-			y: -3.0d
-		}
-		{
-			dependencies: ["070FEF9ED73C92AD"]
-			id: "51847DC1E08767AD"
-			tasks: [{
-				id: "6B9959559494C2EC"
-				item: "kubejs:tin_crystal_block"
-				type: "item"
-			}]
-			x: 4.0d
-			y: -3.0d
-		}
-		{
-			dependencies: [
-				"51847DC1E08767AD"
-				"6D8606FCA88C5E0B"
-			]
-			id: "2619396A1C66DB2F"
-			tasks: [{
-				id: "4390BBC644352ABD"
-				item: "mekanism:dirty_dust_tin"
-				type: "item"
-			}]
-			x: 4.0d
-			y: -0.5d
-		}
-		{
-			dependencies: [
-				"2619396A1C66DB2F"
-				"3A2A3AE7B0285D32"
-			]
-			id: "0C0958B6B09017EF"
-			tasks: [{
-				id: "65DFAE2201E05347"
-				item: "mekanism:dust_bronze"
-				type: "item"
-			}]
-			x: 7.0d
-			y: -0.5d
-		}
-		{
-			dependencies: ["070FEF9ED73C92AD"]
-			id: "478DEBF2EC22C51B"
-			tasks: [{
-				id: "4EC4AE86C2104EB9"
-				item: "kubejs:copper_crystal_block"
-				type: "item"
-			}]
-			x: 1.0d
-			y: -0.5d
-		}
-		{
-			dependencies: ["478DEBF2EC22C51B"]
-			id: "1767F258F5BF5ED0"
-			tasks: [{
-				id: "422504EF7A0B03A7"
-				item: "minecraft:copper_ingot"
-				type: "item"
-			}]
-			x: 1.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["0C0958B6B09017EF"]
-			id: "7A2FBC1778E84931"
-			tasks: [{
-				id: "5757B5DFEFE3D5D5"
-				item: "mekanism:ingot_bronze"
-				type: "item"
-			}]
-			x: 10.0d
-			y: -0.5d
-		}
-		{
-			dependencies: ["1767F258F5BF5ED0"]
-			id: "6D8606FCA88C5E0B"
-			tasks: [{
-				id: "414399E9B09F3FF8"
-				item: {
-					Count: 1
-					id: "alltheores:copper_ore_hammer"
-					tag: {
-						Damage: 0
-					}
-				}
-				type: "item"
-			}]
-			x: 4.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["6D8606FCA88C5E0B"]
-			id: "3A2A3AE7B0285D32"
-			tasks: [{
-				id: "0BB41384C7FE501D"
-				item: "mekanism:dirty_dust_copper"
-				type: "item"
-			}]
-			x: 7.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["7A2FBC1778E84931"]
-			id: "4BFAE93DBE2CF97C"
-			shape: "gear"
-			size: 2.0d
-			tasks: [{
-				id: "2CD9D33C23B6B6E9"
-				item: "industrialforegoing:machine_frame_pity"
-				type: "item"
-			}]
-			x: 10.0d
-			y: 2.0d
-		}
-		{
-			dependencies: ["201E356F80488BC6"]
-			id: "11C7B6CD22A44A24"
-			tasks: [{
-				id: "58C51C4B909773FB"
-				item: {
-					Count: 1
-					id: "thermal:flux_drill"
-					tag: { }
-				}
-				type: "item"
-			}]
-			x: -2.0d
-			y: -3.0d
-		}
-	]
-	title: "1"
+	quests: [{
+		id: "40510DBD15AE0E76"
+		tasks: [{
+			id: "72BB4F4286BC60C6"
+			type: "checkmark"
+		}]
+		x: 0.5d
+		y: -1.5d
+	}]
+	title: "begin"
 }
