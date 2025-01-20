@@ -3,219 +3,368 @@
 	default_quest_shape: ""
 	filename: "2"
 	group: ""
-	hide_quest_until_deps_visible: true
-	id: "6DE8C0C97E0EB6D6"
-	order_index: 1
+	icon: "industrialforegoing:machine_frame_pity"
+	id: "0A7A83D67DE45113"
+	order_index: 3
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["4BFAE93DBE2CF97C"]
-			id: "56D8A43D9BEC628F"
-			shape: "square"
-			tasks: [{
-				id: "7C07C4C7648C0223"
-				item: "factorium:alloy"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["3958C5A713B861EC"]
-			id: "2FAFCEC63A6170FB"
-			shape: "gear"
+			dependencies: ["567FAF6F55A07B6D"]
+			id: "3C51B5C089F3F915"
 			size: 2.0d
 			tasks: [{
-				id: "10BC76982C2BA453"
-				item: "mekanism:ingot_steel"
-				type: "item"
-			}]
-			x: 3.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["0E2AAEAB608B1B22"]
-			id: "2F8DA95EF450A177"
-			tasks: [{
-				id: "6FD190EF4911CA4B"
-				item: "industrialforegoing:plant_sower"
+				id: "57EFE52268393343"
+				item: "industrialforegoing:machine_frame_pity"
 				type: "item"
 			}]
 			x: -3.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["56D8A43D9BEC628F"]
-			id: "2B9679DD9C47CEE2"
-			tasks: [{
-				id: "634186FF48E8CFDF"
-				item: "alchemistry:dissolver"
-				type: "item"
-			}]
-			x: -9.0d
 			y: -2.5d
 		}
 		{
-			dependencies: ["075AC8146E6EF906"]
-			id: "73A62D534AD513E9"
+			dependencies: ["3C51B5C089F3F915"]
+			id: "2BAA4B2487D8389D"
+			tasks: [{
+				id: "0CE0D4BFEE5EF20D"
+				item: "mekanism:enrichment_chamber"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3C51B5C089F3F915"]
+			id: "31841E6978BF35B8"
+			tasks: [{
+				id: "6A69744DFFBEF1DE"
+				item: "mekanism:metallurgic_infuser"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3C51B5C089F3F915"]
+			id: "3123290EF56D7190"
 			tasks: [
 				{
-					id: "1D048A466DC70402"
-					item: "chemlib:carbon"
+					id: "422EE8CD3ECAD0E5"
+					item: "mekanism:formulaic_assemblicator"
 					type: "item"
 				}
 				{
-					id: "7C6680CA339B130D"
-					item: "chemlib:hydrogen"
-					type: "item"
-				}
-				{
-					id: "2BF54A6B70066343"
-					item: "chemlib:oxygen"
+					id: "6CEFE1FE8A8672EF"
+					item: "mekanism:crafting_formula"
 					type: "item"
 				}
 			]
-			x: -3.0d
+			x: -1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3C51B5C089F3F915"]
+			id: "79F04AEEE24D60F4"
+			tasks: [{
+				id: "5803783A7DA15D68"
+				item: "mekanism:precision_sawmill"
+				type: "item"
+			}]
+			x: 0.0d
 			y: -2.5d
 		}
 		{
-			dependencies: ["2F765057287E7614"]
-			id: "29673DAB27165733"
+			dependencies: ["567FAF6F55A07B6D"]
+			id: "0E1F18EBEF16B84C"
 			tasks: [
 				{
-					id: "7B6FEF8573EF0930"
-					item: "minecraft:oak_sapling"
-					type: "item"
-				}
-				{
-					id: "01A945C825BB566F"
-					item: "minecraft:wheat_seeds"
-					type: "item"
-				}
-				{
-					id: "640D2CF013E8D019"
+					id: "4577B3652E36E12D"
 					item: "minecraft:carrot"
 					type: "item"
 				}
 				{
-					id: "0C40F12302FB8365"
+					id: "1CD4BE8A944C703B"
 					item: "minecraft:potato"
 					type: "item"
 				}
-				{
-					id: "61630EB5211CCEC0"
-					item: "minecraft:water_bucket"
-					type: "item"
-				}
 			]
-			x: 3.0d
-			y: 0.0d
+			x: -0.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["0E1F18EBEF16B84C"]
+			id: "20BF5A1ED50962E9"
+			tasks: [{
+				id: "695271B3F0204D0B"
+				item: "chemlib:beta_carotene"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["3C51B5C089F3F915"]
+			id: "7930E040CACD8113"
+			tasks: [{
+				id: "024C057EFE3883D8"
+				item: "mekanism:crusher"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 0.5d
 		}
 		{
 			dependencies: [
-				"29673DAB27165733"
-				"2F8DA95EF450A177"
+				"31841E6978BF35B8"
+				"0E1F18EBEF16B84C"
 			]
-			id: "70D7844E9B691669"
+			id: "5D33781562C1B736"
 			tasks: [{
-				id: "5CA4A89DE4FF0F2A"
-				item: "minecraft:oak_log"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"70D7844E9B691669"
-				"56C9241597C7AE61"
-			]
-			id: "3958C5A713B861EC"
-			tasks: [{
-				id: "7E5B99F42CEB542A"
-				item: "minecraft:charcoal"
-				type: "item"
-			}]
-			x: 0.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["56D8A43D9BEC628F"]
-			id: "6E618AD00F2EAA2E"
-			tasks: [{
-				id: "6690D417651EA353"
-				item: "factorium:smelter"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["6E618AD00F2EAA2E"]
-			id: "15273E4BBFF743AF"
-			tasks: [{
-				id: "7FBD5E3AD5D0E3F6"
-				item: "factorium:mixer"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 2.5d
-		}
-		{
-			dependencies: ["15273E4BBFF743AF"]
-			id: "56C9241597C7AE61"
-			tasks: [{
-				id: "7022CA153FA9D479"
-				item: "factorium:grinder"
+				id: "6F53C99F0F11F127"
+				item: "mekanism:bio_fuel"
 				type: "item"
 			}]
 			x: -3.0d
-			y: 2.5d
+			y: 4.0d
 		}
 		{
-			dependencies: ["2B9679DD9C47CEE2"]
-			id: "075AC8146E6EF906"
+			dependencies: ["5D33781562C1B736"]
+			id: "42F25EFD0035198D"
 			tasks: [{
-				id: "3E76BCA90D3B2FAB"
-				item: "alchemistry:combiner"
+				id: "1E03BA1B80FF3C28"
+				item: "mekanism:nutritional_liquifier"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 4.0d
+		}
+		{
+			dependencies: ["42F25EFD0035198D"]
+			id: "3B476024F0E9E9BF"
+			tasks: [{
+				id: "4384D07224A010EE"
+				item: {
+					Count: 1
+					id: "mekanism:canteen"
+					tag: {
+						mekData: {
+							FluidTanks: [{
+								Tank: 0b
+								stored: {
+									Amount: 64000
+									FluidName: "mekanism:nutritional_paste"
+								}
+							}]
+						}
+					}
+				}
 				type: "item"
 			}]
 			x: -6.0d
-			y: -2.5d
+			y: 4.0d
 		}
 		{
-			dependencies: ["56D8A43D9BEC628F"]
-			id: "0E2AAEAB608B1B22"
+			dependencies: ["7930E040CACD8113"]
+			id: "1F71983E909AFDD9"
+			subtitle: "2.5x"
 			tasks: [{
-				id: "6640FA13D48234CA"
-				item: "industrialforegoing:plant_gatherer"
+				id: "59AFD5DEE731CA45"
+				item: "minecraft:raw_iron"
 				type: "item"
 			}]
-			x: -6.0d
+			x: 1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0FD086473E643CF5"]
+			id: "3E9B75382D5B6C46"
+			tasks: [{
+				id: "375A4C6C51D01188"
+				item: "industrialforegoing:hydroponic_bed"
+				type: "item"
+			}]
+			x: -4.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["31841E6978BF35B8"]
+			id: "0FD086473E643CF5"
+			tasks: [{
+				id: "1BBDEC726BA52200"
+				item: "enderio:basic_capacitor"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["510CCFC3D686D863"]
+			id: "251AC431EA76C1CB"
+			tasks: [{
+				id: "107B113A5D27AE6E"
+				item: {
+					Count: 1
+					id: "industrialforegoing:range_addon11"
+					tag: {
+						TitaniumAugment: {
+							Range: 11.0f
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: -8.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0FD086473E643CF5"]
+			id: "0DA149C30AEB8BAA"
+			tasks: [{
+				id: "64889C63003E0518"
+				item: "mekanism:basic_logistical_transporter"
+				type: "item"
+			}]
+			x: -7.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["12A5A1F7F73A008D"]
-			id: "2F765057287E7614"
+			dependencies: ["0FD086473E643CF5"]
+			id: "510CCFC3D686D863"
+			tasks: [
+				{
+					id: "59CB0448517A4FCF"
+					item: "industrialforegoing:plant_gatherer"
+					type: "item"
+				}
+				{
+					id: "2A1D75FC0E9C0534"
+					item: "industrialforegoing:plant_sower"
+					type: "item"
+				}
+			]
+			x: -7.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0DA149C30AEB8BAA"]
+			id: "12F34FF5CC2A2F7B"
 			tasks: [{
-				id: "6D66F18A8E0C328E"
-				item: "minecraft:water_bucket"
+				id: "703861006945D4F3"
+				item: "mekanism:logistical_sorter"
 				type: "item"
 			}]
-			x: 3.0d
+			x: -8.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0DA149C30AEB8BAA"]
+			id: "569B3259C6D54316"
+			tasks: [{
+				id: "771607AFF1B2A130"
+				item: "mekanism:basic_bin"
+				type: "item"
+			}]
+			x: -7.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["79F04AEEE24D60F4"]
+			id: "0D57EF1907F0F977"
+			tasks: [{
+				id: "360EA3C159053876"
+				item: "mekanism:sawdust"
+				type: "item"
+			}]
+			x: 1.5d
 			y: -2.5d
 		}
 		{
-			dependencies: ["73A62D534AD513E9"]
-			id: "12A5A1F7F73A008D"
+			dependencies: ["5D33781562C1B736"]
+			id: "6DC8CC73FC36E346"
+			size: 2.0d
 			tasks: [{
-				id: "2AC3D8E233929E33"
-				item: "chemlib:water"
+				id: "1115BB2E804130DE"
+				item: "mekanismgenerators:bio_generator"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -2.5d
+			x: -3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["0E1F18EBEF16B84C"]
+			id: "5C8815F6691FC0F6"
+			tasks: [
+				{
+					id: "6D90E385A3883C95"
+					item: "chemlib:potassium"
+					type: "item"
+				}
+				{
+					id: "0F3A87ECDD9C3B3C"
+					item: "chemlib:starch"
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"20BF5A1ED50962E9"
+				"5C8815F6691FC0F6"
+			]
+			id: "68A23C3DB5781D90"
+			tasks: [{
+				id: "0DAEBC273FAD1008"
+				item: "minecraft:glowstone_dust"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["2BAA4B2487D8389D"]
+			id: "7647FCB12CB8066B"
+			tasks: [{
+				id: "562B185A82A7B1F8"
+				item: "mekanism:enriched_carbon"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["3C51B5C089F3F915"]
+			id: "50305B1F35D11804"
+			tasks: [{
+				id: "12ED5A3284515F7E"
+				item: "industrialforegoing:fluid_extractor"
+				type: "item"
+			}]
+			x: -5.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["50305B1F35D11804"]
+			id: "7779C4A35A114E7A"
+			subtitle: "NO LATEX REPROCESSOR!"
+			tasks: [{
+				id: "3A219B2821E59D8A"
+				item: "industrialforegoing:latex_bucket"
+				type: "item"
+			}]
+			x: -7.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["7779C4A35A114E7A"]
+			id: "57B684F8CBC7DFC1"
+			tasks: [{
+				id: "6B854097B2D85445"
+				item: "industrialforegoing:plastic"
+				type: "item"
+			}]
+			x: -8.5d
+			y: -3.0d
 		}
 	]
-	title: "2"
+	title: "2 bio-fuel"
 }
