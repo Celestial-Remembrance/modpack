@@ -3,44 +3,349 @@
 	default_quest_shape: ""
 	filename: "6"
 	group: ""
-	hide_quest_until_deps_visible: true
-	id: "0BF35B039670793D"
-	order_index: 5
+	icon: "ad_astra:rocket_fin"
+	id: "29CF0DEFD72E92FA"
+	order_index: 7
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["05C92DA7E1E1DE2A"]
-			id: "0F6EB8E3B8399B2B"
+			dependencies: ["1B81E5B218AA4C68"]
+			id: "5517AD1DC34460C0"
 			tasks: [{
-				id: "58BDC771A10D5D13"
+				id: "5577452F5F4497F2"
+				item: "enderio:grains_of_infinity"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["0FE61998BCE087AE"]
+			id: "24AC59B8A7150A60"
+			tasks: [{
+				id: "47FFF4099982DC34"
+				item: "enderio:octadic_capacitor"
+				type: "item"
+			}]
+			x: 7.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["3AA988914BAF7355"]
+			id: "0EF21835278C291B"
+			size: 2.0d
+			tasks: [{
+				id: "3E1589BEE840A01B"
+				item: "thoriumreactors:machine_casing"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["6EF9297B5A07E922"]
+			id: "6BB2B44AFB18A176"
+			tasks: [{
+				id: "7450A1055981B361"
+				item: "mekanism:salt"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["0EF21835278C291B"]
+			id: "7C213221BCDFC854"
+			tasks: [{
+				id: "71F704F56FFC78AD"
+				item: {
+					Count: 1
+					id: "thoriumreactors:fluid_centrifuge_block"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 4.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["0EF21835278C291B"]
+			id: "1B81E5B218AA4C68"
+			tasks: [{
+				id: "58C9F7418F6F761D"
+				item: {
+					Count: 1
+					id: "thoriumreactors:crystallizer_block"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 3.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["0EF21835278C291B"]
+			id: "5F77610BB7911E33"
+			tasks: [{
+				id: "2709585F739DC4FE"
+				item: {
+					Count: 1
+					id: "thoriumreactors:electrolytic_salt_separator"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: -0.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["0EF21835278C291B"]
+			id: "6EF9297B5A07E922"
+			tasks: [{
+				id: "3C48C6AC6C99D75D"
+				item: {
+					Count: 1
+					id: "thoriumreactors:fluid_evaporation_block"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["0EF21835278C291B"]
+			id: "3B668069484A5BB7"
+			tasks: [{
+				id: "1A926BABE43B9DF7"
+				item: {
+					Count: 1
+					id: "thoriumreactors:salt_melter_block"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 4.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["1B81E5B218AA4C68"]
+			id: "17FA08934C15E4D3"
+			tasks: [{
+				id: "2FA01EF7250B7DFF"
+				item: "mekanism:dust_lithium"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["17FA08934C15E4D3"]
+			id: "0B50B19DEE1F99BD"
+			subtitle: "t3"
+			tasks: [{
+				id: "04015CDE3D9C5B7F"
+				item: "industrialforegoing:laser_lens0"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"6FF505875C232AD9"
+				"0FE61998BCE087AE"
+			]
+			id: "701C3C5DB81A7EAE"
+			tasks: [{
+				id: "268FCD26CFE60144"
+				item: "experienceobelisk:cognitive_crystal"
+				type: "item"
+			}]
+			x: 7.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["701C3C5DB81A7EAE"]
+			id: "6A7F7B20356E78FA"
+			tasks: [{
+				id: "606B2C849805AC09"
+				item: "experienceobelisk:primordial_assembly"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7FCCDC0D1DB60B0F"]
+			id: "42E2A5485A05609E"
+			tasks: [{
+				id: "3B49998B14AFD3FA"
+				item: "industrialforegoing:mob_crusher"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6A7F7B20356E78FA"]
+			id: "40CD8DF22FBDB272"
+			tasks: [{
+				id: "427F4456B903022C"
+				item: "experienceobelisk:bibliophage"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1B81E5B218AA4C68"]
+			id: "6FF505875C232AD9"
+			tasks: [{
+				id: "166F07A9F6902CAC"
+				item: "ae2:ender_dust"
+				type: "item"
+			}]
+			x: 5.5d
+			y: 0.5d
+		}
+		{
+			dependencies: ["5517AD1DC34460C0"]
+			id: "2E7E5CB9230C8DB0"
+			tasks: [{
+				id: "449AB0BDAC84C033"
+				item: "enderio:void_chassis"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 2.5d
+		}
+		{
+			dependencies: [
+				"40CD8DF22FBDB272"
+				"2E7E5CB9230C8DB0"
+			]
+			id: "7FCCDC0D1DB60B0F"
+			tasks: [{
+				id: "040F404BE521492C"
+				item: {
+					Count: 1
+					id: "experienceobelisk:molecular_metamorpher"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 8.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["7FCCDC0D1DB60B0F"]
+			id: "665F4A0836E41E9B"
+			tasks: [{
+				id: "159900B5B92D0530"
+				item: "industrialforegoing:mob_imprisonment_tool"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["7FCCDC0D1DB60B0F"]
+			id: "7207B6DB58355C2B"
+			tasks: [{
+				id: "73D57BB607F9DF96"
+				item: "industrialforegoing:mechanical_dirt"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["2E7E5CB9230C8DB0"]
+			id: "0AD0F45D9384C9BF"
+			size: 2.0d
+			tasks: [{
+				id: "5905B91F6E33C4C4"
+				item: {
+					Count: 1
+					id: "ad_astra:tier_3_rocket"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"074080A3BD50A60C"
+				"24AC59B8A7150A60"
+			]
+			id: "74817A94569EE225"
+			tasks: [{
+				id: "4CB0F565E4999FDE"
 				item: "ae2:controller"
 				type: "item"
 			}]
-			x: -4.5d
-			y: -6.5d
+			x: 8.5d
+			y: -4.0d
 		}
 		{
-			dependencies: ["0F6EB8E3B8399B2B"]
-			id: "6615C60E76DF07FC"
+			dependencies: ["74817A94569EE225"]
+			id: "02832C6B2B9308CB"
 			tasks: [{
-				id: "7692F27D5931B5E1"
-				item: "enderio:alloy_smelter"
+				id: "2EA83BF92F569090"
+				item: "ae2:crafting_terminal"
 				type: "item"
 			}]
-			x: -4.5d
-			y: -3.0d
+			x: 10.0d
+			y: -4.0d
 		}
 		{
-			dependencies: ["6615C60E76DF07FC"]
-			id: "2A28CDE4B37F9D9E"
+			dependencies: ["64CB64C1E1B0D419"]
+			id: "7C0057F207AE66F4"
+			subtitle: "9x"
 			tasks: [{
-				id: "5A5A2A61EFB536A7"
-				item: "mekanism:energized_smelter"
+				id: "50AA900291CA27F0"
+				item: "minecraft:raw_iron"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -3.0d
+			x: 0.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["0983D0B3B1D78F03"]
+			id: "64CB64C1E1B0D419"
+			tasks: [{
+				id: "2F4F0CCE17AC3820"
+				item: "mekanism:chemical_injection_chamber"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6BB2B44AFB18A176"]
+			id: "0983D0B3B1D78F03"
+			tasks: [{
+				id: "292DF0D05C1DDEF7"
+				item: "mekanism:hydrogen_chloride_bucket"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1B81E5B218AA4C68"]
+			id: "0FE61998BCE087AE"
+			tasks: [{
+				id: "3A11004C25DDC0DF"
+				item: "minecraft:emerald"
+				type: "item"
+			}]
+			x: 5.5d
+			y: -1.0d
 		}
 	]
-	title: "6"
+	title: "6 rocket3"
 }
