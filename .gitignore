@@ -255,3 +255,4 @@ config/energizedpower/server.conf
 config/energizedpower/common.conf
 config/fancymenu/customizablemenus.txt
 fancymenu_data/last_world.fmdata
+config/jetboots-client.toml
