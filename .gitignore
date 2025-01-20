@@ -256,3 +256,8 @@ config/energizedpower/common.conf
 config/fancymenu/customizablemenus.txt
 fancymenu_data/last_world.fmdata
 config/jetboots-client.toml
+config/megacells.json
+config/mffs-client.toml
+config/mffs-common.toml
+config/watercollector-common.toml
+config/xycraft/core_client.toml
