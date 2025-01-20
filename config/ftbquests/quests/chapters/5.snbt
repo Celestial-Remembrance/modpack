@@ -3,340 +3,320 @@
 	default_quest_shape: ""
 	filename: "5"
 	group: ""
-	hide_quest_until_deps_visible: true
-	id: "2D58FD167E4775F0"
-	order_index: 4
+	icon: "ad_astra:venus_globe"
+	id: "66074A5E3F97AA3D"
+	order_index: 6
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["76394CA56A1EC1FA"]
-			id: "5FDD809829FE1E0C"
+			dependencies: ["55C75AA7BCF75C53"]
+			id: "710F2A88A602B521"
 			tasks: [{
-				id: "0B5D0931CCB98340"
-				item: "minecraft:diamond"
+				id: "49B0FF1678CA578A"
+				item: "ad_astra:ostrum_ingot"
 				type: "item"
 			}]
-			x: -6.5d
-			y: -4.0d
+			x: -4.5d
+			y: -2.0d
 		}
 		{
-			dependencies: ["4EEB0D35A5CB5C0B"]
-			id: "76394CA56A1EC1FA"
-			shape: "square"
+			dependencies: ["5DDDE07AD43B07D4"]
+			id: "77FDBB77F1433697"
 			tasks: [{
-				dimension: "ad_astra:venus"
-				icon: "ad_astra:venus_sandstone"
-				id: "6E736BCFD8B6511B"
-				type: "dimension"
-			}]
-			x: -6.5d
-			y: -6.5d
-		}
-		{
-			dependencies: ["76394CA56A1EC1FA"]
-			id: "5AFC8BA3A05BE76C"
-			tasks: [{
-				id: "77328F3D021476D9"
-				item: "ad_astra:calorite_ingot"
+				id: "1D2937AF733A69E2"
+				item: "alltheores:ruby"
 				type: "item"
 			}]
-			x: -3.5d
-			y: -6.5d
+			x: -0.5d
+			y: -3.5d
 		}
 		{
-			dependencies: ["76394CA56A1EC1FA"]
-			id: "3A64ADE9F8ED2767"
-			tasks: [
-				{
-					id: "61F8E0D67F5AC71B"
-					item: "minecraft:gold_ingot"
-					type: "item"
-				}
-				{
-					id: "5D642367612F64D5"
-					item: "minecraft:quartz"
-					type: "item"
-				}
-			]
-			x: -6.5d
-			y: -9.0d
-		}
-		{
-			dependencies: ["3A64ADE9F8ED2767"]
-			id: "7C269C1601506A76"
+			dependencies: ["5DDDE07AD43B07D4"]
+			id: "30CF39E00F2FE625"
 			tasks: [{
-				id: "6FBB2B2E290675C6"
-				item: "thermal:rf_coil"
+				id: "1CD5F5EEA35F45A6"
+				item: "alltheores:sapphire"
 				type: "item"
 			}]
-			x: -3.5d
-			y: -9.0d
+			x: 0.5d
+			y: -3.5d
 		}
 		{
-			dependencies: ["3A64ADE9F8ED2767"]
-			id: "5F6A8B568162CB12"
+			dependencies: ["5DDDE07AD43B07D4"]
+			id: "7C48412CC2EFA3F0"
 			tasks: [{
-				id: "12F4F5D6FB700A8E"
-				item: "factorium:craft_quartz_pulse"
+				id: "1E3342E8980F0B3C"
+				item: "alltheores:peridot"
 				type: "item"
 			}]
-			x: -6.5d
-			y: -11.5d
+			x: 1.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["6BD79F40BC93C735"]
+			id: "13B3DF6F88D8F53E"
+			tasks: [{
+				id: "7A01A4F9FA1310D4"
+				item: "mekanism:pressurized_reaction_chamber"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["6BD79F40BC93C735"]
+			id: "5079FE8389CDF7F2"
+			tasks: [{
+				id: "2F94E766A530F3E9"
+				item: "mekanism:isotopic_centrifuge"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["664C87BC890110DF"]
+			id: "7EBFC76B0DB677EC"
+			tasks: [{
+				id: "60083B9EC2BB385E"
+				item: "minecraft:lapis_lazuli"
+				type: "item"
+			}]
+			x: -5.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["13B3DF6F88D8F53E"]
+			id: "67C98EA4C1AE228D"
+			tasks: [{
+				id: "3CCDE3701C135642"
+				item: "fluxnetworks:flux_dust"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 1.0d
 		}
 		{
 			dependencies: [
-				"5AFC8BA3A05BE76C"
-				"5FDD809829FE1E0C"
+				"67C98EA4C1AE228D"
+				"7E38298731BC3901"
 			]
-			id: "3BB9BEF01142B091"
+			id: "3AA988914BAF7355"
+			size: 2.0d
 			tasks: [{
-				id: "5E2336B9613ACE63"
+				id: "128096E10754BBA5"
+				item: "enderio:dark_steel_ingot"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6BD79F40BC93C735"]
+			id: "596B66A139AA5F67"
+			tasks: [{
+				id: "1286CD6CFA821D44"
+				item: "mekanism:chemical_oxidizer"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"77FDBB77F1433697"
+				"30CF39E00F2FE625"
+				"7C48412CC2EFA3F0"
+				"7F019ABC4065F392"
+				"074080A3BD50A60C"
+			]
+			id: "6BD79F40BC93C735"
+			tasks: [{
+				id: "0716747DFEDA2976"
 				item: "industrialforegoing:machine_frame_advanced"
 				type: "item"
 			}]
-			x: -3.5d
-			y: -4.0d
+			x: 0.5d
+			y: -2.0d
 		}
 		{
-			dependencies: ["3BB9BEF01142B091"]
-			id: "2B463071C8A6A0EA"
+			dependencies: ["423DA75438213B03"]
+			id: "5DDDE07AD43B07D4"
 			tasks: [
 				{
-					id: "2048409BDC770F50"
-					item: "industrialforegoing:fluid_laser_base"
+					id: "31C19CA7A1DE37D4"
+					item: "ad_astra:venus_sand"
 					type: "item"
 				}
 				{
-					id: "790DC629BBFB42DF"
-					item: "industrialforegoing:laser_drill"
+					id: "7A3799EC43147850"
+					item: "ad_astra:venus_cobblestone"
 					type: "item"
 				}
 			]
-			x: -0.5d
-			y: -4.0d
+			x: 0.5d
+			y: -5.0d
 		}
 		{
-			dependencies: ["2B463071C8A6A0EA"]
-			id: "467A167775A83F9D"
+			dependencies: ["55C75AA7BCF75C53"]
+			id: "4BA9BACAD38C3FFC"
 			tasks: [{
-				id: "5E353C8229F89595"
-				item: "thermal:crude_oil_bucket"
-				type: "item"
-			}]
-			x: 2.5d
-			y: -4.0d
-		}
-		{
-			dependencies: [
-				"5F6A8B568162CB12"
-				"7C269C1601506A76"
-			]
-			id: "59A4582E03FB0CEC"
-			tasks: [{
-				id: "76BFF700FC0F25AE"
-				item: "thermal:machine_refinery"
+				id: "2D5876AD54786A2E"
+				item: "alltheores:tin_ingot"
 				type: "item"
 			}]
 			x: -3.5d
-			y: -11.5d
+			y: -3.5d
 		}
 		{
-			dependencies: [
-				"467A167775A83F9D"
-				"066E3E9586BD71A9"
-			]
-			id: "42B9D89479B9D60A"
+			dependencies: ["4BA9BACAD38C3FFC"]
+			id: "7F019ABC4065F392"
 			tasks: [{
-				id: "505A4A88DDCAC27E"
-				item: "thermal_extra:polyolefin_plate"
+				id: "4871B5565BC752D0"
+				item: "mekanism:ingot_bronze"
 				type: "item"
 			}]
-			x: 2.5d
-			y: -6.5d
+			x: -3.5d
+			y: -2.0d
 		}
 		{
-			dependencies: ["44403B91A10DC5E3"]
-			id: "0BB2CF6C8AE15984"
-			tasks: [
-				{
-					id: "71A9E1F5B60FD363"
-					item: "laserio:logic_chip_raw"
-					type: "item"
-				}
-				{
-					id: "5CA4967B8AE546C5"
-					item: "thoriumreactors:module_empty"
-					type: "item"
-				}
-			]
-			x: 8.5d
-			y: -6.5d
-		}
-		{
-			dependencies: ["0BB2CF6C8AE15984"]
-			id: "797403C0C6A71A52"
-			shape: "rsquare"
-			tasks: [
-				{
-					id: "4114101BFF61B35A"
-					item: {
-						Count: 1
-						id: "industrialforegoing:speed_addon_1"
-						tag: {
-							TitaniumAugment: {
-								Speed: 2.0f
-							}
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "3AB5E87876230A5A"
-					item: {
-						Count: 1
-						id: "industrialforegoing:efficiency_addon_1"
-						tag: {
-							TitaniumAugment: {
-								Efficiency: 0.9f
-							}
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "3ACC3D2AC4229FC4"
-					item: {
-						Count: 1
-						id: "industrialforegoing:efficiency_addon_1"
-						tag: {
-							TitaniumAugment: {
-								Efficiency: 0.9f
-							}
-						}
-					}
-					type: "item"
-				}
-			]
-			x: 8.5d
-			y: -4.0d
-		}
-		{
-			dependencies: ["3F2B0E1F1696876E"]
-			id: "6879DB76718DA243"
-			tasks: [{
-				id: "336B982A0CFC95AF"
-				item: "thermal_extra:endothermic_dehydrator"
-				type: "item"
-			}]
-			x: -0.5d
-			y: -9.0d
-		}
-		{
-			dependencies: ["59A4582E03FB0CEC"]
-			id: "3F2B0E1F1696876E"
-			tasks: [{
-				id: "235B5C9207A6C29D"
-				item: "thermal_extra:fluid_mixer"
-				type: "item"
-			}]
-			x: -0.5d
-			y: -11.5d
-		}
-		{
-			dependencies: ["6879DB76718DA243"]
-			id: "066E3E9586BD71A9"
-			tasks: [{
-				id: "0F482ACEFA94EA7A"
-				item: "thermal:machine_chiller"
-				type: "item"
-			}]
-			x: -0.5d
-			y: -6.5d
-		}
-		{
-			dependencies: ["42B9D89479B9D60A"]
-			id: "44403B91A10DC5E3"
-			tasks: [{
-				id: "4AA6F8977CAE2875"
-				item: "thermal_extra:component_assembly"
-				type: "item"
-			}]
-			x: 5.5d
-			y: -6.5d
-		}
-		{
-			dependencies: ["0BB2CF6C8AE15984"]
-			id: "53625AC6C38450FA"
-			tasks: [
-				{
-					id: "1479A681DA7337D7"
-					item: "thoriumreactors:module_io"
-					type: "item"
-				}
-				{
-					id: "032116A01302A80F"
-					item: "thoriumreactors:module_energy"
-					type: "item"
-				}
-				{
-					id: "0AC60E98D2BD2B11"
-					item: "thoriumreactors:module_storage"
-					type: "item"
-				}
-			]
-			x: 8.5d
-			y: -9.0d
-		}
-		{
-			dependencies: ["53625AC6C38450FA"]
-			id: "43089914D063D622"
-			tasks: [{
-				id: "5D49ACBEE94DCD70"
-				item: "expatternprovider:ex_inscriber"
-				type: "item"
-			}]
-			x: 8.5d
-			y: -11.5d
-		}
-		{
-			dependencies: ["53625AC6C38450FA"]
-			id: "05C642744417F38E"
-			tasks: [{
-				id: "1FDD02788BB9CB3E"
-				item: "voidminers:aurantium_miner"
-				type: "item"
-			}]
-			x: 5.5d
-			y: -9.0d
-		}
-		{
-			dependencies: [
-				"05C642744417F38E"
-				"43089914D063D622"
-			]
-			id: "05C92DA7E1E1DE2A"
-			shape: "gear"
+			dependencies: ["656DE1BBDCEF9C38"]
+			id: "423DA75438213B03"
 			size: 2.0d
-			tasks: [
-				{
-					id: "6EA1127B4E048101"
-					item: "ae2:printed_calculation_processor"
-					type: "item"
-				}
-				{
-					id: "18A8E9FA2AAAED3E"
-					item: "ae2:printed_engineering_processor"
-					type: "item"
-				}
-				{
-					id: "2AAC8A92E8E08C70"
-					item: "ae2:printed_logic_processor"
-					type: "item"
-				}
+			tasks: [{
+				dimension: "ad_astra:venus"
+				icon: "ad_astra:venus_globe"
+				id: "03E676B630D62B0A"
+				type: "dimension"
+			}]
+			x: -2.0d
+			y: -7.0d
+		}
+		{
+			dependencies: ["55C75AA7BCF75C53"]
+			id: "497FC41F7682A67B"
+			tasks: [{
+				id: "4F71982E698C2676"
+				item: "xycraft_world:aluminum_ingot"
+				type: "item"
+			}]
+			x: -5.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["582C67B944CCBC95"]
+			id: "664C87BC890110DF"
+			tasks: [{
+				id: "00847C30B6AD0B04"
+				item: "minecraft:clay_ball"
+				type: "item"
+			}]
+			x: -5.5d
+			y: -1.0d
+		}
+		{
+			dependencies: ["497FC41F7682A67B"]
+			id: "582C67B944CCBC95"
+			tasks: [{
+				id: "3D15FC8EC4E18AC3"
+				item: "chemlib:aluminum_oxide"
+				type: "item"
+			}]
+			x: -5.5d
+			y: -2.0d
+		}
+		{
+			dependencies: [
+				"7EBFC76B0DB677EC"
+				"710F2A88A602B521"
+				"13B3DF6F88D8F53E"
 			]
-			x: 5.5d
-			y: -11.5d
+			id: "4DD90BDC1F57C22D"
+			tasks: [{
+				id: "4CC31878F80EF906"
+				item: "experienceobelisk:cognitive_flux"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0D2BAD835FF97293"]
+			id: "7E38298731BC3901"
+			tasks: [{
+				id: "63AC363B67386CCD"
+				item: "experienceobelisk:cognitive_alloy"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4DD90BDC1F57C22D"]
+			id: "0D2BAD835FF97293"
+			tasks: [{
+				id: "63A6FEC6F76E336E"
+				item: "experienceobelisk:cognitive_amalgam"
+				type: "item"
+			}]
+			x: -3.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["423DA75438213B03"]
+			id: "55C75AA7BCF75C53"
+			tasks: [{
+				id: "33131D165BF7D6AD"
+				item: "ad_astra:infernal_spire_block"
+				type: "item"
+			}]
+			x: -4.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["5DDDE07AD43B07D4"]
+			id: "074080A3BD50A60C"
+			tasks: [{
+				id: "28F1B56DE1400A41"
+				item: "ae2:certus_quartz_crystal"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["6BD79F40BC93C735"]
+			id: "09577662D497D5DF"
+			tasks: [{
+				id: "2EFA6290BC757146"
+				item: "mekanism:chemical_washer"
+				type: "item"
+			}]
+			x: 3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6BD79F40BC93C735"]
+			id: "17424540CC5FD3FB"
+			tasks: [{
+				id: "00FF1CCE8FBC4894"
+				item: "mekanism:chemical_dissolution_chamber"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["074080A3BD50A60C"]
+			id: "528F7CCD6A7565B0"
+			tasks: [{
+				id: "4461C54E5B56E27C"
+				item: "ad_astra:gravity_normalizer"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -3.5d
 		}
 	]
-	title: "5"
+	title: "5 venus"
 }
