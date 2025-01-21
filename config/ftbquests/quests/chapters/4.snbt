@@ -48,8 +48,8 @@
 			dependencies: ["34E34FB289126C37"]
 			id: "6732334334E9E6B9"
 			tasks: [{
-				id: "062C71D033B2F9E4"
-				item: "mekanism:dust_sulfur"
+				id: "33B6A4BB4EA9C2AC"
+				item: "ad_astra:mars_sand"
 				type: "item"
 			}]
 			x: -6.0d
@@ -81,11 +81,18 @@
 		{
 			dependencies: ["6732334334E9E6B9"]
 			id: "31C82CFC98B88576"
-			tasks: [{
-				id: "125E15BFF02ED21F"
-				item: "chemlib:sulfuric_acid"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "125E15BFF02ED21F"
+					item: "chemlib:sulfuric_acid"
+					type: "item"
+				}
+				{
+					id: "744325F314AB290F"
+					item: "mekanism:dust_sulfur"
+					type: "item"
+				}
+			]
 			x: -3.5d
 			y: -11.5d
 		}
@@ -280,8 +287,8 @@
 			id: "312F228D7701E2E4"
 			subtitle: "Can drop without need of silktouch"
 			tasks: [{
-				id: "5A93478B3980C469"
-				item: "ad_astra:mars_sand"
+				id: "21BB217EE6F9A8FA"
+				item: "ad_astra:mars_cobblestone"
 				type: "item"
 			}]
 			x: -8.5d
