@@ -7,6 +7,9 @@ const $BooleanProperty = Java.loadClass(
 const $IntegerProperty = Java.loadClass(
   "net.minecraft.world.level.block.state.properties.IntegerProperty"
 );
+function rndChance(chance) {
+  return Math.random() < (chance/100);
+}
 /**
  *
  * @param {number} min
