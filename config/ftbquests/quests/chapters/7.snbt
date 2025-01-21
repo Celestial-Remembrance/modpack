@@ -53,10 +53,7 @@
 			y: -4.0d
 		}
 		{
-			dependencies: [
-				"59A414C943246E5A"
-				"65185725FC5F0624"
-			]
+			dependencies: ["59A414C943246E5A"]
 			id: "291F16C23081FD8B"
 			tasks: [{
 				id: "4A182D79DDABC693"
@@ -70,9 +67,9 @@
 			dependencies: ["4095E53D1208FFEA"]
 			id: "59A414C943246E5A"
 			tasks: [{
-				id: "0E5AE50C2F05D32D"
-				title: "LIQUID ETRIUM"
-				type: "checkmark"
+				id: "2DE8492ABED98552"
+				item: "kubejs:liquid_etrium_bucket"
+				type: "item"
 			}]
 			x: 1.0d
 			y: -4.0d
@@ -219,9 +216,9 @@
 			dependencies: ["3D9D78FDE5C6FD00"]
 			id: "12440F437AEEDA99"
 			tasks: [{
-				id: "6A71905C7C366D8D"
-				title: "MAGMA"
-				type: "checkmark"
+				id: "4E61D8B49C00A560"
+				item: "kubejs:magma_bucket"
+				type: "item"
 			}]
 			x: -14.0d
 			y: -8.0d
@@ -272,7 +269,10 @@
 			y: -6.0d
 		}
 		{
-			dependencies: ["23DFEA1C7A466B2A"]
+			dependencies: [
+				"23DFEA1C7A466B2A"
+				"291F16C23081FD8B"
+			]
 			id: "65185725FC5F0624"
 			tasks: [
 				{
@@ -303,6 +303,11 @@
 					item: "xycraft_world:xychorium_gem_red"
 					type: "item"
 				}
+				{
+					id: "2F1FDF7AC295E9E2"
+					item: "ad_astra:calorite_ingot"
+					type: "item"
+				}
 			]
 			x: -9.0d
 			y: -6.0d
@@ -313,18 +318,11 @@
 				"5D4B10641B4AE48D"
 			]
 			id: "3FE965589D29E10E"
-			tasks: [
-				{
-					id: "02B1EBB4DD32FD9D"
-					title: "VULCANIC ALLOY"
-					type: "checkmark"
-				}
-				{
-					id: "3D6E72245DFBABD2"
-					item: "ad_astra:calorite_ingot"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "24D24C092CD90473"
+				item: "kubejs:vulcanic_alloy"
+				type: "item"
+			}]
 			x: -11.5d
 			y: -8.0d
 		}

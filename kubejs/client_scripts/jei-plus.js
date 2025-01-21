@@ -357,7 +357,7 @@ JEIAddedEvents.registerCategories((event) => {
           69
         )
       )
-      .icon(guiHelper.createDrawableItemStack(Item.of("kubejs:icon_tree")))
+      .icon(guiHelper.createDrawableItemStack(Item.of('minecraft:structure_block')))
       //---------------------------------------------------------------------//
       //                            SLOT VALIDATOR                           //
       //---------------------------------------------------------------------//
