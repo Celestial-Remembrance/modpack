@@ -75,10 +75,7 @@
 			y: -4.0d
 		}
 		{
-			dependencies: [
-				"0F196C9ECC823D43"
-				"23DFEA1C7A466B2A"
-			]
+			dependencies: ["0F196C9ECC823D43"]
 			id: "537343DA999856B1"
 			tasks: [{
 				id: "25310EA6D5AC60BC"
@@ -89,10 +86,7 @@
 			y: -8.0d
 		}
 		{
-			dependencies: [
-				"21235ABBA9FBE2C9"
-				"3FE965589D29E10E"
-			]
+			dependencies: ["3FE965589D29E10E"]
 			id: "2C04B243246861FD"
 			tasks: [{
 				id: "25B8940462FB12EA"
@@ -235,37 +229,14 @@
 			y: -6.0d
 		}
 		{
-			dependencies: ["4095E53D1208FFEA"]
-			id: "5E840B0B91D01549"
+			dependencies: ["1BBFC752F3D77B4F"]
+			id: "23DFEA1C7A466B2A"
 			tasks: [{
-				id: "292AF0DE40BD4526"
-				item: "ad_astra:glacio_stone"
+				id: "5DF7622B567922A0"
+				item: "mekanism:fluorite_gem"
 				type: "item"
 			}]
 			x: -1.5d
-			y: -6.0d
-		}
-		{
-			dependencies: ["5E840B0B91D01549"]
-			id: "23DFEA1C7A466B2A"
-			tasks: [
-				{
-					id: "7333E891CEBCB1E8"
-					item: "xycraft_world:xychorium_gem_blue"
-					type: "item"
-				}
-				{
-					id: "68602647E3C0F04E"
-					item: "xycraft_world:xychorium_gem_dark"
-					type: "item"
-				}
-				{
-					id: "5DF7622B567922A0"
-					item: "mekanism:fluorite_gem"
-					type: "item"
-				}
-			]
-			x: -4.0d
 			y: -6.0d
 		}
 		{
@@ -274,18 +245,11 @@
 				"291F16C23081FD8B"
 			]
 			id: "65185725FC5F0624"
-			tasks: [
-				{
-					id: "079282C6D209C6DE"
-					item: "mekanism:hydrofluoric_acid_bucket"
-					type: "item"
-				}
-				{
-					id: "48A67CDF9A4F2290"
-					item: "thoriumreactors:molten_salt_bucket"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "079282C6D209C6DE"
+				item: "mekanism:hydrofluoric_acid_bucket"
+				type: "item"
+			}]
 			x: -4.0d
 			y: -4.0d
 		}
@@ -315,7 +279,7 @@
 		{
 			dependencies: [
 				"12440F437AEEDA99"
-				"5D4B10641B4AE48D"
+				"21235ABBA9FBE2C9"
 			]
 			id: "3FE965589D29E10E"
 			tasks: [{
@@ -480,6 +444,21 @@
 					item: "ad_astra:ice_shard"
 					type: "item"
 				}
+				{
+					id: "5029996FE7D109E8"
+					item: "xycraft_world:xychorium_gem_dark"
+					type: "item"
+				}
+				{
+					id: "65408A7126B65753"
+					item: "xycraft_world:xychorium_gem_blue"
+					type: "item"
+				}
+				{
+					id: "36CA093FF1F5771C"
+					item: "mekanism:fluorite_gem"
+					type: "item"
+				}
 			]
 			x: -1.5d
 			y: -8.0d
@@ -487,13 +466,30 @@
 		{
 			dependencies: ["4095E53D1208FFEA"]
 			id: "1BBFC752F3D77B4F"
-			tasks: [{
-				id: "321563970D0BB8BA"
-				item: "ad_astra:permafrost"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "321563970D0BB8BA"
+					item: "ad_astra:permafrost"
+					type: "item"
+				}
+				{
+					id: "63F1586E3009865B"
+					item: "ad_astra:glacio_stone"
+					type: "item"
+				}
+			]
 			x: 1.0d
 			y: -8.0d
+		}
+		{
+			id: "680E8123B33C074B"
+			tasks: [{
+				id: "5E0119B2849E40BF"
+				item: "mekanism:alloy_reinforced"
+				type: "item"
+			}]
+			x: -3.5d
+			y: -6.5d
 		}
 	]
 	title: "7 mercury-glacio"
