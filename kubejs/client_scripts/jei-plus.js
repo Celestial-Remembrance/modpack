@@ -1,222 +1,6 @@
 //priority : -1
 JEIAddedEvents.registerCategories((event) => {
   //---------------------------------------------------------------------------------------//
-  //                                       CLICK EVENT                                     //
-  //---------------------------------------------------------------------------------------//
-  event.custom("kubejs:click-event", (category) => {
-    const {
-      jeiHelpers,
-      jeiHelpers: { guiHelper },
-    } = category;
-    category
-      .title("Click on Block")
-      .background(
-        guiHelper.createDrawable(
-          "kubejs:textures/gui/click_event.png",
-          2,
-          2,
-          136,
-          128
-        )
-      )
-      .icon(guiHelper.createDrawableItemStack(Item.of("kubejs:icon_click")))
-      //---------------------------------------------------------------------//
-      //                            SLOT VALIDATOR                           //
-      //---------------------------------------------------------------------//
-      .isRecipeHandled((recipe) => {
-        return !!(
-          recipe?.data?.input?.main_hand !== undefined &&
-          recipe?.data?.input?.off_hand !== undefined &&
-          recipe?.data?.input?.block !== undefined &&
-          recipe?.data?.input?.extra !== undefined &&
-          recipe?.data?.output?.block_replace !== undefined &&
-          recipe?.data?.output?.drop !== undefined &&
-          recipe?.data?.output?.chance !== undefined &&
-          recipe?.data?.output?.isCrouching !== undefined &&
-          recipe?.data?.output?.extra !== undefined &&
-          recipe?.data?.output?.type !== undefined
-        );
-      })
-      //---------------------------------------------------------------------//
-      //                            SLOT IO                                  //
-      //---------------------------------------------------------------------//
-      .handleLookup((builder, recipe, focuses) => {
-        verify(recipe.data.input.main_hand, "INPUT", 35, 16, builder);
-        verify(recipe.data.input.off_hand, "INPUT", 2, 51, builder);
-        verifyCrude(
-          recipe.data.input.extra != ""
-            ? Item.of(
-                recipe.data.input.block,
-                `{display:{Lore:['{\"text\":\"` +
-                  recipe.data.input.extra +
-                  `\"}']}}`
-              )
-            : Item.of(recipe.data.input.block),
-
-          "INPUT",
-          35,
-          82,
-          builder
-        );
-        verifyMixed(
-          recipe.data.output.type,
-          recipe.data.output.extra != ""
-            ? Item.of(
-                recipe.data.output.block_replace,
-                `{display:{Lore:['{\"text\":\"` +
-                  recipe.data.output.extra +
-                  `\"}']}}`
-              )
-            : recipe.data.output.block_replace,
-          "OUTPUT",
-          88,
-          22,
-          builder
-        );
-
-        for (let i = 0; i < 3; i++) {
-          for (let j = 0; j < 3; j++) {
-            verify(
-              recipe.data.output.drop[j * 3 + i],
-              "OUTPUT",
-              67 + i * 21,
-              61 + j * 21,
-              builder
-            );
-          }
-        }
-      })
-      //---------------------------------------------------------------------//
-      //                            TEXT DRAWING                             //
-      //---------------------------------------------------------------------//
-      .setDrawHandler(
-        (recipe, recipeSlotsView, guiGraphics, mouseX, mouseY) => {
-          for (let i = 0; i < 3; i++) {
-            for (let j = 0; j < 3; j++) {
-              if (
-                recipe.data.output.chance[j * 3 + i] === undefined &&
-                recipe.data.output.drop[j * 3 + i] !== undefined
-              ) {
-                guiGraphics.drawWordWrap(
-                  Client.font,
-                  Text.of(convertString("100%")),
-                  68 + i * 21,
-                  72 + j * 21,
-                  20,
-                  20
-                );
-              }
-              if (recipe.data.output.drop[j * 3 + i] !== undefined) {
-                guiGraphics.drawWordWrap(
-                  Client.font,
-                  Text.of(
-                    convertString(recipe.data.output.chance[j * 3 + i] + "%")
-                  ),
-                  68 + i * 21,
-                  72 + j * 21,
-                  20,
-                  20
-                );
-              }
-            }
-          }
-
-          guiGraphics.drawWordWrap(
-            Client.font,
-            Text.of(convertString("right")).bold(),
-            31,
-            4,
-            100,
-            0
-          );
-          guiGraphics.drawWordWrap(
-            Client.font,
-            Text.of(convertString("left")).bold(),
-            0,
-            40,
-            100,
-            0
-          );
-          guiGraphics.drawWordWrap(
-            Client.font,
-            Text.of(convertString("result")).bold(),
-            80,
-            10,
-            100,
-            0
-          );
-
-          if (recipe.data.output.isCrouching) {
-            guiGraphics.drawWordWrap(
-              Client.font,
-              Text.of(convertString("shift")),
-              20,
-              100,
-              100,
-              0
-            );
-          }
-        }
-      );
-    //---------------------------------------------------------------------//
-  });
-
-  //---------------------------------------------------------------------------------------//
-  //                                       RANDOMTICK                                //
-  //---------------------------------------------------------------------------------------//
-
-  event.custom("kubejs:random-tick", (category) => {
-    const {
-      jeiHelpers,
-      jeiHelpers: { guiHelper },
-    } = category;
-    category
-      .title("Random Tick Conversion")
-      .background(
-        guiHelper.createDrawable(
-          "kubejs:textures/gui/randomtick.png",
-          2,
-          2,
-          90,
-          32
-        )
-      )
-      .icon(guiHelper.createDrawableItemStack(Item.of("mud")))
-      //---------------------------------------------------------------------//
-      //                            SLOT VALIDATOR                           //
-      //---------------------------------------------------------------------//
-      .isRecipeHandled((recipe) => {
-        return !!(
-          recipe?.data?.input !== undefined &&
-          recipe?.data?.output !== undefined
-        );
-      })
-      //---------------------------------------------------------------------//
-      //                            SLOT IO                                  //
-      //---------------------------------------------------------------------//
-      .handleLookup((builder, recipe, focuses) => {
-        verify(recipe.data.input, "INPUT", 6, 7, builder);
-        verify(recipe.data.output, "OUTPUT", 65, 7, builder);
-      });
-    //---------------------------------------------------------------------//
-    //                            TEXT DRAWING                             //
-    //---------------------------------------------------------------------//
-    // .setDrawHandler(
-    //   (recipe, recipeSlotsView, guiGraphics, mouseX, mouseY) => {
-    //     guiGraphics.drawWordWrap(
-    //       Client.font,
-    //       Text.of(convertString("right")).bold(),
-    //       31,
-    //       4,
-    //       100,
-    //       0
-    //     );
-    //   }
-    // );
-    //---------------------------------------------------------------------//
-  });
-
-  //---------------------------------------------------------------------------------------//
   //                                       CROP RESULT                                     //
   //---------------------------------------------------------------------------------------//
 
@@ -364,10 +148,9 @@ JEIAddedEvents.registerCategories((event) => {
   });
 
   //---------------------------------------------------------------------------------------//
-  //                                         ATOMIC                                        //
+  //                                     MACHINE OUTPUT                                    //
   //---------------------------------------------------------------------------------------//
-
-  event.custom("kubejs:atomic", (category) => {
+  event.custom("kubejs:machine-output", (category) => {
     const {
       jeiHelpers,
       jeiHelpers: { guiHelper },
@@ -376,31 +159,51 @@ JEIAddedEvents.registerCategories((event) => {
       .title("Block Infusion")
       .background(
         guiHelper.createDrawable(
-          "kubejs:textures/gui/atomic.png",
+          "kubejs:textures/gui/output.png",
           2,
           2,
           112,
           27
         )
       )
-      .icon(guiHelper.createDrawableItemStack(Item.of("kubejs:converter")))
+      .icon(
+        guiHelper.createDrawableItemStack(
+          Item.of("thoriumreactors:reactor_controller")
+        )
+      )
       //---------------------------------------------------------------------//
       //                            SLOT VALIDATOR                           //
       //---------------------------------------------------------------------//
       .isRecipeHandled((recipe) => {
         return !!(
-          recipe?.data?.input !== undefined &&
-          recipe?.data?.output !== undefined &&
-          Item.of("kubejs:converter") !== undefined
+          recipe?.data?.input?.id !== undefined &&
+          recipe?.data?.output?.id !== undefined &&
+          recipe?.data?.input?.type !== undefined &&
+          recipe?.data?.output?.type !== undefined &&
+          recipe?.data?.machine !== undefined
         );
       })
       //---------------------------------------------------------------------//
       //                            SLOT IO                                  //
       //---------------------------------------------------------------------//
       .handleLookup((builder, recipe, focuses) => {
-        verify(recipe.data.input, "INPUT", 4, 4, builder);
-        verify("kubejs:converter", "INPUT", 45, 3, builder);
-        verify(recipe.data.output, "OUTPUT", 86, 4, builder);
+        verifyMixed(
+          recipe.data.input.type,
+          recipe.data.input.id,
+          "INPUT",
+          4,
+          4,
+          builder
+        );
+        verify(recipe.data.machine, "INPUT", 45, 3, builder);
+        verifyMixed(
+          recipe.data.output.type,
+          recipe.data.output.id,
+          "OUTPUT",
+          86,
+          4,
+          builder
+        );
       });
     //---------------------------------------------------------------------//
     //                            TEXT DRAWING                             //
@@ -457,7 +260,7 @@ JEIAddedEvents.registerCategories((event) => {
                 convertString("⚡/t ")
             ),
             35,
-            9,
+            15,
             150,
             0
           );
@@ -561,7 +364,7 @@ JEIAddedEvents.registerCategories((event) => {
       .isRecipeHandled((recipe) => {
         return !!(
           recipe?.data?.controller !== undefined &&
-          recipe?.data?.blocks !== undefined
+          recipe?.data?.structure !== undefined
         );
       })
       //---------------------------------------------------------------------//
@@ -569,11 +372,12 @@ JEIAddedEvents.registerCategories((event) => {
       //---------------------------------------------------------------------//
       .handleLookup((builder, recipe, focuses) => {
         verify(recipe.data.controller, "INPUT", 10, 25, builder);
+
         let slotSize = 21;
         for (let i = 0; i < 5; i++) {
           for (let j = 0; j < 3; j++) {
             verifyCrude(
-              recipe.data.blocks[j * 5 + i],
+              recipe.data.structure[j * 5 + i],
               "OUTPUT",
               51 + i * slotSize,
               4 + j * slotSize,
@@ -593,7 +397,6 @@ JEIAddedEvents.registerCategories((event) => {
 });
 
 /*
-
       _____                   _______                   _____                   _______         
      /\    \                 /::\    \                 /\    \                 /::\    \        
     /::\    \               /::::\    \               /::\    \               /::::\    \       
@@ -614,21 +417,16 @@ JEIAddedEvents.registerCategories((event) => {
                             \::::/    /             \::::::/    /             \::::/    /       
                              \::/____/               \::::/    /               \::/____/        
                               ~~                      \::/____/                 ~~              
-                                                       ~~                                                                                
-['thoriumreactors:enriched_uranium', 'thoriumreactors:depleted_uranium']
+                                                       ~~          
+
+[, ]
 ['thoriumreactors:molten_salt', 'thoriumreactors:heated_molten_salt']
-
-['thoriumreactors:reactor_controller', 'thoriumreactors:reactor_casing', 'thoriumreactors:reactor_valve', 'thoriumreactors:reactor_rod_controller', 'thoriumreactors:reactor_core', 'thoriumreactors:reactor_graphite_moderator', 'thoriumreactors:reactor_glass']
-
-
 
 ['minecraft:water', 'thoriumreactors:steam']
 ['thoriumreactors:heated_molten_salt', 'thoriumreactors:depleted_molten_salt']
-['thoriumreactors:thermal_controller', 'thoriumreactors:thermal_conductor', 'thoriumreactors:thermal_valve', 'thoriumreactors:thermal_heat_sink']
-
+[, , , ']
 
 'thoriumreactors:steam'
-['thoriumreactors:turbine_controller', 'thoriumreactors:turbine_casing', 'thoriumreactors:turbine_valve', 'thoriumreactors:turbine_power_port', 'thoriumreactors:turbine_rotation_mount', 'thoriumreactors:turbine_vent', 'thoriumreactors:turbine_glass', 'thoriumreactors:electromagnetic_coil', 'thoriumreactors:turbine_rotor','thoriumreactors:turbine_blade']
 ['thoriumreactors:nickel_block', 'thoriumreactors:niob_block', 'thoriumreactors:molybdenum_block']
 
 */
@@ -636,33 +434,77 @@ JEIAddedEvents.registerCategories((event) => {
 JEIAddedEvents.registerRecipes((event) => {
   //--------HARDCODED-RECIPES--------//
 
+  event.custom("kubejs:machine-output").add({
+    input: {
+      id: "thoriumreactors:enriched_uranium",
+      type: "item",
+    },
+    machine: "thoriumreactors:reactor_controller",
+    output: {
+      id: "thoriumreactors:depleted_uranium",
+      type: "item",
+    },
+  });
+
   event.custom("kubejs:multiblock").add({
-    controller: "minecraft:stone",
-    blocks: [
-      Item.of("minecraft:bedrock", 4),
-      "minecraft:dirt",
-      Item.of("coal", 4),
-      Item.of("iron_ore", 2),
-      Item.of("gold_block", 7),
-      Item.of("diamond", 10),
+    controller: "thoriumreactors:reactor_controller",
+    structure: [
+      Item.of("thoriumreactors:reactor_casing", 61),
+      Item.of("thoriumreactors:reactor_glass", 31),
+      Item.of("thoriumreactors:reactor_valve", 4),
+      Item.of("thoriumreactors:reactor_controller", 1),
+      Item.of("thoriumreactors:reactor_graphite_moderator", 2),
+      Item.of("thoriumreactors:reactor_core", 1),
+      Item.of("thoriumreactors:reactor_rod_controller", 1),
+    ],
+  });
+
+  event.custom("kubejs:multiblock").add({
+    controller: "thoriumreactors:thermal_controller",
+    structure: [
+      Item.of("thoriumreactors:thermal_controller", 1),
+      Item.of("thoriumreactors:thermal_conductor", 25),
+      Item.of("thoriumreactors:thermal_valve", 4),
+      Item.of("thoriumreactors:thermal_heat_sink", 15),
+    ],
+  });
+
+  event.custom("kubejs:multiblock").add({
+    controller: "thoriumreactors:turbine_controller",
+    structure: [
+      Item.of("thoriumreactors:turbine_controller", 1),
+      Item.of("thoriumreactors:turbine_casing", 68),
+      Item.of("thoriumreactors:turbine_valve", 1),
+      Item.of("thoriumreactors:turbine_power_port", 1),
+      Item.of("thoriumreactors:turbine_rotation_mount", 2),
+      Item.of("thoriumreactors:turbine_vent", 12),
+      Item.of("thoriumreactors:turbine_glass", 45),
+      Item.of("thoriumreactors:electromagnetic_coil", 8),
+      Item.of("thoriumreactors:turbine_rotor", 5),
+      Item.of("thoriumreactors:turbine_blade", 24),
+      Item.of(
+        "thoriumreactors:molybdenum_block",
+        8,
+        `{display:{Lore:['{\"text\":\"any #kubejs:moderators\"}']}}`
+      ),
     ],
   });
 
   //thorium moderators
   event.custom("kubejs:turbine-mod").add({
-    fuel: "thoriumreactors:nickel_block",
+    fuel: Item.of("thoriumreactors:nickel_block", 8),
     info: ["§c1.0", "§c114k"],
   });
 
   //thorium moderators
   event.custom("kubejs:turbine-mod").add({
-    fuel: "thoriumreactors:niob_block",
+    fuel: Item.of("thoriumreactors:niob_block", 8),
     info: ["§e1.5", "§e171k"],
   });
 
   //thorium moderators
   event.custom("kubejs:turbine-mod").add({
-    fuel: "thoriumreactors:molybdenum_block",
+    fuel: Item.of("thoriumreactors:molybdenum_block", 8),
     info: ["§a2.0", "§a228k"],
   });
 
@@ -670,30 +512,6 @@ JEIAddedEvents.registerRecipes((event) => {
   event.custom("kubejs:dynamo-fuel").add({
     fuel: "kubejs:star",
     info: 100,
-  });
-
-  //mud to clay
-  event.custom("kubejs:random-tick").add({
-    input: "minecraft:mud",
-    output: "minecraft:clay",
-  });
-
-  //bottle-mud click
-  event.custom("kubejs:click-event").add({
-    input: {
-      main_hand: Item.of("minecraft:potion", '{Potion:"minecraft:water"}'),
-      off_hand: "",
-      block: "minecraft:dirt",
-      extra: "Accept any #minecraft:convertable_to_mud",
-    },
-    output: {
-      type: "block",
-      block_replace: "minecraft:mud",
-      drop: [],
-      chance: [],
-      isCrouching: false,
-      extra: "",
-    },
   });
 
   //wheat seed
@@ -709,32 +527,6 @@ JEIAddedEvents.registerRecipes((event) => {
   event.custom("kubejs:crop-result").add({
     input: "minecraft:torchflower_seeds",
     output: { id: ["minecraft:torchflower"], tip: ["1"] },
-  });
-
-  //clay to clayball
-  event.custom("kubejs:block-drop").add({
-    input: "minecraft:clay",
-    output: {
-      id: ["minecraft:clay_ball"],
-      count: [4],
-    },
-  });
-  //stone to cobblestone
-  event.custom("kubejs:block-drop").add({
-    input: "minecraft:stone",
-    output: {
-      id: ["minecraft:cobblestone"],
-      count: [1],
-    },
-  });
-
-  //-------DYNAMIC-RECIPES-----------//
-  global.jei.recipes.click.forEach((element) => {
-    event.custom("kubejs:click-event").add(element);
-  });
-
-  global.jei.recipes.atomic.forEach((element) => {
-    event.custom("kubejs:atomic").add(element);
   });
 
   global.jei.recipes.blockdrop.forEach((element) => {
