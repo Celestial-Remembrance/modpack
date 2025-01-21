@@ -278,7 +278,6 @@
 		{
 			dependencies: ["34E34FB289126C37"]
 			id: "312F228D7701E2E4"
-			subtitle: "Can drop without need of silktouch"
 			tasks: [{
 				id: "5A93478B3980C469"
 				item: "ad_astra:mars_sand"
