@@ -261,3 +261,4 @@ config/mffs-client.toml
 config/mffs-common.toml
 config/watercollector-common.toml
 config/xycraft/core_client.toml
+config/experienceobelisk-common.toml
