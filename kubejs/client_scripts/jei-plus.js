@@ -419,21 +419,14 @@ JEIAddedEvents.registerCategories((event) => {
                               ~~                      \::/____/                 ~~              
                                                        ~~          
 
-[, ]
-['thoriumreactors:molten_salt', 'thoriumreactors:heated_molten_salt']
 
-['minecraft:water', 'thoriumreactors:steam']
-['thoriumreactors:heated_molten_salt', 'thoriumreactors:depleted_molten_salt']
-[, , , ']
 
-'thoriumreactors:steam'
-['thoriumreactors:nickel_block', 'thoriumreactors:niob_block', 'thoriumreactors:molybdenum_block']
+
 
 */
 
 JEIAddedEvents.registerRecipes((event) => {
   //--------HARDCODED-RECIPES--------//
-
   event.custom("kubejs:machine-output").add({
     input: {
       id: "thoriumreactors:enriched_uranium",
@@ -442,6 +435,53 @@ JEIAddedEvents.registerRecipes((event) => {
     machine: "thoriumreactors:reactor_controller",
     output: {
       id: "thoriumreactors:depleted_uranium",
+      type: "item",
+    },
+  });
+  event.custom("kubejs:machine-output").add({
+    input: {
+      id: 'thoriumreactors:molten_salt',
+      type: "fluid",
+    },
+    machine: "thoriumreactors:reactor_controller",
+    output: {
+      id: 'thoriumreactors:heated_molten_salt',
+      type: "fluid",
+    },
+  });
+
+  event.custom("kubejs:machine-output").add({
+    input: {
+      id: 'minecraft:water',
+      type: "fluid",
+    },
+    machine: "thoriumreactors:thermal_controller",
+    output: {
+      id: 'thoriumreactors:steam',
+      type: "fluid",
+    },
+  });
+
+  event.custom("kubejs:machine-output").add({
+    input: {
+      id: 'thoriumreactors:heated_molten_salt',
+      type: "fluid",
+    },
+    machine: "thoriumreactors:thermal_controller",
+    output: {
+      id: 'thoriumreactors:depleted_molten_salt',
+      type: "fluid",
+    },
+  });
+
+  event.custom("kubejs:machine-output").add({
+    input: {
+      id: 'thoriumreactors:steam',
+      type: "fluid",
+    },
+    machine: "thoriumreactors:turbine_controller",
+    output: {
+      id: 'mekanism:energy_tablet',
       type: "item",
     },
   });
