@@ -1,8 +1,9 @@
 // priority: -1
 let baseFEgen = 100;
 StartupEvents.registry("block", (event) => {
-  event.create("dynamo")
-  .displayName('ExoNova Sidereal Engine')
+  event
+    .create("dynamo")
+    .displayName("ExoNova Sidereal Engine")
     .property($BooleanProperty.create("active"))
     .property(BlockProperties.NORTH)
     .property(BlockProperties.SOUTH)
@@ -32,6 +33,16 @@ StartupEvents.registry("block", (event) => {
       ) {
         click.block.entity.persistentData.putBoolean("active", true);
         click.block.set(click.block.id, { active: "true" });
+        click.level.playSound(
+          null,
+          click.block.x,
+          click.block.y,
+          click.block.z,
+          "thoriumreactors:reactor.startup",
+          "blocks",
+          1,
+          0.1*rnd(5,9)
+        );
       }
     })
     .steppedOn((step) => {
@@ -40,7 +51,6 @@ StartupEvents.registry("block", (event) => {
       }
     })
     .blockEntity((be) => {
-      
       be.serverTick(1, 0, (state) => {
         let direc = ["north", "south", "east", "west"];
         let result = { active: state.persistentData.getBoolean("active") };
@@ -52,15 +62,25 @@ StartupEvents.registry("block", (event) => {
         });
         state.block.set(state.block.id, result);
 
-
-
-        if(state.persistentData.getBoolean("active")){
+        if (state.persistentData.getBoolean("active")) {
+          if (rndChance(0.5)) {
+            state.level.playSound(
+              null,
+              state.block.x,
+              state.block.y,
+              state.block.z,
+              "thoriumreactors:reactor.run",
+              "blocks",
+              0.5,
+              0.1*rnd(5,9)
+            );
+          }
           state.level.spawnParticles(
             "minecraft:glow",
             true,
-            state.block.x +0.25+ 0.1 * rnd(1, 3),
-            state.block.y +0.25+ 0.1 * rnd(1, 3),
-            state.block.z +0.25+ 0.1 * rnd(1, 3),
+            state.block.x + 0.25 + 0.1 * rnd(1, 3),
+            state.block.y + 0.25 + 0.1 * rnd(1, 3),
+            state.block.z + 0.25 + 0.1 * rnd(1, 3),
             0,
             0,
             0,
@@ -68,9 +88,7 @@ StartupEvents.registry("block", (event) => {
             0
           );
         }
-
-
-      })
+      });
 
       be.attachCapability(
         CapabilityBuilder.ENERGY.customBlockEntity()
