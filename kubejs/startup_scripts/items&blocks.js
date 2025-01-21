@@ -16,6 +16,10 @@ StartupEvents.registry("item", (event) => {
 
   event.create("vulcanic_alloy").texture("kubejs:item/alloy");
   event.create("niter").texture("kubejs:item/niter");
+
+
+  let nuclear_stuff = ["uranium",""]
+
 });
 
 StartupEvents.registry("block", (event) => {
