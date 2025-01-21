@@ -84,8 +84,8 @@
 				item: "ad_astra:white_flag"
 				type: "item"
 			}]
-			x: -0.5d
-			y: -2.0d
+			x: 1.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["3A0AEFB5443B4271"]
@@ -110,6 +110,7 @@
 			y: -4.5d
 		}
 		{
+			dependencies: ["3A0AEFB5443B4271"]
 			id: "1223C14B0EFA2BE8"
 			tasks: [{
 				id: "6AE226FEF7860752"
@@ -118,6 +119,28 @@
 			}]
 			x: 1.5d
 			y: -4.0d
+		}
+		{
+			dependencies: ["3A0AEFB5443B4271"]
+			id: "40DE243BC82D8166"
+			tasks: [{
+				id: "1EA1A5DF95422AA2"
+				item: "kubejs:dynamo"
+				type: "item"
+			}]
+			x: -2.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3A0AEFB5443B4271"]
+			id: "4269D32A71CABB0D"
+			tasks: [{
+				id: "636A552E72C7A71B"
+				item: "kubejs:star"
+				type: "item"
+			}]
+			x: -0.5d
+			y: -1.0d
 		}
 	]
 	title: "0 moon"
