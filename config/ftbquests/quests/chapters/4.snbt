@@ -11,40 +11,38 @@
 		{
 			dependencies: ["7952B0FEE0D703C1"]
 			id: "34E34FB289126C37"
-			size: 2.0d
+			shape: "rsquare"
+			size: 1.0d
 			tasks: [{
 				dimension: "ad_astra:mars"
 				icon: "ad_astra:mars_globe"
 				id: "54D4A410F1091688"
 				type: "dimension"
 			}]
-			x: -7.0d
-			y: -5.0d
+			x: -8.5d
+			y: -11.5d
 		}
 		{
-			dependencies: ["3B1613F4E76542E6"]
+			dependencies: ["2AF0FE6948B771B8"]
 			id: "4175A70010D3CE36"
 			tasks: [{
-				id: "09F537E2A430C3E3"
-				item: "mekanism:osmium_compressor"
+				id: "20F755880E828129"
+				item: "ad_astra:compressor"
 				type: "item"
 			}]
-			x: -0.5d
-			y: 1.5d
+			x: -11.0d
+			y: -15.5d
 		}
 		{
-			dependencies: [
-				"2750D458C9BA7831"
-				"5A8ABEEAC76D5B61"
-			]
+			dependencies: ["6E71CD5F7CDA293E"]
 			id: "7F2A7D1E3E5D35E8"
 			tasks: [{
 				id: "7E23E895777AAB1B"
 				item: "mekanism:thermal_evaporation_controller"
 				type: "item"
 			}]
-			x: -3.5d
-			y: -1.5d
+			x: -11.0d
+			y: -11.5d
 		}
 		{
 			dependencies: ["34E34FB289126C37"]
@@ -54,52 +52,31 @@
 				item: "mekanism:dust_sulfur"
 				type: "item"
 			}]
-			x: -2.0d
-			y: -5.5d
+			x: -6.0d
+			y: -11.5d
 		}
 		{
-			dependencies: ["34E34FB289126C37"]
+			dependencies: ["312F228D7701E2E4"]
 			id: "6E71CD5F7CDA293E"
-			tasks: [{
-				id: "53C329A53B5DEBC0"
-				item: "minecraft:gold_ingot"
-				type: "item"
-			}]
-			x: -7.0d
-			y: -3.0d
-		}
-		{
-			dependencies: ["34E34FB289126C37"]
-			id: "43F04FB59AF63F40"
-			tasks: [{
-				id: "310747CD364A45FC"
-				item: "alltheores:nickel_ingot"
-				type: "item"
-			}]
-			x: -8.5d
-			y: -3.0d
-		}
-		{
-			dependencies: ["34E34FB289126C37"]
-			id: "2750D458C9BA7831"
-			tasks: [{
-				id: "7A77F4DA846D8C5B"
-				item: "ad_astra:desh_ingot"
-				type: "item"
-			}]
-			x: -4.5d
-			y: -4.0d
-		}
-		{
-			dependencies: ["4175A70010D3CE36"]
-			id: "69E6A78D15173FAB"
-			tasks: [{
-				id: "5284349D7AF6ACCB"
-				item: "enderio:energetic_alloy_ingot"
-				type: "item"
-			}]
-			x: 1.0d
-			y: 2.5d
+			tasks: [
+				{
+					id: "53C329A53B5DEBC0"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					id: "5AEF0E8CEFF4F750"
+					item: "alltheores:nickel_ingot"
+					type: "item"
+				}
+				{
+					id: "60EC582AF376577D"
+					item: "ad_astra:desh_ingot"
+					type: "item"
+				}
+			]
+			x: -11.0d
+			y: -9.5d
 		}
 		{
 			dependencies: ["6732334334E9E6B9"]
@@ -109,41 +86,32 @@
 				item: "chemlib:sulfuric_acid"
 				type: "item"
 			}]
-			x: -0.5d
-			y: -4.5d
-		}
-		{
-			dependencies: ["043086DC94472C2C"]
-			id: "7312BC60327A532D"
-			tasks: [{
-				id: "07664E4F80B54324"
-				item: "rftoolsutility:matter_transmitter"
-				type: "item"
-			}]
-			x: 1.5d
-			y: -3.0d
-		}
-		{
-			dependencies: ["043086DC94472C2C"]
-			id: "4BBADCAB648D26B8"
-			tasks: [{
-				id: "346D2C5959993A06"
-				item: "rftoolsutility:matter_receiver"
-				type: "item"
-			}]
-			x: 2.5d
-			y: -2.0d
+			x: -3.5d
+			y: -11.5d
 		}
 		{
 			dependencies: ["3B1613F4E76542E6"]
 			id: "043086DC94472C2C"
-			tasks: [{
-				id: "1E923575E8AD66B5"
-				item: "rftoolsutility:dialing_device"
-				type: "item"
-			}]
-			x: 1.5d
-			y: -2.0d
+			shape: "rsquare"
+			tasks: [
+				{
+					id: "1E923575E8AD66B5"
+					item: "rftoolsutility:dialing_device"
+					type: "item"
+				}
+				{
+					id: "319F7E5A6CE3FFBD"
+					item: "rftoolsutility:matter_transmitter"
+					type: "item"
+				}
+				{
+					id: "1E5171D2BF31CE68"
+					item: "rftoolsutility:matter_receiver"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: -13.5d
 		}
 		{
 			dependencies: ["31C82CFC98B88576"]
@@ -153,61 +121,41 @@
 				item: "rftoolsbase:machine_frame"
 				type: "item"
 			}]
-			x: -0.5d
-			y: -2.0d
+			x: -3.5d
+			y: -13.5d
 		}
 		{
-			dependencies: [
-				"43F04FB59AF63F40"
-				"6E71CD5F7CDA293E"
-			]
+			dependencies: ["6E71CD5F7CDA293E"]
 			id: "676A3322FE4DC159"
 			tasks: [{
 				id: "346C027385379436"
 				item: "enderio:double_layer_capacitor"
 				type: "item"
 			}]
-			x: -8.0d
-			y: -1.0d
+			x: -13.5d
+			y: -9.5d
 		}
 		{
-			dependencies: [
-				"38DBB5036C7EF383"
-				"5A8ABEEAC76D5B61"
-			]
+			dependencies: ["38DBB5036C7EF383"]
 			id: "68E83A309B800F3E"
 			tasks: [{
 				id: "7E7739D72ACD800B"
 				item: "minecraft:netherite_scrap"
 				type: "item"
 			}]
-			x: -6.0d
-			y: 1.5d
+			x: -13.5d
+			y: -13.5d
 		}
 		{
-			dependencies: [
-				"4175A70010D3CE36"
-				"2AF0FE6948B771B8"
-			]
+			dependencies: ["36509536488274E7"]
 			id: "1FAFD68FE538C259"
 			tasks: [{
 				id: "157F8CA8190A5A75"
 				item: "minecraft:netherite_ingot"
 				type: "item"
 			}]
-			x: -1.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["3B1613F4E76542E6"]
-			id: "6D202BF7876601B3"
-			tasks: [{
-				id: "46627E0CC14D4708"
-				item: "ad_astra:compressor"
-				type: "item"
-			}]
-			x: -1.5d
-			y: -3.0d
+			x: -13.5d
+			y: -17.5d
 		}
 		{
 			dependencies: ["676A3322FE4DC159"]
@@ -217,8 +165,8 @@
 				item: "alchemistry:atomizer"
 				type: "item"
 			}]
-			x: -8.0d
-			y: 1.0d
+			x: -13.5d
+			y: -11.5d
 		}
 		{
 			dependencies: [
@@ -231,33 +179,8 @@
 				item: "mekanism:purification_chamber"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["11AD0BF421359143"]
-			id: "371CD73D1CEFF96C"
-			tasks: [{
-				id: "2830BCFBF8D20E16"
-				item: "alltheores:signalum_ingot"
-				type: "item"
-			}]
-			x: 3.5d
-			y: 1.5d
-		}
-		{
-			dependencies: [
-				"69E6A78D15173FAB"
-				"11AD0BF421359143"
-			]
-			id: "55B510BD5928B50D"
-			tasks: [{
-				id: "3068AA7AAB5826FA"
-				item: "alltheores:lumium_ingot"
-				type: "item"
-			}]
-			x: 2.5d
-			y: 2.5d
+			x: -3.5d
+			y: -15.5d
 		}
 		{
 			dependencies: ["6C4EC1AD82E73F95"]
@@ -268,20 +191,8 @@
 				item: "industrialforegoing:laser_lens0"
 				type: "item"
 			}]
-			x: 6.0d
-			y: -1.0d
-		}
-		{
-			dependencies: ["11AD0BF421359143"]
-			id: "6F637D55E286099B"
-			subtitle: "5x"
-			tasks: [{
-				id: "067FE3CFC1D28287"
-				item: "minecraft:raw_iron"
-				type: "item"
-			}]
-			x: 5.0d
-			y: 0.5d
+			x: -3.5d
+			y: -17.5d
 		}
 		{
 			dependencies: ["57BAB919CC46E5CD"]
@@ -291,8 +202,8 @@
 				item: "mekanismgenerators:gas_burning_generator"
 				type: "item"
 			}]
-			x: 5.0d
-			y: -1.0d
+			x: -1.0d
+			y: -17.5d
 		}
 		{
 			dependencies: [
@@ -305,8 +216,8 @@
 				item: "mekanism:ingot_refined_glowstone"
 				type: "item"
 			}]
-			x: -4.5d
-			y: 2.5d
+			x: -11.0d
+			y: -13.5d
 		}
 		{
 			dependencies: [
@@ -319,8 +230,8 @@
 				item: "chemlib:nitrate"
 				type: "item"
 			}]
-			x: 4.5d
-			y: -3.5d
+			x: -1.0d
+			y: -11.5d
 		}
 		{
 			dependencies: ["30E14B7D90A02DB8"]
@@ -330,8 +241,8 @@
 				title: "NITER"
 				type: "checkmark"
 			}]
-			x: 4.5d
-			y: -2.0d
+			x: -1.0d
+			y: -13.5d
 		}
 		{
 			dependencies: ["3BD7663596F6ADA2"]
@@ -341,16 +252,16 @@
 				item: "chemlib:nitric_acid"
 				type: "item"
 			}]
-			x: 3.5d
-			y: -1.0d
+			x: -1.0d
+			y: -15.5d
 		}
 		{
 			dependencies: [
-				"371CD73D1CEFF96C"
-				"55B510BD5928B50D"
 				"24574D51B09BDC7D"
+				"685D9306B168AB38"
 			]
 			id: "656DE1BBDCEF9C38"
+			shape: "gear"
 			size: 2.0d
 			tasks: [{
 				id: "7D7CB1A77C07266E"
@@ -361,43 +272,20 @@
 				}
 				type: "item"
 			}]
-			x: 5.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["34E34FB289126C37"]
-			id: "11C486830B57DB76"
-			tasks: [{
-				id: "5DFF16D428C339C0"
-				item: "ad_astra:conglomerate"
-				type: "item"
-			}]
-			x: -4.5d
-			y: -8.0d
+			x: -8.5d
+			y: -17.5d
 		}
 		{
 			dependencies: ["34E34FB289126C37"]
 			id: "312F228D7701E2E4"
 			subtitle: "Can drop without need of silktouch"
-			tasks: [
-				{
-					id: "25DE8F068FB2787E"
-					item: "minecraft:packed_ice"
-					type: "item"
-				}
-				{
-					id: "314CCF523A8CB1C1"
-					item: "minecraft:ice"
-					type: "item"
-				}
-				{
-					id: "5D9ED01AB16DBA54"
-					item: "minecraft:blue_ice"
-					type: "item"
-				}
-			]
-			x: -4.0d
-			y: -6.5d
+			tasks: [{
+				id: "5A93478B3980C469"
+				item: "ad_astra:mars_sand"
+				type: "item"
+			}]
+			x: -8.5d
+			y: -9.5d
 		}
 		{
 			dependencies: ["1FAFD68FE538C259"]
@@ -413,36 +301,19 @@
 				}
 				type: "item"
 			}]
-			x: -0.5d
-			y: 4.5d
+			x: -11.0d
+			y: -17.5d
 		}
 		{
-			dependencies: [
-				"7952B0FEE0D703C1"
-				"64571C0BE539009A"
-			]
-			id: "5A8ABEEAC76D5B61"
-			tasks: [{
-				id: "60E8C0B8ECE155A8"
-				item: "ad_astra:oil_bucket"
-				type: "item"
-			}]
-			x: -6.0d
-			y: -1.0d
-		}
-		{
-			dependencies: [
-				"11C486830B57DB76"
-				"312F228D7701E2E4"
-			]
+			dependencies: ["1D0E372F337CE88B"]
 			id: "182A85451A17D98A"
 			tasks: [{
 				id: "7FAB524E71DBC545"
 				item: "ad_astra:cryo_freezer"
 				type: "item"
 			}]
-			x: 0.5d
-			y: -6.5d
+			x: -3.5d
+			y: -9.5d
 		}
 		{
 			dependencies: ["182A85451A17D98A"]
@@ -453,8 +324,76 @@
 				item: "ad_astra:cryo_fuel_bucket"
 				type: "item"
 			}]
-			x: 3.0d
-			y: -5.5d
+			x: -1.0d
+			y: -9.5d
+		}
+		{
+			dependencies: ["312F228D7701E2E4"]
+			id: "1D0E372F337CE88B"
+			tasks: [
+				{
+					id: "6F6A8DD505732955"
+					item: "ad_astra:conglomerate"
+					type: "item"
+				}
+				{
+					id: "62D2F21244894D7C"
+					item: "minecraft:ice"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: -9.5d
+		}
+		{
+			dependencies: ["11AD0BF421359143"]
+			id: "57395F663B0161BE"
+			tasks: [
+				{
+					id: "0326B447F39CE37E"
+					item: "alltheores:signalum_ingot"
+					type: "item"
+				}
+				{
+					id: "29AD06F9D0B652B1"
+					item: "alltheores:lumium_ingot"
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: -15.5d
+		}
+		{
+			dependencies: [
+				"57395F663B0161BE"
+				"4175A70010D3CE36"
+			]
+			id: "685D9306B168AB38"
+			tasks: [
+				{
+					id: "129557370F641CD5"
+					item: "alltheores:lumium_plate"
+					type: "item"
+				}
+				{
+					id: "104AB3C236D297DF"
+					item: "alltheores:signalum_plate"
+					type: "item"
+				}
+			]
+			x: -8.5d
+			y: -15.5d
+		}
+		{
+			dependencies: ["4175A70010D3CE36"]
+			id: "36509536488274E7"
+			tasks: [{
+				id: "417E9B6F89BBEBEB"
+				item: "mekanism:osmium_compressor"
+				type: "item"
+			}]
+			x: -13.5d
+			y: -15.5d
 		}
 	]
 	title: "4 mars"

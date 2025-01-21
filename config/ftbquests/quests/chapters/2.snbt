@@ -11,14 +11,15 @@
 		{
 			dependencies: ["567FAF6F55A07B6D"]
 			id: "3C51B5C089F3F915"
-			size: 2.0d
+			shape: "square"
+			size: 1.0d
 			tasks: [{
 				id: "57EFE52268393343"
 				item: "industrialforegoing:machine_frame_pity"
 				type: "item"
 			}]
-			x: -3.0d
-			y: -2.5d
+			x: -9.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["3C51B5C089F3F915"]
@@ -28,37 +29,8 @@
 				item: "mekanism:enrichment_chamber"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -1.5d
-		}
-		{
-			dependencies: ["3C51B5C089F3F915"]
-			id: "31841E6978BF35B8"
-			tasks: [{
-				id: "6A69744DFFBEF1DE"
-				item: "mekanism:metallurgic_infuser"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 1.5d
-		}
-		{
-			dependencies: ["3C51B5C089F3F915"]
-			id: "3123290EF56D7190"
-			tasks: [
-				{
-					id: "422EE8CD3ECAD0E5"
-					item: "mekanism:formulaic_assemblicator"
-					type: "item"
-				}
-				{
-					id: "6CEFE1FE8A8672EF"
-					item: "mekanism:crafting_formula"
-					type: "item"
-				}
-			]
-			x: -1.5d
-			y: 1.5d
+			x: -9.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["3C51B5C089F3F915"]
@@ -68,11 +40,14 @@
 				item: "mekanism:precision_sawmill"
 				type: "item"
 			}]
-			x: 0.0d
-			y: -2.5d
+			x: -11.5d
+			y: -4.0d
 		}
 		{
-			dependencies: ["567FAF6F55A07B6D"]
+			dependencies: [
+				"567FAF6F55A07B6D"
+				"251AC431EA76C1CB"
+			]
 			id: "0E1F18EBEF16B84C"
 			tasks: [
 				{
@@ -86,19 +61,8 @@
 					type: "item"
 				}
 			]
-			x: -0.5d
-			y: 4.0d
-		}
-		{
-			dependencies: ["0E1F18EBEF16B84C"]
-			id: "20BF5A1ED50962E9"
-			tasks: [{
-				id: "695271B3F0204D0B"
-				item: "chemlib:beta_carotene"
-				type: "item"
-			}]
-			x: 1.5d
-			y: 3.5d
+			x: -4.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["3C51B5C089F3F915"]
@@ -108,58 +72,32 @@
 				item: "mekanism:crusher"
 				type: "item"
 			}]
-			x: -0.5d
-			y: 0.5d
+			x: -9.0d
+			y: -2.0d
 		}
 		{
 			dependencies: [
-				"31841E6978BF35B8"
 				"0E1F18EBEF16B84C"
+				"7930E040CACD8113"
+				"68A23C3DB5781D90"
 			]
 			id: "5D33781562C1B736"
-			tasks: [{
-				id: "6F53C99F0F11F127"
-				item: "mekanism:bio_fuel"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 4.0d
-		}
-		{
-			dependencies: ["5D33781562C1B736"]
-			id: "42F25EFD0035198D"
-			tasks: [{
-				id: "1E03BA1B80FF3C28"
-				item: "mekanism:nutritional_liquifier"
-				type: "item"
-			}]
-			x: -4.5d
-			y: 4.0d
-		}
-		{
-			dependencies: ["42F25EFD0035198D"]
-			id: "3B476024F0E9E9BF"
-			tasks: [{
-				id: "4384D07224A010EE"
-				item: {
-					Count: 1
-					id: "mekanism:canteen"
-					tag: {
-						mekData: {
-							FluidTanks: [{
-								Tank: 0b
-								stored: {
-									Amount: 64000
-									FluidName: "mekanism:nutritional_paste"
-								}
-							}]
-						}
-					}
+			shape: "gear"
+			size: 2.0d
+			tasks: [
+				{
+					id: "6F53C99F0F11F127"
+					item: "mekanism:bio_fuel"
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					id: "0596520C5B123E4A"
+					item: "mekanismgenerators:bio_generator"
+					type: "item"
+				}
+			]
 			x: -6.0d
-			y: 4.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["7930E040CACD8113"]
@@ -170,30 +108,19 @@
 				item: "minecraft:raw_iron"
 				type: "item"
 			}]
-			x: 1.0d
-			y: 1.5d
+			x: -11.5d
+			y: -2.0d
 		}
 		{
-			dependencies: ["0FD086473E643CF5"]
-			id: "3E9B75382D5B6C46"
-			tasks: [{
-				id: "375A4C6C51D01188"
-				item: "industrialforegoing:hydroponic_bed"
-				type: "item"
-			}]
-			x: -4.5d
-			y: -1.0d
-		}
-		{
-			dependencies: ["31841E6978BF35B8"]
+			dependencies: ["57B684F8CBC7DFC1"]
 			id: "0FD086473E643CF5"
 			tasks: [{
 				id: "1BBDEC726BA52200"
 				item: "enderio:basic_capacitor"
 				type: "item"
 			}]
-			x: -4.5d
-			y: 1.5d
+			x: -1.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["510CCFC3D686D863"]
@@ -211,19 +138,26 @@
 				}
 				type: "item"
 			}]
-			x: -8.5d
-			y: 1.5d
+			x: -1.5d
+			y: -2.0d
 		}
 		{
 			dependencies: ["0FD086473E643CF5"]
 			id: "0DA149C30AEB8BAA"
-			tasks: [{
-				id: "64889C63003E0518"
-				item: "mekanism:basic_logistical_transporter"
-				type: "item"
-			}]
-			x: -7.0d
-			y: 0.0d
+			tasks: [
+				{
+					id: "64889C63003E0518"
+					item: "mekanism:basic_logistical_transporter"
+					type: "item"
+				}
+				{
+					id: "74E0AD8802DB066C"
+					item: "mekanism:logistical_sorter"
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["0FD086473E643CF5"]
@@ -240,19 +174,8 @@
 					type: "item"
 				}
 			]
-			x: -7.0d
-			y: 1.5d
-		}
-		{
-			dependencies: ["0DA149C30AEB8BAA"]
-			id: "12F34FF5CC2A2F7B"
-			tasks: [{
-				id: "703861006945D4F3"
-				item: "mekanism:logistical_sorter"
-				type: "item"
-			}]
-			x: -8.5d
-			y: 0.0d
+			x: -1.5d
+			y: -4.0d
 		}
 		{
 			dependencies: ["0DA149C30AEB8BAA"]
@@ -262,31 +185,8 @@
 				item: "mekanism:basic_bin"
 				type: "item"
 			}]
-			x: -7.0d
-			y: -1.5d
-		}
-		{
-			dependencies: ["79F04AEEE24D60F4"]
-			id: "0D57EF1907F0F977"
-			tasks: [{
-				id: "360EA3C159053876"
-				item: "mekanism:sawdust"
-				type: "item"
-			}]
-			x: 1.5d
-			y: -2.5d
-		}
-		{
-			dependencies: ["5D33781562C1B736"]
-			id: "6DC8CC73FC36E346"
-			size: 2.0d
-			tasks: [{
-				id: "1115BB2E804130DE"
-				item: "mekanismgenerators:bio_generator"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 6.0d
+			x: 1.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["0E1F18EBEF16B84C"]
@@ -302,23 +202,25 @@
 					item: "chemlib:starch"
 					type: "item"
 				}
+				{
+					id: "30BFF08EEACB4896"
+					item: "chemlib:beta_carotene"
+					type: "item"
+				}
 			]
-			x: 1.5d
-			y: 4.5d
+			x: -4.0d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"20BF5A1ED50962E9"
-				"5C8815F6691FC0F6"
-			]
+			dependencies: ["5C8815F6691FC0F6"]
 			id: "68A23C3DB5781D90"
 			tasks: [{
 				id: "0DAEBC273FAD1008"
 				item: "minecraft:glowstone_dust"
 				type: "item"
 			}]
-			x: 3.0d
-			y: 4.0d
+			x: -6.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["2BAA4B2487D8389D"]
@@ -328,8 +230,8 @@
 				item: "mekanism:enriched_carbon"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -0.5d
+			x: -11.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["3C51B5C089F3F915"]
@@ -339,20 +241,20 @@
 				item: "industrialforegoing:fluid_extractor"
 				type: "item"
 			}]
-			x: -5.0d
-			y: -3.0d
+			x: -6.5d
+			y: -4.0d
 		}
 		{
 			dependencies: ["50305B1F35D11804"]
 			id: "7779C4A35A114E7A"
 			subtitle: "NO LATEX REPROCESSOR!"
 			tasks: [{
-				id: "3A219B2821E59D8A"
-				item: "industrialforegoing:latex_bucket"
+				id: "1F7EDD77B7118DDD"
+				item: "industrialforegoing:latex_processing_unit"
 				type: "item"
 			}]
-			x: -7.0d
-			y: -3.0d
+			x: -6.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["7779C4A35A114E7A"]
@@ -362,8 +264,26 @@
 				item: "industrialforegoing:plastic"
 				type: "item"
 			}]
-			x: -8.5d
-			y: -3.0d
+			x: -4.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["0E1F18EBEF16B84C"]
+			id: "3C6A1EFCBFC5D401"
+			tasks: [
+				{
+					id: "53DC91E0A7E803A2"
+					item: "mekanism:nutritional_liquifier"
+					type: "item"
+				}
+				{
+					id: "1DF9742E8F4A9241"
+					item: "mekanism:canteen"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: -4.0d
 		}
 	]
 	title: "2 bio-fuel"

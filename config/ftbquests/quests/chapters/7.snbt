@@ -18,8 +18,8 @@
 				id: "508E16A75B74A310"
 				type: "dimension"
 			}]
-			x: -13.0d
-			y: -5.0d
+			x: -14.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["0AD0F45D9384C9BF"]
@@ -31,78 +31,26 @@
 				id: "03DE109520EF91EA"
 				type: "dimension"
 			}]
-			x: -4.5d
-			y: -4.0d
-		}
-		{
-			dependencies: ["5E840B0B91D01549"]
-			id: "2B71BBEB6699D29D"
-			tasks: [{
-				id: "33D06C28C09AAB37"
-				item: "mekanism:fluorite_gem"
-				type: "item"
-			}]
-			x: -1.5d
-			y: -1.5d
-		}
-		{
-			dependencies: ["41E55D2D2187B63D"]
-			id: "03CD24396446F5FA"
-			tasks: [{
-				id: "6E7742329A4486F6"
-				item: "ad_astra:ice_shard"
-				type: "item"
-			}]
-			x: -5.5d
-			y: -1.5d
-		}
-		{
-			dependencies: ["5D4B10641B4AE48D"]
-			id: "48AB9BFE80F8799A"
-			tasks: [{
-				id: "2B33FCDFFBA460F8"
-				item: "ad_astra:calorite_ingot"
-				type: "item"
-			}]
-			x: -13.0d
-			y: -1.5d
-		}
-		{
-			dependencies: ["5D4B10641B4AE48D"]
-			id: "3DF22FC8C6BA8D5C"
-			tasks: [{
-				id: "2877DB3F36F16B93"
-				item: "thoriumreactors:thorium"
-				type: "item"
-			}]
-			x: -11.0d
-			y: -1.5d
+			x: 1.0d
+			y: -6.0d
 		}
 		{
 			dependencies: ["5D4B10641B4AE48D"]
 			id: "66418F3E27401C34"
-			tasks: [{
-				id: "034C617B99AE7F3E"
-				item: "thoriumreactors:raw_uranium"
-				type: "item"
-			}]
-			x: -12.0d
-			y: -1.5d
-		}
-		{
-			dependencies: [
-				"38729C98BC0AAF94"
-				"03CD24396446F5FA"
+			tasks: [
+				{
+					id: "034C617B99AE7F3E"
+					item: "thoriumreactors:raw_uranium"
+					type: "item"
+				}
+				{
+					id: "50D7D65AC9271FF7"
+					item: "thoriumreactors:thorium"
+					type: "item"
+				}
 			]
-			id: "3A67FE5E422F64EB"
-			subtitle: "GELID ALLOY"
-			tasks: [{
-				id: "3C9E5702564FEC36"
-				item: "mekanism:alloy_reinforced"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 1.0d
+			x: -11.5d
+			y: -4.0d
 		}
 		{
 			dependencies: [
@@ -115,8 +63,8 @@
 				item: "ad_astra:etrium_nugget"
 				type: "item"
 			}]
-			x: 0.0d
-			y: 0.0d
+			x: -1.5d
+			y: -4.0d
 		}
 		{
 			dependencies: ["4095E53D1208FFEA"]
@@ -126,14 +74,13 @@
 				title: "LIQUID ETRIUM"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: -3.0d
+			x: 1.0d
+			y: -4.0d
 		}
 		{
 			dependencies: [
+				"0F196C9ECC823D43"
 				"23DFEA1C7A466B2A"
-				"53A74DAE0F6AF79C"
-				"3A67FE5E422F64EB"
 			]
 			id: "537343DA999856B1"
 			tasks: [{
@@ -141,12 +88,11 @@
 				item: "enderio:alloy_smelter"
 				type: "item"
 			}]
-			x: -3.5d
-			y: 1.0d
+			x: -4.0d
+			y: -8.0d
 		}
 		{
 			dependencies: [
-				"60F92386CB3B689F"
 				"21235ABBA9FBE2C9"
 				"3FE965589D29E10E"
 			]
@@ -156,19 +102,8 @@
 				item: "enderio:sag_mill"
 				type: "item"
 			}]
-			x: -9.5d
-			y: 1.0d
-		}
-		{
-			dependencies: ["4095E53D1208FFEA"]
-			id: "41E55D2D2187B63D"
-			tasks: [{
-				id: "0C3BCBE45444F86B"
-				item: "ad_astra:permafrost"
-				type: "item"
-			}]
-			x: -6.0d
-			y: -3.0d
+			x: -9.0d
+			y: -8.0d
 		}
 		{
 			dependencies: ["65185725FC5F0624"]
@@ -178,30 +113,26 @@
 				item: "mekanism:dust_refined_obsidian"
 				type: "item"
 			}]
-			x: -2.0d
-			y: 6.0d
-		}
-		{
-			dependencies: ["278F8E221462378D"]
-			id: "5EAAFC75D748633F"
-			tasks: [{
-				id: "78272398BA2FCFC2"
-				item: "alltheores:platinum_ingot"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 5.5d
-		}
-		{
-			dependencies: ["278F8E221462378D"]
-			id: "4A394B4B773DFFED"
-			tasks: [{
-				id: "6C210B19E85008A8"
-				item: "alltheores:iridium_ingot"
-				type: "item"
-			}]
 			x: -4.0d
-			y: 5.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["6C6097C01D2C4D95"]
+			id: "5EAAFC75D748633F"
+			tasks: [
+				{
+					id: "78272398BA2FCFC2"
+					item: "alltheores:platinum_ingot"
+					type: "item"
+				}
+				{
+					id: "7F0C758A6B26EC5B"
+					item: "alltheores:iridium_ingot"
+					type: "item"
+				}
+			]
+			x: -6.5d
+			y: 0.5d
 		}
 		{
 			dependencies: ["7935AD603BF217AB"]
@@ -211,8 +142,8 @@
 				item: "mekanism:pellet_plutonium"
 				type: "item"
 			}]
-			x: -13.5d
-			y: 7.0d
+			x: -12.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["39A1A5AC3303C7CB"]
@@ -222,49 +153,44 @@
 				item: "mekanism:pellet_polonium"
 				type: "item"
 			}]
-			x: -13.5d
-			y: 4.0d
-		}
-		{
-			dependencies: ["537343DA999856B1"]
-			id: "27E8FA6A989DDFB2"
-			tasks: [{
-				id: "110EA8402ED5B0A7"
-				item: "enderio:vibrant_alloy_ingot"
-				type: "item"
-			}]
-			x: -6.0d
-			y: 3.0d
-		}
-		{
-			dependencies: ["2C04B243246861FD"]
-			id: "28C53D0EE3A8D5C5"
-			tasks: [{
-				id: "63C68C58FF5985B3"
-				item: "enderio:soularium_ingot"
-				type: "item"
-			}]
-			x: -9.0d
-			y: 3.0d
+			x: -12.0d
+			y: 0.5d
 		}
 		{
 			dependencies: [
-				"28C53D0EE3A8D5C5"
-				"27E8FA6A989DDFB2"
+				"2C04B243246861FD"
+				"537343DA999856B1"
 			]
+			id: "28C53D0EE3A8D5C5"
+			tasks: [
+				{
+					id: "63C68C58FF5985B3"
+					item: "enderio:soularium_ingot"
+					type: "item"
+				}
+				{
+					id: "0002B0D51C0FF791"
+					item: "enderio:vibrant_alloy_ingot"
+					type: "item"
+				}
+			]
+			x: -6.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["28C53D0EE3A8D5C5"]
 			id: "6853558A02031CB1"
 			tasks: [{
 				id: "4EA9AA715F235677"
 				item: "enderio:end_steel_ingot"
 				type: "item"
 			}]
-			x: -7.5d
-			y: 4.0d
+			x: -6.5d
+			y: -6.0d
 		}
 		{
 			dependencies: [
 				"5EAAFC75D748633F"
-				"4A394B4B773DFFED"
 				"33337D5DF8F709A5"
 			]
 			id: "5477BDDE4F3702E4"
@@ -274,8 +200,8 @@
 				item: "mekanism:alloy_atomic"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 7.0d
+			x: -4.0d
+			y: 0.5d
 		}
 		{
 			dependencies: ["5477BDDE4F3702E4"]
@@ -286,8 +212,8 @@
 				item: "industrialforegoing:laser_lens0"
 				type: "item"
 			}]
-			x: -5.0d
-			y: 8.5d
+			x: -1.5d
+			y: 0.5d
 		}
 		{
 			dependencies: ["3D9D78FDE5C6FD00"]
@@ -297,8 +223,8 @@
 				title: "MAGMA"
 				type: "checkmark"
 			}]
-			x: -15.5d
-			y: -3.5d
+			x: -14.0d
+			y: -8.0d
 		}
 		{
 			dependencies: ["3D9D78FDE5C6FD00"]
@@ -308,8 +234,8 @@
 				item: "ad_astra:mercury_stone"
 				type: "item"
 			}]
-			x: -11.0d
-			y: -3.5d
+			x: -11.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["4095E53D1208FFEA"]
@@ -319,93 +245,92 @@
 				item: "ad_astra:glacio_stone"
 				type: "item"
 			}]
-			x: -3.5d
-			y: -3.0d
-		}
-		{
-			dependencies: ["41E55D2D2187B63D"]
-			id: "38729C98BC0AAF94"
-			tasks: [{
-				id: "68BD0BB7614D5114"
-				item: "xycraft_world:xychorium_gem_light"
-				type: "item"
-			}]
-			x: -6.5d
-			y: -1.5d
+			x: -1.5d
+			y: -6.0d
 		}
 		{
 			dependencies: ["5E840B0B91D01549"]
 			id: "23DFEA1C7A466B2A"
-			tasks: [{
-				id: "7333E891CEBCB1E8"
-				item: "xycraft_world:xychorium_gem_blue"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "7333E891CEBCB1E8"
+					item: "xycraft_world:xychorium_gem_blue"
+					type: "item"
+				}
+				{
+					id: "68602647E3C0F04E"
+					item: "xycraft_world:xychorium_gem_dark"
+					type: "item"
+				}
+				{
+					id: "5DF7622B567922A0"
+					item: "mekanism:fluorite_gem"
+					type: "item"
+				}
+			]
 			x: -4.0d
-			y: -1.5d
+			y: -6.0d
 		}
 		{
-			dependencies: ["5D4B10641B4AE48D"]
-			id: "60F92386CB3B689F"
-			tasks: [{
-				id: "079C0D612B09DCEF"
-				item: "xycraft_world:xychorium_gem_red"
-				type: "item"
-			}]
-			x: -9.0d
-			y: -1.5d
-		}
-		{
-			dependencies: ["5E840B0B91D01549"]
-			id: "53A74DAE0F6AF79C"
-			tasks: [{
-				id: "4D2D25F5530DE4BD"
-				item: "xycraft_world:xychorium_gem_dark"
-				type: "item"
-			}]
-			x: -3.0d
-			y: -1.5d
-		}
-		{
-			dependencies: ["2B71BBEB6699D29D"]
+			dependencies: ["23DFEA1C7A466B2A"]
 			id: "65185725FC5F0624"
-			tasks: [{
-				id: "079282C6D209C6DE"
-				item: "mekanism:hydrofluoric_acid_bucket"
-				type: "item"
-			}]
-			x: -1.5d
-			y: 0.0d
+			tasks: [
+				{
+					id: "079282C6D209C6DE"
+					item: "mekanism:hydrofluoric_acid_bucket"
+					type: "item"
+				}
+				{
+					id: "48A67CDF9A4F2290"
+					item: "thoriumreactors:molten_salt_bucket"
+					type: "item"
+				}
+			]
+			x: -4.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["5D4B10641B4AE48D"]
 			id: "21235ABBA9FBE2C9"
-			tasks: [{
-				id: "2A364B0EDB4A4F49"
-				item: "xycraft_world:xychorium_gem_green"
-				type: "item"
-			}]
-			x: -10.0d
-			y: -1.5d
+			tasks: [
+				{
+					id: "2A364B0EDB4A4F49"
+					item: "xycraft_world:xychorium_gem_green"
+					type: "item"
+				}
+				{
+					id: "5FB7529BF71C1432"
+					item: "xycraft_world:xychorium_gem_red"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: -6.0d
 		}
 		{
 			dependencies: [
 				"12440F437AEEDA99"
-				"48AB9BFE80F8799A"
+				"5D4B10641B4AE48D"
 			]
 			id: "3FE965589D29E10E"
-			tasks: [{
-				id: "02B1EBB4DD32FD9D"
-				title: "VULCANIC ALLOY"
-				type: "checkmark"
-			}]
-			x: -15.5d
-			y: 1.0d
+			tasks: [
+				{
+					id: "02B1EBB4DD32FD9D"
+					title: "VULCANIC ALLOY"
+					type: "checkmark"
+				}
+				{
+					id: "3D6E72245DFBABD2"
+					item: "ad_astra:calorite_ingot"
+					type: "item"
+				}
+			]
+			x: -11.5d
+			y: -8.0d
 		}
 		{
 			dependencies: [
 				"1AA6139480C203AA"
-				"1CACC8A3453A85F3"
 				"6853558A02031CB1"
 			]
 			id: "2A297A8D69A06170"
@@ -427,8 +352,8 @@
 				}
 			]
 			title: "Fission Reactor"
-			x: -13.0d
-			y: 5.5d
+			x: -6.5d
+			y: -4.0d
 		}
 		{
 			dependencies: ["6A9591D6CBE890C8"]
@@ -438,8 +363,8 @@
 				title: "NEPTUNIUM"
 				type: "checkmark"
 			}]
-			x: -12.5d
-			y: 7.0d
+			x: -10.25d
+			y: -2.0d
 		}
 		{
 			dependencies: ["212A73614EC6F4FB"]
@@ -449,8 +374,8 @@
 				title: "AMERICIUM"
 				type: "checkmark"
 			}]
-			x: -14.5d
-			y: 6.0d
+			x: -14.0d
+			y: -2.0d
 		}
 		{
 			dependencies: ["436C9190D14EBB74"]
@@ -460,8 +385,8 @@
 				title: "CURIUM"
 				type: "checkmark"
 			}]
-			x: -14.5d
-			y: 5.0d
+			x: -14.0d
+			y: 0.5d
 		}
 		{
 			dependencies: ["4A3DDF55D48A8B88"]
@@ -471,8 +396,8 @@
 				title: "BERKELIUM"
 				type: "checkmark"
 			}]
-			x: -12.5d
-			y: 4.0d
+			x: -10.25d
+			y: 0.5d
 		}
 		{
 			dependencies: ["7CBCAEE83ECE4CFF"]
@@ -482,50 +407,40 @@
 				title: "CALIFORNIUM"
 				type: "checkmark"
 			}]
-			x: -11.5d
-			y: 5.0d
+			x: -8.5d
+			y: 0.5d
 		}
 		{
-			dependencies: ["2A297A8D69A06170"]
+			dependencies: ["278F8E221462378D"]
 			id: "6A9591D6CBE890C8"
 			tasks: [{
 				id: "172F1C70A7D3B3E0"
 				title: "URANIUM"
 				type: "checkmark"
 			}]
-			x: -11.5d
-			y: 6.0d
+			x: -8.5d
+			y: -2.0d
 		}
 		{
 			dependencies: ["66418F3E27401C34"]
 			id: "1AA6139480C203AA"
-			tasks: [{
-				id: "543485A02059A45C"
-				item: "thoriumreactors:enriched_uranium"
-				type: "item"
-			}]
-			x: -13.5d
-			y: 2.5d
+			tasks: [
+				{
+					id: "543485A02059A45C"
+					item: "thoriumreactors:enriched_uranium"
+					type: "item"
+				}
+				{
+					id: "01E164BB56436558"
+					item: "thoriumreactors:molten_salt_bucket"
+					type: "item"
+				}
+			]
+			x: -9.0d
+			y: -4.0d
 		}
 		{
-			dependencies: [
-				"65185725FC5F0624"
-				"3DF22FC8C6BA8D5C"
-			]
-			id: "1CACC8A3453A85F3"
-			tasks: [{
-				id: "4578DE71FCA7261A"
-				item: "thoriumreactors:molten_salt_bucket"
-				type: "item"
-			}]
-			x: -11.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"2A297A8D69A06170"
-				"6853558A02031CB1"
-			]
+			dependencies: ["2A297A8D69A06170"]
 			id: "278F8E221462378D"
 			tasks: [
 				{
@@ -550,8 +465,37 @@
 				}
 			]
 			title: "Fuel Reprocessor"
-			x: -5.0d
-			y: 4.5d
+			x: -6.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["1BBFC752F3D77B4F"]
+			id: "0F196C9ECC823D43"
+			tasks: [
+				{
+					id: "48CDAACE2E0D605C"
+					item: "xycraft_world:xychorium_gem_light"
+					type: "item"
+				}
+				{
+					id: "358E97EC104C46A8"
+					item: "ad_astra:ice_shard"
+					type: "item"
+				}
+			]
+			x: -1.5d
+			y: -8.0d
+		}
+		{
+			dependencies: ["4095E53D1208FFEA"]
+			id: "1BBFC752F3D77B4F"
+			tasks: [{
+				id: "321563970D0BB8BA"
+				item: "ad_astra:permafrost"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -8.0d
 		}
 	]
 	title: "7 mercury-glacio"
