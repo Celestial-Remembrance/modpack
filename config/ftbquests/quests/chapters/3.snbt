@@ -9,27 +9,27 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["6DC8CC73FC36E346"]
 			id: "6D4EF960FDA31B85"
-			size: 2.0d
+			shape: "square"
+			size: 1.0d
 			tasks: [{
 				id: "280F9FD72F84300C"
 				item: "industrialforegoing:machine_frame_simple"
 				type: "item"
 			}]
-			x: -6.0d
-			y: -4.0d
+			x: -5.5d
+			y: 1.5d
 		}
 		{
-			dependencies: ["6D4EF960FDA31B85"]
+			dependencies: ["170364ED542EA327"]
 			id: "5A1EBE5743B639A6"
 			tasks: [{
 				id: "5A248B3E28B4F57C"
 				item: "alchemistry:liquifier"
 				type: "item"
 			}]
-			x: -8.0d
-			y: -2.5d
+			x: -0.5d
+			y: -4.5d
 		}
 		{
 			dependencies: ["6D4EF960FDA31B85"]
@@ -39,89 +39,78 @@
 				item: "mekanism:electrolytic_separator"
 				type: "item"
 			}]
-			x: -7.0d
-			y: -2.5d
+			x: -5.5d
+			y: -0.5d
 		}
 		{
-			dependencies: ["6D4EF960FDA31B85"]
+			dependencies: ["7CC40D232C349523"]
 			id: "1CC63166BC821FC8"
 			tasks: [{
 				id: "52951D36EE09F32B"
 				item: "mekanism:rotary_condensentrator"
 				type: "item"
 			}]
-			x: -5.0d
-			y: -2.5d
+			x: -5.5d
+			y: -4.5d
 		}
 		{
-			dependencies: ["6D4EF960FDA31B85"]
+			dependencies: ["6FE10E938892E9E5"]
 			id: "7CC40D232C349523"
 			tasks: [{
 				id: "34BD06E042AAD282"
 				item: "mekanism:chemical_infuser"
 				type: "item"
 			}]
-			x: -6.0d
+			x: -5.5d
 			y: -2.5d
 		}
 		{
-			dependencies: ["6D4EF960FDA31B85"]
+			dependencies: ["1CC63166BC821FC8"]
 			id: "170364ED542EA327"
 			tasks: [{
 				id: "7D767B6C50BE7F2D"
 				item: "mekanism:chemical_crystallizer"
 				type: "item"
 			}]
-			x: -4.0d
-			y: -2.5d
+			x: -3.0d
+			y: -4.5d
 		}
 		{
 			dependencies: ["7C83E896E1BF7707"]
 			id: "48F48CEB91B17B70"
-			tasks: [{
-				id: "292E1882E4CAADBF"
-				item: "mekanism:ingot_osmium"
-				type: "item"
-			}]
-			x: -2.0d
-			y: 1.0d
-		}
-		{
-			dependencies: ["62298320B06B32FE"]
-			id: "7677A170EFF62D57"
-			tasks: [{
-				id: "7E52BBD55F639251"
-				item: "minecraft:quartz"
-				type: "item"
-			}]
-			x: -4.0d
+			tasks: [
+				{
+					id: "292E1882E4CAADBF"
+					item: "mekanism:ingot_osmium"
+					type: "item"
+				}
+				{
+					id: "7D923C8D09D28542"
+					item: "alltheores:lead_ingot"
+					type: "item"
+				}
+			]
+			x: 2.0d
 			y: -1.0d
 		}
 		{
-			dependencies: ["2C0D9E7E4C7B2977"]
-			id: "7F716F676E665E98"
-			tasks: [{
-				id: "196FF5DCBAFE35DB"
-				item: "alltheores:lead_ingot"
-				type: "item"
-			}]
-			x: -3.0d
-			y: 0.5d
-		}
-		{
-			dependencies: ["3CB0DBF3A8FB3FD7"]
+			dependencies: ["48F48CEB91B17B70"]
 			id: "64D00E98C4D5B999"
 			tasks: [{
 				id: "4DA5B1B1B3A114AB"
 				item: "industrialforegoing:laser_drill"
 				type: "item"
 			}]
-			x: -8.0d
-			y: 1.0d
+			x: 4.5d
+			y: -1.0d
 		}
 		{
-			dependencies: ["3CB0DBF3A8FB3FD7"]
+			dependencies: [
+				"3CB0DBF3A8FB3FD7"
+				"2ED2971121BBA079"
+			]
 			id: "7952B0FEE0D703C1"
+			shape: "gear"
 			size: 2.0d
 			tasks: [{
 				id: "4312BCEDE8CC1832"
@@ -132,19 +121,26 @@
 				}
 				type: "item"
 			}]
-			x: -6.0d
-			y: 3.0d
+			x: -0.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["64D00E98C4D5B999"]
 			id: "55F4241C92CCAD31"
-			tasks: [{
-				id: "13AA726A7168C819"
-				item: "industrialforegoing:ore_laser_base"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 2.0d
+			tasks: [
+				{
+					id: "13AA726A7168C819"
+					item: "industrialforegoing:ore_laser_base"
+					type: "item"
+				}
+				{
+					id: "0C66A0AD5980B791"
+					item: "industrialforegoing:fluid_laser_base"
+					type: "item"
+				}
+			]
+			x: 4.5d
+			y: 1.5d
 		}
 		{
 			dependencies: ["55F4241C92CCAD31"]
@@ -155,8 +151,8 @@
 				item: "industrialforegoing:laser_lens0"
 				type: "item"
 			}]
-			x: -9.5d
-			y: 2.0d
+			x: 2.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["12FEDCB79F8C5CC1"]
@@ -166,69 +162,51 @@
 				item: "chemlib:barium"
 				type: "item"
 			}]
-			x: -2.5d
-			y: -1.0d
+			x: -3.0d
+			y: -2.5d
 		}
 		{
 			dependencies: ["12FEDCB79F8C5CC1"]
 			id: "7C83E896E1BF7707"
-			tasks: [{
-				id: "0CA161DED500F1E7"
-				item: "chemlib:osmium"
-				type: "item"
-			}]
-			x: -0.5d
-			y: 0.0d
+			tasks: [
+				{
+					id: "0CA161DED500F1E7"
+					item: "chemlib:osmium"
+					type: "item"
+				}
+				{
+					id: "705B858257E575C2"
+					item: "chemlib:lead"
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -2.5d
 		}
 		{
-			dependencies: ["12FEDCB79F8C5CC1"]
-			id: "2C0D9E7E4C7B2977"
-			tasks: [{
-				id: "2C415918C8EEF26D"
-				item: "chemlib:lead"
-				type: "item"
-			}]
-			x: -1.5d
-			y: -0.5d
-		}
-		{
-			dependencies: ["170364ED542EA327"]
+			dependencies: ["5A1EBE5743B639A6"]
 			id: "12FEDCB79F8C5CC1"
 			tasks: [{
 				id: "40FB351F71A777B0"
 				type: "checkmark"
 			}]
 			title: "TODO"
-			x: -1.5d
-			y: -2.0d
+			x: -0.5d
+			y: -2.5d
 		}
 		{
-			dependencies: ["7677A170EFF62D57"]
+			dependencies: ["62298320B06B32FE"]
 			id: "157CE4564BA672E1"
 			tasks: [{
 				id: "08A6D4B2D834B4C1"
 				item: "ae2:silicon"
 				type: "item"
 			}]
-			x: -6.0d
-			y: -1.0d
+			x: -3.0d
+			y: -0.5d
 		}
 		{
 			dependencies: ["157CE4564BA672E1"]
-			id: "7975F8E1389492BA"
-			tasks: [{
-				id: "71BCE1C7DC297278"
-				item: "enderio:copper_alloy_ingot"
-				type: "item"
-			}]
-			x: -5.0d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"157CE4564BA672E1"
-				"7975F8E1389492BA"
-			]
 			id: "3CB0DBF3A8FB3FD7"
 			tasks: [
 				{
@@ -243,8 +221,8 @@
 				}
 			]
 			title: "Alloys"
-			x: -6.0d
-			y: 1.0d
+			x: -0.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["157CE4564BA672E1"]
@@ -254,30 +232,8 @@
 				item: "laserio:laser_node"
 				type: "item"
 			}]
-			x: -8.0d
-			y: -1.0d
-		}
-		{
-			dependencies: ["64D00E98C4D5B999"]
-			id: "64571C0BE539009A"
-			tasks: [{
-				id: "65B53284B1E0CA99"
-				item: "industrialforegoing:fluid_laser_base"
-				type: "item"
-			}]
-			x: -8.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["64571C0BE539009A"]
-			id: "03C81E146A01B80E"
-			tasks: [{
-				id: "13F346197572166D"
-				item: "minecraft:lava_bucket"
-				type: "item"
-			}]
-			x: -9.5d
-			y: 0.0d
+			x: -3.0d
+			y: 1.5d
 		}
 	]
 	title: "3 rocket1"
